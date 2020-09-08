@@ -1,0 +1,318 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1786 ]
+[d frameptr 6 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"5 C:\Users\Zhiyu\MPLABXProjects\pic1786_buzzer.X\i2c_peripheral.c
+[v _iicPeripheralInterruptTx iicPeripheralInterruptTx `(v  1 e 1 0 ]
+"35
+[v _iicPeripheralInterruptRx iicPeripheralInterruptRx `(uc  1 e 1 0 ]
+"45 C:\Users\Zhiyu\MPLABXProjects\pic1786_buzzer.X\init.c
+[v _initIICPeripheralMode initIICPeripheralMode `(v  1 e 1 0 ]
+"29 C:\Users\Zhiyu\MPLABXProjects\pic1786_buzzer.X\main.c
+[v _irs_routine irs_routine `II(v  1 e 1 0 ]
+"50
+[v _sound sound `(v  1 e 1 0 ]
+"63
+[v _i2c_isr i2c_isr `(v  1 e 1 0 ]
+"80
+[v _main main `(v  1 e 1 0 ]
+"116
+[v _Init Init `(v  1 e 1 0 ]
+"134
+[v _Enable_INT Enable_INT `(v  1 e 1 0 ]
+"146
+[v _Pull_Up Pull_Up `(v  1 e 1 0 ]
+[s S461 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1786.h
+[s S470 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S475 . 1 `S461 1 . 1 0 `S470 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES475  1 e 1 @11 ]
+"429
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"499
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"569
+[v _PORTC PORTC `VEuc  1 e 1 @14 ]
+"660
+[v _PIR1 PIR1 `VEuc  1 e 1 @17 ]
+[s S22 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"677
+[u S31 . 1 `S22 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES31  1 e 1 @17 ]
+"883
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"903
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"923
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S126 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+"945
+[s S135 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[u S139 . 1 `S126 1 . 1 0 `S135 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES139  1 e 1 @24 ]
+"1065
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"1176
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1246
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1316
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S159 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1336
+[s S168 . 1 `uc 1 TRISC 1 0 :8:0 
+]
+[u S170 . 1 `S159 1 . 1 0 `S168 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES170  1 e 1 @142 ]
+"1407
+[v _PIE1 PIE1 `VEuc  1 e 1 @145 ]
+[s S190 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1424
+[u S199 . 1 `S190 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES199  1 e 1 @145 ]
+[s S211 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1635
+[s S220 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S225 . 1 `S211 1 . 1 0 `S220 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES225  1 e 1 @149 ]
+"1869
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S431 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+`uc 1 SPLLEN 1 0 :1:7 
+]
+"1891
+[s S440 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+[u S444 . 1 `S431 1 . 1 0 `S440 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES444  1 e 1 @153 ]
+"2293
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2363
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S43 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2383
+[s S52 . 1 `uc 1 LATB 1 0 :8:0 
+]
+[u S54 . 1 `S43 1 . 1 0 `S52 1 . 1 0 ]
+[v _LATBbits LATBbits `VES54  1 e 1 @269 ]
+"2433
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"3533
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3598
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"4953
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"5212
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"5720
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+[s S81 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"5792
+[u S90 . 1 `S81 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES90  1 e 1 @532 ]
+"5846
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S326 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5933
+[s S332 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S337 . 1 `S326 1 . 1 0 `S332 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES337  1 e 1 @533 ]
+"5995
+[v _SSPCON1bits SSPCON1bits `VES337  1 e 1 @533 ]
+[s S377 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6184
+[u S386 . 1 `S377 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES386  1 e 1 @534 ]
+"14199
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"15588
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"3 C:\Users\Zhiyu\MPLABXProjects\pic1786_buzzer.X\i2c_peripheral.c
+[v _IICAddr IICAddr `uc  1 e 1 0 ]
+"13 C:\Users\Zhiyu\MPLABXProjects\pic1786_buzzer.X\main.c
+[v _cnt_1 cnt_1 `ui  1 e 2 0 ]
+"14
+[v _cnt_2 cnt_2 `ui  1 e 2 0 ]
+"16
+[v _voice voice `[10]ui  1 e 20 0 ]
+"18
+[v _idx idx `ui  1 e 2 0 ]
+"19
+[v _count count `uc  1 e 1 0 ]
+"20
+[v _recvData recvData `uc  1 e 1 0 ]
+"80
+[v _main main `(v  1 e 1 0 ]
+{
+"108
+} 0
+"146
+[v _Pull_Up Pull_Up `(v  1 e 1 0 ]
+{
+"150
+} 0
+"116
+[v _Init Init `(v  1 e 1 0 ]
+{
+"132
+} 0
+"134
+[v _Enable_INT Enable_INT `(v  1 e 1 0 ]
+{
+"144
+} 0
+"29
+[v _irs_routine irs_routine `II(v  1 e 1 0 ]
+{
+"48
+} 0
+"50
+[v _sound sound `(v  1 e 1 0 ]
+{
+[v sound@gate1 gate1 `i  1 p 2 6 ]
+"61
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"63 C:\Users\Zhiyu\MPLABXProjects\pic1786_buzzer.X\main.c
+[v _i2c_isr i2c_isr `(v  1 e 1 0 ]
+{
+"78
+} 0
+"5 C:\Users\Zhiyu\MPLABXProjects\pic1786_buzzer.X\i2c_peripheral.c
+[v _iicPeripheralInterruptTx iicPeripheralInterruptTx `(v  1 e 1 0 ]
+{
+"7
+[v iicPeripheralInterruptTx@i i `uc  1 a 1 7 ]
+"5
+[v iicPeripheralInterruptTx@data data `*.39uc  1 p 2 0 ]
+[v iicPeripheralInterruptTx@size size `uc  1 p 1 2 ]
+"32
+} 0
+"35
+[v _iicPeripheralInterruptRx iicPeripheralInterruptRx `(uc  1 e 1 0 ]
+{
+"41
+[v iicPeripheralInterruptRx@data data `uc  1 a 1 2 ]
+"51
+} 0
