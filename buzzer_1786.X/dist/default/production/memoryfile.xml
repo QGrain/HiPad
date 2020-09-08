@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\pic1786_buzzer.X.production.hex">
+  <executable name="dist/default/production\buzzer_1786.X.production.hex">
     <memory name="program">
       <units>words</units>
       <length>8192</length>
-      <used>428</used>
-      <free>7764</free>
+      <used>386</used>
+      <free>7806</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>1024</length>
-      <used>41</used>
-      <free>983</free>
+      <used>43</used>
+      <free>981</free>
     </memory>
   </executable>
 </project>

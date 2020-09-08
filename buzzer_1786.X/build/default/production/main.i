@@ -8923,10 +8923,11 @@ void initFunctionSelectModule();
 # 13 "main.c"
 unsigned int cnt_1 = 0;
 unsigned int cnt_2 = 0;
+unsigned int cnt_3 = 0;
+unsigned int voice[10] = {85, 80, 76, 72, 68, 64, 60, 57, 54, 51};
 
-unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
 
-unsigned int idx = 0;
+unsigned int i = 0;
 unsigned char count = 60;
 unsigned char recvData;
 
@@ -8940,19 +8941,19 @@ void i2c_isr();
 void interrupt irs_routine(void)
 {
 if(PIR1bits.TMR1IF == 1) {
+sound(voice[i]);
 
-LATBbits.LATB0 = !LATBbits.LATB0;
 PIR1bits.TMR1IF = 0;
 TMR1H = 0xff;
-TMR1L = 0xae;
+TMR1L = 0xfe;
 }
 if(PIR1bits.TMR2IF == 1) {
-sound(voice[idx]);
+sound(voice[i]);
 
 PIR1bits.TMR2IF = 0;
 TMR2 = 0xfe;
 }
-if (PIR1bits.SSP1IF == 1){
+if(PIR1bits.SSP1IF == 1){
 i2c_isr();
 }
 return;
@@ -8960,14 +8961,18 @@ return;
 
 void sound(int gate1)
 {
-if(++cnt_2 >= 30000) {
+if(++cnt_2 >= 50) {
 cnt_2 = 0;
-++idx;
-idx = idx % 10;
+if(++cnt_3 >= 50) {
+cnt_3 = 0;
+i = i + 1;
+if(i >= 10) i = 0;
+}
 }
 
 if(++cnt_1 == gate1) {
 LATBbits.LATB0 = !LATBbits.LATB0;
+cnt_1 = 0;
 }
 }
 
@@ -8992,18 +8997,17 @@ void main(void) {
 OSCCON = 0b01101011;
 Init();
 Enable_INT();
-Pull_Up();
 
-# 90
+# 95
 TRISB = 0b11111100;
 LATBbits.LATB0 = 0;
 
 
 TMR1H = 0xff;
-TMR1L = 0xf0;
+TMR1L = 0xfe;
 T1CONbits.TMR1ON = 1;
 
-# 108
+# 113
 }
 
 

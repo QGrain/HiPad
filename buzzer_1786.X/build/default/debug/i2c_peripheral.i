@@ -1,5 +1,5 @@
 
-# 1 "main.c"
+# 1 "i2c_peripheral.c"
 
 # 18 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -8910,144 +8910,53 @@ void iicPeripheralInterruptTx(unsigned char data[], unsigned char size);
 extern unsigned char IICAddr;
 unsigned char iicPeripheralInterruptRx();
 
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
+# 3 "i2c_peripheral.c"
+unsigned char IICAddr;
 
-# 38 "init.h"
-void initHardware(bool isCenterBoard, unsigned char iicAddr);
-void initIICCenterMode();
-void initIICPeripheralMode(unsigned char iicAddr);
-void initBluetoothUART();
-void initFunctionSelectModule();
+void iicPeripheralInterruptTx(unsigned char data[], unsigned char size) {
+SSPCONbits.CKP = 0;
+unsigned char i = 0;
+unsigned char tmp;
 
-# 13 "main.c"
-unsigned int cnt_1 = 0;
-unsigned int cnt_2 = 0;
-unsigned int cnt_3 = 0;
+if(SSPSTATbits.R_nW == 1) {
 
-unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
+PIR1bits.SSP1IF = 0;
+tmp = SSP1BUF;
+SSPSTATbits.BF = 0;
+SSP1BUF = data[i];
+SSPCONbits.CKP = 1;
+while(PIR1bits.SSP1IF == 0);
+PIR1bits.SSP1IF = 0;
+i++;
 
-unsigned int i = 0;
-unsigned char count = 60;
-unsigned char recvData;
-
-void Init();
-void Enable_INT();
-void Pull_Up();
-void delay_time(int cnt);
-void sound(int gate1);
-void i2c_isr();
-
-void interrupt irs_routine(void)
-{
-if(PIR1bits.TMR1IF == 1) {
-sound(voice[i]);
-
-PIR1bits.TMR1IF = 0;
-TMR1H = 0xff;
-TMR1L = 0xfe;
+while(SSPCON2bits.ACKSTAT == 0) {
+SSP1BUF = data[i];
+SSPCONbits.CKP = 1;
+while(PIR1bits.SSP1IF == 0);
+if (i + 1 < size) {
+i++;
 }
-if(PIR1bits.TMR2IF == 1) {
-sound(voice[i]);
-
-PIR1bits.TMR2IF = 0;
-TMR2 = 0xfe;
+PIR1bits.SSP1IF = 0;
 }
-if(PIR1bits.SSP1IF == 1){
-i2c_isr();
-}
-return;
-}
-
-void sound(int gate1)
-{
-if(++cnt_2 >= 50) {
-cnt_2 = 0;
-if(++cnt_3 >= 50) {
-cnt_3 = 0;
-i = i + 1;
-if(i >= 10) i = 0;
-}
-}
-
-if(++cnt_1 == gate1) {
-LATBbits.LATB0 = !LATBbits.LATB0;
-cnt_1 = 0;
-}
-}
-
-void i2c_isr() {
-
-
-if (SSPSTATbits.D_nA == 0 && SSPSTATbits.R_nW == 0) {
-
-recvData = iicPeripheralInterruptRx();
-count++;
-
-} else if (SSPSTATbits.D_nA == 0 && SSPSTATbits.R_nW == 1) {
-
-unsigned char data = 2;
-iicPeripheralInterruptTx(data, 1);
-count++;
 }
 PIR1bits.SSP1IF = 0;
 }
 
-void main(void) {
-OSCCON = 0b01101011;
-Init();
-Enable_INT();
 
-# 95
-TRISB = 0b11111100;
-LATBbits.LATB0 = 0;
-
-
-TMR1H = 0xff;
-TMR1L = 0xfe;
-T1CONbits.TMR1ON = 1;
-
-# 113
-}
-
-
-void delay_time(int cnt)
-{
-while(--cnt > 0);
-}
-
-void Init()
-{
-
-TRISA = 0;
-ANSELA = 0;
-
-TRISB = 0;
-ANSELB = 0;
-
-TRISCbits.TRISC3 = 0;
-TRISCbits.TRISC4 = 0;
-
-T1CON = 0b01000000;
-
-
-return;
-}
-
-void Enable_INT()
-{
-GIE = 1;
-PEIE = 1;
-
-PIR1 = 0;
-PIE1 = 0;
-PIE1bits.TMR1IE = 1;
-
-return;
-}
-
-void Pull_Up()
-{
-OPTION_REGbits.nWPUEN = 0;
-return;
+unsigned char iicPeripheralInterruptRx() {
+PIR1bits.SSP1IF = 0;
+unsigned char tmp;
+tmp = SSP1BUF;
+SSPSTATbits.BF = 0;
+SSPCONbits.CKP = 1;
+unsigned char data = 0;
+while (SSPSTATbits.BF == 0);
+SSPCON2bits.ACKDT = 1;
+SSPCON2bits.ACKEN = 1;
+while (!PIR1bits.SSP1IF);
+PIR1bits.SSP1IF = 0;
+data = SSP1BUF;
+SSPCONbits.CKP = 1;
+PIR1bits.SSP1IF = 0;
+return data;
 }
