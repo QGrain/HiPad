@@ -17,17 +17,17 @@
 [v _iicPeripheralInterruptRx iicPeripheralInterruptRx `(uc  1 e 1 0 ]
 "45 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\init.c
 [v _initIICPeripheralMode initIICPeripheralMode `(v  1 e 1 0 ]
-"30 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
+"54 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 [v _irs_routine irs_routine `II(v  1 e 1 0 ]
-"51
+"75
 [v _sound sound `(v  1 e 1 0 ]
-"68
+"92
 [v _i2c_isr i2c_isr `(v  1 e 1 0 ]
-"85
+"109
 [v _main main `(v  1 e 1 0 ]
-"121
+"145
 [v _Init Init `(v  1 e 1 0 ]
-"139
+"163
 [v _Enable_INT Enable_INT `(v  1 e 1 0 ]
 [s S458 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
@@ -163,7 +163,7 @@
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2363
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S55 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S43 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -173,10 +173,10 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2383
-[s S64 . 1 `uc 1 LATB 1 0 :8:0 
+[s S52 . 1 `uc 1 LATB 1 0 :8:0 
 ]
-[u S66 . 1 `S55 1 . 1 0 `S64 1 . 1 0 ]
-[v _LATBbits LATBbits `VES66  1 e 1 @269 ]
+[u S54 . 1 `S43 1 . 1 0 `S52 1 . 1 0 ]
+[v _LATBbits LATBbits `VES54  1 e 1 @269 ]
 "2433
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "3533
@@ -237,50 +237,50 @@
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
 "3 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\i2c_peripheral.c
 [v _IICAddr IICAddr `uc  1 e 1 0 ]
-"13 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
+"36 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 [v _cnt_1 cnt_1 `ui  1 e 2 0 ]
-"14
+"37
 [v _cnt_2 cnt_2 `ui  1 e 2 0 ]
-"15
+"38
 [v _cnt_3 cnt_3 `ui  1 e 2 0 ]
-"16
+"41
 [v _voice voice `[10]ui  1 e 20 0 ]
-"19
+"43
 [v _i i `ui  1 e 2 0 ]
-"20
+"44
 [v _count count `uc  1 e 1 0 ]
-"21
+"45
 [v _recvData recvData `uc  1 e 1 0 ]
-"85
+"109
 [v _main main `(v  1 e 1 0 ]
-{
-"113
-} 0
-"121
-[v _Init Init `(v  1 e 1 0 ]
 {
 "137
 } 0
-"139
+"145
+[v _Init Init `(v  1 e 1 0 ]
+{
+"161
+} 0
+"163
 [v _Enable_INT Enable_INT `(v  1 e 1 0 ]
 {
-"149
+"173
 } 0
-"30
+"54
 [v _irs_routine irs_routine `II(v  1 e 1 0 ]
 {
-"49
+"73
 } 0
-"51
+"75
 [v _sound sound `(v  1 e 1 0 ]
 {
 [v sound@gate1 gate1 `i  1 p 2 0 ]
-"66
+"90
 } 0
-"68
+"92
 [v _i2c_isr i2c_isr `(v  1 e 1 0 ]
 {
-"83
+"107
 } 0
 "5 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\i2c_peripheral.c
 [v _iicPeripheralInterruptTx iicPeripheralInterruptTx `(v  1 e 1 0 ]

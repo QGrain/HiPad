@@ -8924,8 +8924,8 @@ void initFunctionSelectModule();
 unsigned int cnt_1 = 0;
 unsigned int cnt_2 = 0;
 unsigned int cnt_3 = 0;
+unsigned int voice[10] = {85, 80, 76, 72, 68, 64, 60, 57, 54, 51};
 
-unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
 
 unsigned int i = 0;
 unsigned char count = 60;

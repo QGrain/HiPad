@@ -5,6 +5,29 @@
  * Created on 2020年8月23日, 上午10:22
  */
 
+// CONFIG1
+#pragma config FOSC = INTOSC    // Oscillator Selection (INTOSC oscillator: I/O function on CLKIN pin)
+#pragma config WDTE = ON        // Watchdog Timer Enable (WDT enabled)
+#pragma config PWRTE = OFF      // Power-up Timer Enable (PWRT disabled)
+#pragma config MCLRE = ON       // MCLR Pin Function Select (MCLR/VPP pin function is MCLR)
+#pragma config CP = OFF         // Flash Program Memory Code Protection (Program memory code protection is disabled)
+#pragma config CPD = OFF        // Data Memory Code Protection (Data memory code protection is disabled)
+#pragma config BOREN = ON       // Brown-out Reset Enable (Brown-out Reset enabled)
+#pragma config CLKOUTEN = OFF   // Clock Out Enable (CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin)
+#pragma config IESO = ON        // Internal/External Switchover (Internal/External Switchover mode is enabled)
+#pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable (Fail-Safe Clock Monitor is enabled)
+
+// CONFIG2
+#pragma config WRT = OFF        // Flash Memory Self-Write Protection (Write protection off)
+#pragma config VCAPEN = OFF     // Voltage Regulator Capacitor Enable bit (Vcap functionality is disabled on RA6.)
+#pragma config PLLEN = ON       // PLL Enable (4x PLL enabled)
+#pragma config STVREN = ON      // Stack Overflow/Underflow Reset Enable (Stack Overflow or Underflow will cause a Reset)
+#pragma config BORV = LO        // Brown-out Reset Voltage Selection (Brown-out Reset Voltage (Vbor), low trip point selected.)
+#pragma config LPBOR = OFF      // Low Power Brown-Out Reset Enable Bit (Low power brown-out is disabled)
+#pragma config LVP = ON         // Low-Voltage Programming Enable (Low-voltage programming enabled)
+
+// #pragma config statements should precede project file includes.
+// Use project enums instead of #define for ON and OFF.
 
 #include <xc.h>
 #include "i2c_peripheral.h"
@@ -13,8 +36,9 @@
 unsigned int cnt_1 = 0;
 unsigned int cnt_2 = 0;
 unsigned int cnt_3 = 0;
- unsigned int voice[10] = {85, 80, 76, 72, 68, 64, 60, 57, 54, 51};
-//unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
+//unsigned int voice[10] = {170, 160, 152, 144, 136, 128, 120, 114, 108, 102};
+// unsigned int voice[10] = {85, 80, 76, 72, 68, 64, 60, 57, 54, 51};
+unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
                         //C4, D4, E4, F4, G4, A4, B4, C5, D5, E5
 unsigned int i = 0;
 unsigned char count = 60;
@@ -30,11 +54,11 @@ void i2c_isr();
 void interrupt irs_routine(void)
 {
     if(PIR1bits.TMR1IF == 1) {
-        sound(voice[i]);
-        // LATBbits.LATB0 = !LATBbits.LATB0;
+//        sound(voice[i]);
+        LATBbits.LATB0 = !LATBbits.LATB0;
         PIR1bits.TMR1IF = 0;
         TMR1H = 0xff;
-        TMR1L = 0xfe;
+        TMR1L = 0xf0;
     }
     if(PIR1bits.TMR2IF == 1) {
         sound(voice[i]);
@@ -50,9 +74,9 @@ void interrupt irs_routine(void)
 
 void sound(int gate1)
 {
-   if(++cnt_2 >= 50) {
+   if(++cnt_2 >= 100) {
         cnt_2 = 0;
-        if(++cnt_3 >= 50) {
+        if(++cnt_3 >= 100) {
             cnt_3 = 0;
             i = i + 1;
             if(i >= 10) i = 0;

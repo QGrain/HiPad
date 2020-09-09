@@ -1,6 +1,28 @@
 
 # 1 "main.c"
 
+
+# 9
+#pragma config FOSC = INTOSC
+#pragma config WDTE = ON
+#pragma config PWRTE = OFF
+#pragma config MCLRE = ON
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = ON
+#pragma config CLKOUTEN = OFF
+#pragma config IESO = ON
+#pragma config FCMEN = ON
+
+
+#pragma config WRT = OFF
+#pragma config VCAPEN = OFF
+#pragma config PLLEN = ON
+#pragma config STVREN = ON
+#pragma config BORV = LO
+#pragma config LPBOR = OFF
+#pragma config LVP = ON
+
 # 18 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -8920,12 +8942,13 @@ void initIICPeripheralMode(unsigned char iicAddr);
 void initBluetoothUART();
 void initFunctionSelectModule();
 
-# 13 "main.c"
+# 36 "main.c"
 unsigned int cnt_1 = 0;
 unsigned int cnt_2 = 0;
 unsigned int cnt_3 = 0;
-unsigned int voice[10] = {85, 80, 76, 72, 68, 64, 60, 57, 54, 51};
 
+
+unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
 
 unsigned int i = 0;
 unsigned char count = 60;
@@ -8941,11 +8964,11 @@ void i2c_isr();
 void interrupt irs_routine(void)
 {
 if(PIR1bits.TMR1IF == 1) {
-sound(voice[i]);
 
+LATBbits.LATB0 = !LATBbits.LATB0;
 PIR1bits.TMR1IF = 0;
 TMR1H = 0xff;
-TMR1L = 0xfe;
+TMR1L = 0xf0;
 }
 if(PIR1bits.TMR2IF == 1) {
 sound(voice[i]);
@@ -8961,9 +8984,9 @@ return;
 
 void sound(int gate1)
 {
-if(++cnt_2 >= 50) {
+if(++cnt_2 >= 100) {
 cnt_2 = 0;
-if(++cnt_3 >= 50) {
+if(++cnt_3 >= 100) {
 cnt_3 = 0;
 i = i + 1;
 if(i >= 10) i = 0;
@@ -8998,7 +9021,7 @@ OSCCON = 0b01101011;
 Init();
 Enable_INT();
 
-# 95
+# 119
 TRISB = 0b11111100;
 LATBbits.LATB0 = 0;
 
@@ -9007,7 +9030,7 @@ TMR1H = 0xff;
 TMR1L = 0xfe;
 T1CONbits.TMR1ON = 1;
 
-# 113
+# 137
 }
 
 

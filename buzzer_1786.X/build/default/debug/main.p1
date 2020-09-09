@@ -5689,23 +5689,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 0 `i `ui
 ]
 [; ;main.c: 15: unsigned int cnt_3 = 0;
-"17
+"16
 [v _voice `ui ~T0 @X0 -> 10 `i e ]
 [i _voice
 :U ..
--> -> 43 `i `ui
--> -> 40 `i `ui
--> -> 38 `i `ui
--> -> 36 `i `ui
--> -> 34 `i `ui
--> -> 32 `i `ui
--> -> 30 `i `ui
--> -> 29 `i `ui
--> -> 27 `i `ui
--> -> 25 `i `ui
+-> -> 85 `i `ui
+-> -> 80 `i `ui
+-> -> 76 `i `ui
+-> -> 72 `i `ui
+-> -> 68 `i `ui
+-> -> 64 `i `ui
+-> -> 60 `i `ui
+-> -> 57 `i `ui
+-> -> 54 `i `ui
+-> -> 51 `i `ui
 ..
 ]
-[; ;main.c: 17: unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
+[; ;main.c: 16: unsigned int voice[10] = {85, 80, 76, 72, 68, 64, 60, 57, 54, 51};
 "19
 [v _i `ui ~T0 @X0 1 e ]
 [i _i

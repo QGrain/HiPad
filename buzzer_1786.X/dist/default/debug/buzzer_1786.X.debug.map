@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/debug\buzzer_1786.X.debug.sym \
   --cmf=dist/default/debug\buzzer_1786.X.debug.cmf -z -Q16F1786 \
-  -oC:\Users\Zhiyu\AppData\Local\Temp\s93k.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Zhiyu\AppData\Local\Temp\s7f8.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/debug/buzzer_1786.X.debug.map -E1 -ver=XC8 --acfsm=1493 \
   -ASTACK=0201Bh-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -32,7 +32,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Zhiyu\AppData\Local\Temp\s93k.o \
+  C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o \
   dist/default/debug\buzzer_1786.X.debug.o 
 
 Object code version is 3.11
@@ -42,7 +42,7 @@ Machine type is 16F1786
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
+C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
                 end_init                             38       38        2        8       0
                 reset_vec                             0        0        2        0       0
 dist/default/debug\buzzer_1786.X.debug.o

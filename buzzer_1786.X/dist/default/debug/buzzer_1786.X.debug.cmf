@@ -29,7 +29,7 @@ idataBANK0 CODE 0 152 152 14 2
 dataBANK0 BANK0 1 20 20 14 1
 dataCOMMON COMMON 1 7D 7D 1 1
 bssCOMMON COMMON 1 7A 7A 3 1
-$C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
+$C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 38 38 2 2
 # %UNUSED Section
@@ -125,34 +125,34 @@ STRING 184-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\buzzer_1786.X.debug.o
-3A cinit CODE >2465:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-3A cinit CODE >2468:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-3A cinit CODE >2524:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-3D cinit CODE >2525:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-3E cinit CODE >2529:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-3F cinit CODE >2530:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-40 cinit CODE >2531:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-41 cinit CODE >2532:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-42 cinit CODE >2533:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-43 cinit CODE >2534:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-44 cinit CODE >2535:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-45 cinit CODE >2536:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-46 cinit CODE >2537:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-47 cinit CODE >2538:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-4A cinit CODE >2543:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-4B cinit CODE >2544:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-4C cinit CODE >2545:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-4D cinit CODE >2549:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-4E cinit CODE >2550:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-4F cinit CODE >2551:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-50 cinit CODE >2552:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-51 cinit CODE >2553:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-52 cinit CODE >2554:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-53 cinit CODE >2555:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-54 cinit CODE >2561:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-54 cinit CODE >2563:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-55 cinit CODE >2564:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-56 cinit CODE >2565:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
+3A cinit CODE >2465:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+3A cinit CODE >2468:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+3A cinit CODE >2524:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+3D cinit CODE >2525:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+3E cinit CODE >2529:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+3F cinit CODE >2530:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+40 cinit CODE >2531:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+41 cinit CODE >2532:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+42 cinit CODE >2533:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+43 cinit CODE >2534:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+44 cinit CODE >2535:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+45 cinit CODE >2536:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+46 cinit CODE >2537:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+47 cinit CODE >2538:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+4A cinit CODE >2543:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+4B cinit CODE >2544:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+4C cinit CODE >2545:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+4D cinit CODE >2549:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+4E cinit CODE >2550:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+4F cinit CODE >2551:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+50 cinit CODE >2552:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+51 cinit CODE >2553:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+52 cinit CODE >2554:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+53 cinit CODE >2555:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+54 cinit CODE >2561:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+54 cinit CODE >2563:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+55 cinit CODE >2564:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+56 cinit CODE >2565:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
 4 intentry CODE >30:D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 6 intentry CODE >32:D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 B intentry CODE >33:D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
@@ -251,14 +251,14 @@ F6 text4 CODE >66:D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 14D maintext CODE >100:D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 14F maintext CODE >101:D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 150 maintext CODE >113:D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
-17D inittext CODE >2513:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-17D inittext CODE >2514:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-17E inittext CODE >2515:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-17E inittext CODE >2516:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-17F inittext CODE >2517:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-180 inittext CODE >2518:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-181 inittext CODE >2519:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
-182 inittext CODE >2520:C:\Users\Zhiyu\AppData\Local\Temp\s93k.s
+17D inittext CODE >2513:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+17D inittext CODE >2514:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+17E inittext CODE >2515:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+17E inittext CODE >2516:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+17F inittext CODE >2517:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+180 inittext CODE >2518:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+181 inittext CODE >2519:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
+182 inittext CODE >2520:C:\Users\Zhiyu\AppData\Local\Temp\s7f8.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -292,10 +292,10 @@ _PEIE 5E 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 _PIE1 91 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 _PIR1 11 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 _TMR2 1A 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
-___sp 0 0 STACK 2 stack C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
+___sp 0 0 STACK 2 stack C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
 _main 278 0 CODE 0 maintext dist/default/debug\buzzer_1786.X.debug.o
 btemp 7E 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
-start 70 0 CODE 0 init C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
+start 70 0 CODE 0 init C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
 __size_of_Init 0 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 __size_of_main 0 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
@@ -305,12 +305,12 @@ _OPTION_REGbits 95 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 99 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 wtemp0 7E 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
@@ -326,8 +326,8 @@ __LdataCOMMON 0 0 ABS 0 dataCOMMON -
 _i2c_isr 1EE 0 CODE 0 text5 dist/default/debug\buzzer_1786.X.debug.o
 iicPeripheralInterruptTx@i 77 0 COMMON 1 cstackCOMMON dist/default/debug\buzzer_1786.X.debug.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 23EF 0 ABS 0 - C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
-___stacklo 201B 0 ABS 0 - C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
+___stackhi 23EF 0 ABS 0 - C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
+___stacklo 201B 0 ABS 0 - C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 __size_of_sound 0 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 start_initialization 74 0 CODE 0 cinit dist/default/debug\buzzer_1786.X.debug.o
@@ -338,7 +338,7 @@ _TRISCbits 8E 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
 _irs_routine 8 0 CODE 0 intentry dist/default/debug\buzzer_1786.X.debug.o
 __pcstackBANK0 0 0 BANK0 1 cstackBANK0 dist/default/debug\buzzer_1786.X.debug.o
 _SSPADD 212 0 ABS 0 - dist/default/debug\buzzer_1786.X.debug.o
-___int_sp 0 0 STACK 2 stack C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
+___int_sp 0 0 STACK 2 stack C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -479,7 +479,7 @@ __end_of_iicPeripheralInterruptTx 152 0 CODE 0 text6 dist/default/debug\buzzer_1
 __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 _Enable_INT 2EA 0 CODE 0 text2 dist/default/debug\buzzer_1786.X.debug.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Zhiyu\AppData\Local\Temp\s93k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Zhiyu\AppData\Local\Temp\s7f8.o
 iicPeripheralInterruptRx@data 72 0 COMMON 1 cstackCOMMON dist/default/debug\buzzer_1786.X.debug.o
 __pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/debug\buzzer_1786.X.debug.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -

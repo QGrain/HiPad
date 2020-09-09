@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Tue Sep 08 20:01:51 2020
+                                                                                               Wed Sep 09 10:28:55 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	16F1786
@@ -1196,25 +1196,25 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1182  0152                     __pidataBANK0:	
   1183                           
   1184                           ;initializer for _voice
-  1185  0152  342B               	retlw	43
+  1185  0152  3455               	retlw	85
   1186  0153  3400               	retlw	0
-  1187  0154  3428               	retlw	40
+  1187  0154  3450               	retlw	80
   1188  0155  3400               	retlw	0
-  1189  0156  3426               	retlw	38
+  1189  0156  344C               	retlw	76
   1190  0157  3400               	retlw	0
-  1191  0158  3424               	retlw	36
+  1191  0158  3448               	retlw	72
   1192  0159  3400               	retlw	0
-  1193  015A  3422               	retlw	34
+  1193  015A  3444               	retlw	68
   1194  015B  3400               	retlw	0
-  1195  015C  3420               	retlw	32
+  1195  015C  3440               	retlw	64
   1196  015D  3400               	retlw	0
-  1197  015E  341E               	retlw	30
+  1197  015E  343C               	retlw	60
   1198  015F  3400               	retlw	0
-  1199  0160  341D               	retlw	29
+  1199  0160  3439               	retlw	57
   1200  0161  3400               	retlw	0
-  1201  0162  341B               	retlw	27
+  1201  0162  3436               	retlw	54
   1202  0163  3400               	retlw	0
-  1203  0164  3419               	retlw	25
+  1203  0164  3433               	retlw	51
   1204  0165  3400               	retlw	0
   1205  000B                     _INTCONbits	set	11
   1206  000E                     _PORTC	set	14
@@ -2662,7 +2662,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Tue Sep 08 20:01:51 2020
+Symbol Table                                                                                   Wed Sep 09 10:28:55 2020
 
                                 _i 007A   __end_of_iicPeripheralInterruptRx 013C  
  __end_of_iicPeripheralInterruptTx 00A9                        _SSPSTATbits 0214  
