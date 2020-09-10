@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\light_18854.X.production.sym \
   --cmf=dist/default/production\light_18854.X.production.cmf -z -Q16F18854 \
-  -oC:\Users\Zhiyu\AppData\Local\Temp\s9f0.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Zhiyu\AppData\Local\Temp\seh0.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/light_18854.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=02026h-021EFh -pstack=STACK -ACODE=00h-07FFhx2 \
   -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 \
@@ -30,7 +30,7 @@ Linker command line:
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o \
+  C:\Users\Zhiyu\AppData\Local\Temp\seh0.o \
   dist/default/production\light_18854.X.production.o 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Machine type is 16F18854
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
+C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        3    1000E       0
@@ -797,7 +797,7 @@ Total ram usage:        3 bytes
 
  *************** function _set_pps *****************
  Defined at:
-		line 208 in file "main.c"
+		line 189 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -855,7 +855,7 @@ Total ram usage:        0 bytes
 
  *************** function _set_eusart *****************
  Defined at:
-		line 191 in file "main.c"
+		line 172 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -884,7 +884,7 @@ Total ram usage:        0 bytes
 
  *************** function _set_cwg *****************
  Defined at:
-		line 234 in file "main.c"
+		line 215 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -913,7 +913,7 @@ Total ram usage:        0 bytes
 
  *************** function _set_clc *****************
  Defined at:
-		line 260 in file "main.c"
+		line 241 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -980,7 +980,7 @@ Total ram usage:       14 bytes
 
  *************** function _turn_off_all *****************
  Defined at:
-		line 320 in file "main.c"
+		line 301 in file "main.c"
  Parameters:    Size  Location     Type
   num             2    6[COMMON] int 
  Auto vars:     Size  Location     Type
@@ -1040,7 +1040,7 @@ Total ram usage:        6 bytes
 
  *************** function _out_reset *****************
  Defined at:
-		line 315 in file "main.c"
+		line 296 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1070,7 +1070,7 @@ Total ram usage:        0 bytes
 
  *************** function _enable_out *****************
  Defined at:
-		line 281 in file "main.c"
+		line 262 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1099,7 +1099,7 @@ Total ram usage:        0 bytes
 
  *************** function _disable_out *****************
  Defined at:
-		line 301 in file "main.c"
+		line 282 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1129,7 +1129,7 @@ Total ram usage:        0 bytes
 
  *************** function _delay *****************
  Defined at:
-		line 294 in file "main.c"
+		line 275 in file "main.c"
  Parameters:    Size  Location     Type
   delay_time      2    0[COMMON] int 
  Auto vars:     Size  Location     Type

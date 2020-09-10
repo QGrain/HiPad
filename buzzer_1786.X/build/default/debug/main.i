@@ -1,6 +1,28 @@
 
 # 1 "main.c"
 
+
+# 9
+#pragma config FOSC = ECH
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = ON
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = OFF
+#pragma config CLKOUTEN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = ON
+
+
+#pragma config WRT = OFF
+#pragma config VCAPEN = OFF
+#pragma config PLLEN = ON
+#pragma config STVREN = ON
+#pragma config BORV = LO
+#pragma config LPBOR = OFF
+#pragma config LVP = ON
+
 # 18 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -8920,13 +8942,17 @@ void initIICPeripheralMode(unsigned char iicAddr);
 void initBluetoothUART();
 void initFunctionSelectModule();
 
-# 13 "main.c"
+# 36 "main.c"
 unsigned int cnt_1 = 0;
 unsigned int cnt_2 = 0;
 unsigned int cnt_3 = 0;
-unsigned int voice[10] = {85, 80, 76, 72, 68, 64, 60, 57, 54, 51};
 
 
+unsigned int voice[17] = {64, 61, 57, 54, 51, 48, 46, 43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
+
+
+unsigned int book[17] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
+unsigned int time[17] = {2, 2, 2, 2, 4, 4, 2, 2, 4, 4, 4, 2, 2, 2, 2, 4, 2};
 unsigned int i = 0;
 unsigned char count = 60;
 unsigned char recvData;
@@ -8941,36 +8967,31 @@ void i2c_isr();
 void interrupt irs_routine(void)
 {
 if(PIR1bits.TMR1IF == 1) {
-sound(voice[i]);
+sound(voice[book[i]]);
+
 
 PIR1bits.TMR1IF = 0;
 TMR1H = 0xff;
 TMR1L = 0xfe;
 }
-if(PIR1bits.TMR2IF == 1) {
-sound(voice[i]);
 
-PIR1bits.TMR2IF = 0;
-TMR2 = 0xfe;
-}
-if(PIR1bits.SSP1IF == 1){
-i2c_isr();
-}
+# 76
 return;
 }
 
 void sound(int gate1)
 {
-if(++cnt_2 >= 50) {
+if(++cnt_2 >= 200) {
 cnt_2 = 0;
-if(++cnt_3 >= 50) {
+if(++cnt_3 >= 100) {
 cnt_3 = 0;
 i = i + 1;
-if(i >= 10) i = 0;
+if(i >= 17) i = 0;
 }
 }
 
 if(++cnt_1 == gate1) {
+
 LATBbits.LATB0 = !LATBbits.LATB0;
 cnt_1 = 0;
 }
@@ -8994,11 +9015,11 @@ PIR1bits.SSP1IF = 0;
 }
 
 void main(void) {
-OSCCON = 0b01101011;
+OSCCON = 0b01111011;
 Init();
 Enable_INT();
 
-# 95
+# 124
 TRISB = 0b11111100;
 LATBbits.LATB0 = 0;
 
@@ -9007,7 +9028,7 @@ TMR1H = 0xff;
 TMR1L = 0xfe;
 T1CONbits.TMR1ON = 1;
 
-# 113
+# 142
 }
 
 
@@ -9042,6 +9063,7 @@ PEIE = 1;
 PIR1 = 0;
 PIE1 = 0;
 PIE1bits.TMR1IE = 1;
+
 
 return;
 }

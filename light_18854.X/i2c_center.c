@@ -56,11 +56,8 @@ void IIC_ACK(unsigned char ack) {
 
 void IIC_Start() {
     SSP1CON2bits.SEN = 1; // Start signal
-    while(!PIR3bits.SSP1IF);
-//    do {
-//        SSP1CON2bits.RSEN = 1;
-//    } while (!PIR1bits.SSP1IF); //等待启动结束,如果没启动，反复重启动
-    PIR3bits.SSP1IF = 0; //SSPIF标志清0
+    while(SSP1CON2bits.SEN == 1);
+    PIR3bits.SSP1IF = 0
 }
 
 void IIC_Stop() {

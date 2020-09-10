@@ -40,7 +40,7 @@ inittext CODE 0 59F 59F 6 2
 bssBANK0 BANK0 1 3C 3C A 1
 idataBANK0 CODE 0 61E 61E 10 2
 dataBANK0 BANK0 1 20 20 10 1
-$C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
+$C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 3 2
@@ -125,31 +125,31 @@ STRING 800-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\light_18854.X.production.o
-7E7 cinit CODE >4418:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7E7 cinit CODE >4421:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7E7 cinit CODE >4451:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7E8 cinit CODE >4452:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7E9 cinit CODE >4453:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7EA cinit CODE >4454:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7EB cinit CODE >4455:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7EC cinit CODE >4456:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7ED cinit CODE >4457:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7EE cinit CODE >4458:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7EF cinit CODE >4459:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7F0 cinit CODE >4460:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7F3 cinit CODE >4465:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7F4 cinit CODE >4466:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7F5 cinit CODE >4467:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7F6 cinit CODE >4468:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7F7 cinit CODE >4469:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7F8 cinit CODE >4470:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7F9 cinit CODE >4471:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7FA cinit CODE >4472:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7FB cinit CODE >4473:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7FC cinit CODE >4474:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7FD cinit CODE >4480:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7FD cinit CODE >4482:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-7FE cinit CODE >4483:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
+7E7 cinit CODE >4418:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7E7 cinit CODE >4421:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7E7 cinit CODE >4451:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7E8 cinit CODE >4452:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7E9 cinit CODE >4453:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7EA cinit CODE >4454:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7EB cinit CODE >4455:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7EC cinit CODE >4456:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7ED cinit CODE >4457:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7EE cinit CODE >4458:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7EF cinit CODE >4459:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7F0 cinit CODE >4460:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7F3 cinit CODE >4465:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7F4 cinit CODE >4466:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7F5 cinit CODE >4467:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7F6 cinit CODE >4468:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7F7 cinit CODE >4469:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7F8 cinit CODE >4470:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7F9 cinit CODE >4471:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7FA cinit CODE >4472:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7FB cinit CODE >4473:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7FC cinit CODE >4474:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7FD cinit CODE >4480:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7FD cinit CODE >4482:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+7FE cinit CODE >4483:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
 5B5 text20 CODE >57:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\i2c_center.c
 5B5 text20 CODE >58:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\i2c_center.c
 5B7 text20 CODE >59:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\i2c_center.c
@@ -211,39 +211,39 @@ $dist/default/production\light_18854.X.production.o
 5AA text14 CODE >139:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 5AC text14 CODE >141:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 5F1 text13 CODE >160:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5F1 text13 CODE >181:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5F3 text13 CODE >182:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5F5 text13 CODE >184:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5F7 text13 CODE >185:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5F9 text13 CODE >187:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5FB text13 CODE >188:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5FD text13 CODE >189:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-62E text12 CODE >294:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-62E text12 CODE >295:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-632 text12 CODE >296:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-633 text12 CODE >297:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-637 text12 CODE >296:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-637 text12 CODE >298:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-644 text12 CODE >299:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-60E text11 CODE >301:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-60E text11 CODE >302:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-615 text11 CODE >304:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-617 text11 CODE >305:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-618 text11 CODE >306:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-619 text11 CODE >309:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-61B text11 CODE >312:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-61D text11 CODE >313:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5C7 text10 CODE >281:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5C7 text10 CODE >283:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5C9 text10 CODE >284:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5CA text10 CODE >285:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5CB text10 CODE >288:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5CD text10 CODE >291:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5CF text10 CODE >292:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5D0 text9 CODE >315:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5D0 text9 CODE >316:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5D2 text9 CODE >317:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5D9 text9 CODE >318:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5F1 text13 CODE >162:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5F3 text13 CODE >163:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5F5 text13 CODE >165:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5F7 text13 CODE >166:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5F9 text13 CODE >168:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5FB text13 CODE >169:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5FD text13 CODE >170:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+62E text12 CODE >275:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+62E text12 CODE >276:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+632 text12 CODE >277:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+633 text12 CODE >278:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+637 text12 CODE >277:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+637 text12 CODE >279:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+644 text12 CODE >280:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+60E text11 CODE >282:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+60E text11 CODE >283:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+615 text11 CODE >285:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+617 text11 CODE >286:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+618 text11 CODE >287:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+619 text11 CODE >290:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+61B text11 CODE >293:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+61D text11 CODE >294:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5C7 text10 CODE >262:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5C7 text10 CODE >264:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5C9 text10 CODE >265:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5CA text10 CODE >266:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5CB text10 CODE >269:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5CD text10 CODE >272:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5CF text10 CODE >273:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5D0 text9 CODE >296:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5D0 text9 CODE >297:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5D2 text9 CODE >298:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5D9 text9 CODE >299:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 6CB text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 6CB text8 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 6CD text8 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
@@ -253,14 +253,14 @@ $dist/default/production\light_18854.X.production.o
 6DF text8 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 6E5 text8 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 6E9 text8 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-6EA text7 CODE >320:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6EA text7 CODE >321:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6F9 text7 CODE >322:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6FA text7 CODE >323:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6FF text7 CODE >324:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-701 text7 CODE >325:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-705 text7 CODE >322:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-712 text7 CODE >327:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6EA text7 CODE >301:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6EA text7 CODE >302:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6F9 text7 CODE >303:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6FA text7 CODE >304:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6FF text7 CODE >305:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+701 text7 CODE >306:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+705 text7 CODE >303:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+712 text7 CODE >308:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 73D text6 CODE >84:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 73D text6 CODE >85:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 742 text6 CODE >87:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
@@ -282,49 +282,49 @@ $dist/default/production\light_18854.X.production.o
 7DC text6 CODE >131:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 7E3 text6 CODE >132:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 7E6 text6 CODE >134:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-65D text5 CODE >260:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-65D text5 CODE >261:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-65F text5 CODE >264:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-661 text5 CODE >265:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-663 text5 CODE >266:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-665 text5 CODE >267:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-667 text5 CODE >269:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-669 text5 CODE >270:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-66A text5 CODE >271:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-66C text5 CODE >272:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-66D text5 CODE >273:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-66F text5 CODE >274:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-670 text5 CODE >275:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-672 text5 CODE >276:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-673 text5 CODE >278:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-675 text5 CODE >279:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6AD text4 CODE >234:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6AD text4 CODE >236:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6AF text4 CODE >237:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6B0 text4 CODE >239:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6B2 text4 CODE >240:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6B6 text4 CODE >242:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6B8 text4 CODE >243:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6BA text4 CODE >246:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6BB text4 CODE >247:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6BF text4 CODE >248:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6C3 text4 CODE >249:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6C4 text4 CODE >252:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6C5 text4 CODE >253:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6C7 text4 CODE >256:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6C9 text4 CODE >257:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6CA text4 CODE >258:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5E5 text3 CODE >191:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5E5 text3 CODE >193:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5E7 text3 CODE >194:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5E9 text3 CODE >195:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5EA text3 CODE >198:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5EB text3 CODE >199:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5EC text3 CODE >201:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5ED text3 CODE >202:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5EE text3 CODE >204:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5EF text3 CODE >205:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-5F0 text3 CODE >206:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+65D text5 CODE >241:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+65D text5 CODE >242:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+65F text5 CODE >245:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+661 text5 CODE >246:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+663 text5 CODE >247:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+665 text5 CODE >248:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+667 text5 CODE >250:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+669 text5 CODE >251:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+66A text5 CODE >252:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+66C text5 CODE >253:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+66D text5 CODE >254:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+66F text5 CODE >255:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+670 text5 CODE >256:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+672 text5 CODE >257:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+673 text5 CODE >259:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+675 text5 CODE >260:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6AD text4 CODE >215:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6AD text4 CODE >217:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6AF text4 CODE >218:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6B0 text4 CODE >220:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6B2 text4 CODE >221:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6B6 text4 CODE >223:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6B8 text4 CODE >224:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6BA text4 CODE >227:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6BB text4 CODE >228:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6BF text4 CODE >229:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6C3 text4 CODE >230:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6C4 text4 CODE >233:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6C5 text4 CODE >234:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6C7 text4 CODE >237:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6C9 text4 CODE >238:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6CA text4 CODE >239:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5E5 text3 CODE >172:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5E5 text3 CODE >174:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5E7 text3 CODE >175:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5E9 text3 CODE >176:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5EA text3 CODE >179:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5EB text3 CODE >180:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5EC text3 CODE >182:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5ED text3 CODE >183:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5EE text3 CODE >185:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5EF text3 CODE >186:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+5F0 text3 CODE >187:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 5AD text2 CODE >143:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 5AD text2 CODE >144:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 5AE text2 CODE >145:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
@@ -332,20 +332,20 @@ $dist/default/production\light_18854.X.production.o
 5B1 text2 CODE >148:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 5B2 text2 CODE >149:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 5B4 text2 CODE >158:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-690 text1 CODE >208:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-690 text1 CODE >210:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-693 text1 CODE >211:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-695 text1 CODE >214:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-698 text1 CODE >216:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-69B text1 CODE >217:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-69D text1 CODE >220:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6A0 text1 CODE >221:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6A2 text1 CODE >226:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6A4 text1 CODE >227:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6A6 text1 CODE >229:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6A9 text1 CODE >230:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6AA text1 CODE >231:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-6AC text1 CODE >232:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+690 text1 CODE >189:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+690 text1 CODE >191:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+693 text1 CODE >192:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+695 text1 CODE >195:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+698 text1 CODE >197:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+69B text1 CODE >198:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+69D text1 CODE >201:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6A0 text1 CODE >202:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6A2 text1 CODE >207:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6A4 text1 CODE >208:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6A6 text1 CODE >210:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6A9 text1 CODE >211:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6AA text1 CODE >212:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+6AC text1 CODE >213:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 713 maintext CODE >63:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 713 maintext CODE >64:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 716 maintext CODE >65:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
@@ -359,14 +359,14 @@ $dist/default/production\light_18854.X.production.o
 728 maintext CODE >75:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 731 maintext CODE >76:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 737 maintext CODE >79:D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
-59F inittext CODE >4440:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-59F inittext CODE >4441:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-5A0 inittext CODE >4442:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-5A0 inittext CODE >4443:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-5A1 inittext CODE >4444:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-5A2 inittext CODE >4445:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-5A3 inittext CODE >4446:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
-5A4 inittext CODE >4447:C:\Users\Zhiyu\AppData\Local\Temp\s9f0.s
+59F inittext CODE >4440:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+59F inittext CODE >4441:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+5A0 inittext CODE >4442:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+5A0 inittext CODE >4443:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+5A1 inittext CODE >4444:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+5A2 inittext CODE >4445:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+5A3 inittext CODE >4446:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
+5A4 inittext CODE >4447:C:\Users\Zhiyu\AppData\Local\Temp\seh0.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -397,11 +397,11 @@ _enable_out B8E 0 CODE 0 text10 dist/default/production\light_18854.X.production
 _LATA 16 0 ABS 0 - dist/default/production\light_18854.X.production.o
 _LATB 17 0 ABS 0 - dist/default/production\light_18854.X.production.o
 _LATC 18 0 ABS 0 - dist/default/production\light_18854.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
+___sp 0 0 STACK 2 stack C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
 _main E26 0 CODE 0 maintext dist/default/production\light_18854.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\light_18854.X.production.o
 _set_interrupt B5A 0 CODE 0 text2 dist/default/production\light_18854.X.production.o
-start 4 0 CODE 0 init C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
+start 4 0 CODE 0 init C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
 __size_of_lightup 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
 _OSCFRQbits 893 0 ABS 0 - dist/default/production\light_18854.X.production.o
@@ -414,12 +414,12 @@ _CWG1DBR 60E 0 ABS 0 - dist/default/production\light_18854.X.production.o
 _CWG1PPS EB1 0 ABS 0 - dist/default/production\light_18854.X.production.o
 _CLC1POLbits E11 0 ABS 0 - dist/default/production\light_18854.X.production.o
 _IIC_Stop B7C 0 CODE 0 text19 dist/default/production\light_18854.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
 __size_of_set_clc 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
 __size_of_set_cwg 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
 __size_of_set_pps 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
@@ -446,8 +446,8 @@ __end_of_lightup FCE 0 CODE 0 text6 dist/default/production\light_18854.X.produc
 __size_of_set_interrupt 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
 __size_of_disable_out 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
 _INTPPS E90 0 ABS 0 - dist/default/production\light_18854.X.production.o
-___stackhi 21EF 0 ABS 0 - C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
-___stacklo 2026 0 ABS 0 - C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
+___stackhi 21EF 0 ABS 0 - C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
+___stacklo 2026 0 ABS 0 - C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
 _recievedData 3C 0 BANK0 1 bssBANK0 dist/default/production\light_18854.X.production.o
 __end_of_IIC_Start B7C 0 CODE 0 text20 dist/default/production\light_18854.X.production.o
 __size_of_IIC_Start 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
@@ -473,7 +473,7 @@ _TX1REG 11A 0 ABS 0 - dist/default/production\light_18854.X.production.o
 centerWriteToPeripheral@peripheralAddr 72 0 COMMON 1 cstackCOMMON dist/default/production\light_18854.X.production.o
 _initHardware CEC 0 CODE 0 text15 dist/default/production\light_18854.X.production.o
 __end_of_init_oc B5A 0 CODE 0 text14 dist/default/production\light_18854.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
+___int_sp 0 0 STACK 2 stack C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -623,7 +623,7 @@ _CWG1CLKCONbits 60C 0 ABS 0 - dist/default/production\light_18854.X.production.o
 __end_of_initHardware D20 0 CODE 0 text15 dist/default/production\light_18854.X.production.o
 __size_of_IIC_Write_Byte 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Zhiyu\AppData\Local\Temp\s9f0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Zhiyu\AppData\Local\Temp\seh0.o
 __pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\light_18854.X.production.o
 __size_of___wmul 0 0 ABS 0 - dist/default/production\light_18854.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -

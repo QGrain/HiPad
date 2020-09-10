@@ -158,25 +158,6 @@ void set_interrupt() {
 }
 
 void init_port() {
-    // //RA0
-    // TRISAbits.TRISA0 = 1;
-    // ANSELAbits.ANSA0 = 0;
-    // WPUAbits.WPUA0 = 1;
-//    //RC1
-//    TRISCbits.TRISC1 = 0;
-//    ANSELCbits.ANSC1 = 0;
-//    //RC2
-//    TRISCbits.TRISC2 = 0;
-//    ANSELCbits.ANSC2 = 0;
-//    //RC3
-//    TRISCbits.TRISC3 = 0;
-//    ANSELCbits.ANSC3 = 0;
-//    //RC6
-//    TRISCbits.TRISC6 = 0;
-//    ANSELCbits.ANSC6 = 0;
-//    //RC7
-//    TRISCbits.TRISC7 = 0;
-//    ANSELCbits.ANSC7 = 0;
     //RB4 input
     TRISBbits.TRISB4 = 0;
     ANSELBbits.ANSB4 = 0;

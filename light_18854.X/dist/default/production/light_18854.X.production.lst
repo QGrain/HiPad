@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Tue Sep 08 16:53:12 2020
+                                                                                               Thu Sep 10 10:19:01 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	16F18854
@@ -2599,7 +2599,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2585  0690                     __ptext1:	
   2586 ;; *************** function _set_pps *****************
   2587 ;; Defined at:
-  2588 ;;		line 208 in file "main.c"
+  2588 ;;		line 189 in file "main.c"
   2589 ;; Parameters:    Size  Location     Type
   2590 ;;		None
   2591 ;; Auto vars:     Size  Location     Type
@@ -2634,57 +2634,57 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2620                           ; Regs used in _set_pps: [wreg]
   2621                           
   2622                           
-  2623                           ;main.c: 210:     RC7PPS = 0x11;
+  2623                           ;main.c: 191:     RC7PPS = 0x11;
   2624  0690  3011               	movlw	17
   2625  0691  003E               	movlb	30	; select bank30
   2626  0692  00A7               	movwf	39	;volatile
   2627                           
-  2628                           ;main.c: 211:     RC6PPS = 0x10;
+  2628                           ;main.c: 192:     RC6PPS = 0x10;
   2629  0693  3010               	movlw	16
   2630  0694  00A6               	movwf	38	;volatile
   2631                           
-  2632                           ;main.c: 214:     CWG1PPS = 0x16;
+  2632                           ;main.c: 195:     CWG1PPS = 0x16;
   2633  0695  3016               	movlw	22
   2634  0696  003D               	movlb	29	; select bank29
   2635  0697  00B1               	movwf	49	;volatile
   2636                           
-  2637                           ;main.c: 216:     RC1PPS = 0x05;
+  2637                           ;main.c: 197:     RC1PPS = 0x05;
   2638  0698  3005               	movlw	5
   2639  0699  003E               	movlb	30	; select bank30
   2640  069A  00A1               	movwf	33	;volatile
   2641                           
-  2642                           ;main.c: 217:     RC2PPS = 0x06;
+  2642                           ;main.c: 198:     RC2PPS = 0x06;
   2643  069B  3006               	movlw	6
   2644  069C  00A2               	movwf	34	;volatile
   2645                           
-  2646                           ;main.c: 220:     SSP1CLKPPS = 0x0c;
+  2646                           ;main.c: 201:     SSP1CLKPPS = 0x0c;
   2647  069D  300C               	movlw	12
   2648  069E  003D               	movlb	29	; select bank29
   2649  069F  00C5               	movwf	69	;volatile
   2650                           
-  2651                           ;main.c: 221:     SSP1DATPPS = 0x0d;
+  2651                           ;main.c: 202:     SSP1DATPPS = 0x0d;
   2652  06A0  300D               	movlw	13
   2653  06A1  00C6               	movwf	70	;volatile
   2654                           
-  2655                           ;main.c: 226:     CLCIN2PPS = 0x11;
+  2655                           ;main.c: 207:     CLCIN2PPS = 0x11;
   2656  06A2  3011               	movlw	17
   2657  06A3  00BD               	movwf	61	;volatile
   2658                           
-  2659                           ;main.c: 227:     CLCIN3PPS = 0x12;
+  2659                           ;main.c: 208:     CLCIN3PPS = 0x12;
   2660  06A4  3012               	movlw	18
   2661  06A5  00BE               	movwf	62	;volatile
   2662                           
-  2663                           ;main.c: 229:     RC3PPS = 0x01;
+  2663                           ;main.c: 210:     RC3PPS = 0x01;
   2664  06A6  3001               	movlw	1
   2665  06A7  003E               	movlb	30	; select bank30
   2666  06A8  00A3               	movwf	35	;volatile
   2667  06A9                     l1259:	
   2668                           
-  2669                           ;main.c: 230:     ANSELCbits.ANSC3 = 0;
+  2669                           ;main.c: 211:     ANSELCbits.ANSC3 = 0;
   2670  06A9  11CE               	bcf	78,3	;volatile
   2671  06AA                     l1261:	
   2672                           
-  2673                           ;main.c: 231:     TRISCbits.TRISC3 = 0;
+  2673                           ;main.c: 212:     TRISCbits.TRISC3 = 0;
   2674  06AA  0020               	movlb	0	; select bank0
   2675  06AB  1193               	bcf	19,3	;volatile
   2676  06AC                     l168:	
@@ -2755,7 +2755,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2741  05E5                     __ptext3:	
   2742 ;; *************** function _set_eusart *****************
   2743 ;; Defined at:
-  2744 ;;		line 191 in file "main.c"
+  2744 ;;		line 172 in file "main.c"
   2745 ;; Parameters:    Size  Location     Type
   2746 ;;		None
   2747 ;; Auto vars:     Size  Location     Type
@@ -2790,41 +2790,41 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2776                           ; Regs used in _set_eusart: [wreg+status,2]
   2777                           
   2778                           
-  2779                           ;main.c: 193:     BAUD1CONbits.BRG16 = 1;
+  2779                           ;main.c: 174:     BAUD1CONbits.BRG16 = 1;
   2780  05E5  0022               	movlb	2	; select bank2
   2781  05E6  159F               	bsf	31,3	;volatile
   2782  05E7                     l1265:	
   2783                           
-  2784                           ;main.c: 194:     SP1BRGL = 0xce;
+  2784                           ;main.c: 175:     SP1BRGL = 0xce;
   2785  05E7  30CE               	movlw	206
   2786  05E8  009B               	movwf	27	;volatile
   2787  05E9                     l1267:	
   2788                           
-  2789                           ;main.c: 195:     SP1BRGH = 0x00;
+  2789                           ;main.c: 176:     SP1BRGH = 0x00;
   2790  05E9  019C               	clrf	28	;volatile
   2791  05EA                     l1269:	
   2792                           
-  2793                           ;main.c: 198:     TX1STAbits.CSRC = 1;
+  2793                           ;main.c: 179:     TX1STAbits.CSRC = 1;
   2794  05EA  179E               	bsf	30,7	;volatile
   2795  05EB                     l1271:	
   2796                           
-  2797                           ;main.c: 199:     TX1STAbits.SYNC = 1;
+  2797                           ;main.c: 180:     TX1STAbits.SYNC = 1;
   2798  05EB  161E               	bsf	30,4	;volatile
   2799  05EC                     l1273:	
   2800                           
-  2801                           ;main.c: 201:     TX1STAbits.TX9 = 0;
+  2801                           ;main.c: 182:     TX1STAbits.TX9 = 0;
   2802  05EC  131E               	bcf	30,6	;volatile
   2803  05ED                     l1275:	
   2804                           
-  2805                           ;main.c: 202:     RC1STAbits.RX9 = 0;
+  2805                           ;main.c: 183:     RC1STAbits.RX9 = 0;
   2806  05ED  131D               	bcf	29,6	;volatile
   2807  05EE                     l1277:	
   2808                           
-  2809                           ;main.c: 204:     RC1STAbits.SPEN = 1;
+  2809                           ;main.c: 185:     RC1STAbits.SPEN = 1;
   2810  05EE  179D               	bsf	29,7	;volatile
   2811  05EF                     l1279:	
   2812                           
-  2813                           ;main.c: 205:     RC1STAbits.CREN = 0;
+  2813                           ;main.c: 186:     RC1STAbits.CREN = 0;
   2814  05EF  121D               	bcf	29,4	;volatile
   2815  05F0                     l165:	
   2816  05F0  0008               	return
@@ -2834,7 +2834,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2820  06AD                     __ptext4:	
   2821 ;; *************** function _set_cwg *****************
   2822 ;; Defined at:
-  2823 ;;		line 234 in file "main.c"
+  2823 ;;		line 215 in file "main.c"
   2824 ;; Parameters:    Size  Location     Type
   2825 ;;		None
   2826 ;; Auto vars:     Size  Location     Type
@@ -2869,69 +2869,69 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2855                           ; Regs used in _set_cwg: [wreg+status,2+status,0]
   2856                           
   2857                           
-  2858                           ;main.c: 236:     TRISCbits.TRISC1 = 1;
+  2858                           ;main.c: 217:     TRISCbits.TRISC1 = 1;
   2859  06AD  0020               	movlb	0	; select bank0
   2860  06AE  1493               	bsf	19,1	;volatile
   2861                           
-  2862                           ;main.c: 237:     TRISCbits.TRISC2 = 1;
+  2862                           ;main.c: 218:     TRISCbits.TRISC2 = 1;
   2863  06AF  1513               	bsf	19,2	;volatile
   2864                           
-  2865                           ;main.c: 239:     CWG1CON0bits.EN = 0;
+  2865                           ;main.c: 220:     CWG1CON0bits.EN = 0;
   2866  06B0  002C               	movlb	12	; select bank12
   2867  06B1  1390               	bcf	16,7	;volatile
   2868  06B2                     l1283:	
   2869                           
-  2870                           ;main.c: 240:     CWG1CON0bits.CWG1MODE = 0b100;
+  2870                           ;main.c: 221:     CWG1CON0bits.CWG1MODE = 0b100;
   2871  06B2  0810               	movf	16,w	;volatile
   2872  06B3  39F8               	andlw	-8
   2873  06B4  3804               	iorlw	4
   2874  06B5  0090               	movwf	16	;volatile
   2875  06B6                     l1285:	
   2876                           
-  2877                           ;main.c: 242:     CWG1DBR = 0x0C;
+  2877                           ;main.c: 223:     CWG1DBR = 0x0C;
   2878  06B6  300C               	movlw	12
   2879  06B7  008E               	movwf	14	;volatile
   2880  06B8                     l1287:	
   2881                           
-  2882                           ;main.c: 243:     CWG1DBF = 0x07;
+  2882                           ;main.c: 224:     CWG1DBF = 0x07;
   2883  06B8  3007               	movlw	7
   2884  06B9  008F               	movwf	15	;volatile
   2885  06BA                     l1289:	
   2886                           
-  2887                           ;main.c: 246:     CWG1AS0bits.REN = 0;
+  2887                           ;main.c: 227:     CWG1AS0bits.REN = 0;
   2888  06BA  1312               	bcf	18,6	;volatile
   2889                           
-  2890                           ;main.c: 247:     CWG1AS0bits.LSAC = 0b10;
+  2890                           ;main.c: 228:     CWG1AS0bits.LSAC = 0b10;
   2891  06BB  0812               	movf	18,w	;volatile
   2892  06BC  39F3               	andlw	-13
   2893  06BD  3808               	iorlw	8
   2894  06BE  0092               	movwf	18	;volatile
   2895                           
-  2896                           ;main.c: 248:     CWG1AS0bits.LSBD = 0b10;
+  2896                           ;main.c: 229:     CWG1AS0bits.LSBD = 0b10;
   2897  06BF  0812               	movf	18,w	;volatile
   2898  06C0  39CF               	andlw	-49
   2899  06C1  3820               	iorlw	32
   2900  06C2  0092               	movwf	18	;volatile
   2901  06C3                     l1291:	
   2902                           
-  2903                           ;main.c: 249:     CWG1AS1bits.AS0E = 0;
+  2903                           ;main.c: 230:     CWG1AS1bits.AS0E = 0;
   2904  06C3  1013               	bcf	19,0	;volatile
   2905  06C4                     l1293:	
   2906                           
-  2907                           ;main.c: 252:     CWG1CLKCONbits.CS = 0;
+  2907                           ;main.c: 233:     CWG1CLKCONbits.CS = 0;
   2908  06C4  100C               	bcf	12,0	;volatile
   2909                           
-  2910                           ;main.c: 253:     CWG1ISMbits.IS = 0b0000;
+  2910                           ;main.c: 234:     CWG1ISMbits.IS = 0b0000;
   2911  06C5  30F0               	movlw	-16
   2912  06C6  058D               	andwf	13,f	;volatile
   2913  06C7                     l1295:	
   2914                           
-  2915                           ;main.c: 256:     TRISCbits.TRISC1 = 0;
+  2915                           ;main.c: 237:     TRISCbits.TRISC1 = 0;
   2916  06C7  0020               	movlb	0	; select bank0
   2917  06C8  1093               	bcf	19,1	;volatile
   2918  06C9                     l1297:	
   2919                           
-  2920                           ;main.c: 257:     TRISCbits.TRISC2 = 0;
+  2920                           ;main.c: 238:     TRISCbits.TRISC2 = 0;
   2921  06C9  1113               	bcf	19,2	;volatile
   2922  06CA                     l171:	
   2923  06CA  0008               	return
@@ -2941,7 +2941,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2927  065D                     __ptext5:	
   2928 ;; *************** function _set_clc *****************
   2929 ;; Defined at:
-  2930 ;;		line 260 in file "main.c"
+  2930 ;;		line 241 in file "main.c"
   2931 ;; Parameters:    Size  Location     Type
   2932 ;;		None
   2933 ;; Auto vars:     Size  Location     Type
@@ -2976,61 +2976,61 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2962                           ; Regs used in _set_clc: [wreg+status,2+status,0]
   2963                           
   2964                           
-  2965                           ;main.c: 261:     CLC1CONbits.LC1EN = 0;
+  2965                           ;main.c: 242:     CLC1CONbits.LC1EN = 0;
   2966  065D  003C               	movlb	28	; select bank28
   2967  065E  1390               	bcf	16,7	;volatile
   2968  065F                     l1301:	
   2969                           
-  2970                           ;main.c: 264:     CLC1SEL0bits.LC1D1S = 0b000011;
+  2970                           ;main.c: 245:     CLC1SEL0bits.LC1D1S = 0b000011;
   2971  065F  3003               	movlw	3
   2972  0660  0092               	movwf	18	;volatile
   2973                           
-  2974                           ;main.c: 265:     CLC1SEL1bits.LC1D2S = 0b100100;
+  2974                           ;main.c: 246:     CLC1SEL1bits.LC1D2S = 0b100100;
   2975  0661  3024               	movlw	36
   2976  0662  0093               	movwf	19	;volatile
   2977                           
-  2978                           ;main.c: 266:     CLC1SEL2bits.LC1D3S = 0b000010;
+  2978                           ;main.c: 247:     CLC1SEL2bits.LC1D3S = 0b000010;
   2979  0663  3002               	movlw	2
   2980  0664  0094               	movwf	20	;volatile
   2981                           
-  2982                           ;main.c: 267:     CLC1SEL3bits.LC1D4S = 0b100101;
+  2982                           ;main.c: 248:     CLC1SEL3bits.LC1D4S = 0b100101;
   2983  0665  3025               	movlw	37
   2984  0666  0095               	movwf	21	;volatile
   2985                           
-  2986                           ;main.c: 269:     CLC1GLS0 = 0x02;
+  2986                           ;main.c: 250:     CLC1GLS0 = 0x02;
   2987  0667  3002               	movlw	2
   2988  0668  0096               	movwf	22	;volatile
   2989  0669                     l1303:	
   2990                           
-  2991                           ;main.c: 270:     CLC1POLbits.LC1G1POL = 1;
+  2991                           ;main.c: 251:     CLC1POLbits.LC1G1POL = 1;
   2992  0669  1411               	bsf	17,0	;volatile
   2993                           
-  2994                           ;main.c: 271:     CLC1GLS1 = 0x08;
+  2994                           ;main.c: 252:     CLC1GLS1 = 0x08;
   2995  066A  3008               	movlw	8
   2996  066B  0097               	movwf	23	;volatile
   2997  066C                     l1305:	
   2998                           
-  2999                           ;main.c: 272:     CLC1POLbits.LC1G2POL = 0;
+  2999                           ;main.c: 253:     CLC1POLbits.LC1G2POL = 0;
   3000  066C  1091               	bcf	17,1	;volatile
   3001                           
-  3002                           ;main.c: 273:     CLC1GLS2 = 0x22;
+  3002                           ;main.c: 254:     CLC1GLS2 = 0x22;
   3003  066D  3022               	movlw	34
   3004  066E  0098               	movwf	24	;volatile
   3005  066F                     l1307:	
   3006                           
-  3007                           ;main.c: 274:     CLC1POLbits.LC1G3POL = 1;
+  3007                           ;main.c: 255:     CLC1POLbits.LC1G3POL = 1;
   3008  066F  1511               	bsf	17,2	;volatile
   3009                           
-  3010                           ;main.c: 275:     CLC1GLS3 = 0x80;
+  3010                           ;main.c: 256:     CLC1GLS3 = 0x80;
   3011  0670  3080               	movlw	128
   3012  0671  0099               	movwf	25	;volatile
   3013  0672                     l1309:	
   3014                           
-  3015                           ;main.c: 276:     CLC1POLbits.LC1G4POL = 0;
+  3015                           ;main.c: 257:     CLC1POLbits.LC1G4POL = 0;
   3016  0672  1191               	bcf	17,3	;volatile
   3017  0673                     l1311:	
   3018                           
-  3019                           ;main.c: 278:     CLC1CONbits.LC1MODE = 0b000;
+  3019                           ;main.c: 259:     CLC1CONbits.LC1MODE = 0b000;
   3020  0673  30F8               	movlw	-8
   3021  0674  0590               	andwf	16,f	;volatile
   3022  0675                     l174:	
@@ -3320,7 +3320,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3306  06EA                     __ptext7:	
   3307 ;; *************** function _turn_off_all *****************
   3308 ;; Defined at:
-  3309 ;;		line 320 in file "main.c"
+  3309 ;;		line 301 in file "main.c"
   3310 ;; Parameters:    Size  Location     Type
   3311 ;;  num             2    6[COMMON] int 
   3312 ;; Auto vars:     Size  Location     Type
@@ -3356,7 +3356,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3342                           ; Regs used in _turn_off_all: [wreg+status,2+status,0+pclath+cstack]
   3343                           
   3344                           
-  3345                           ;main.c: 321:     int i = num * 3;
+  3345                           ;main.c: 302:     int i = num * 3;
   3346  06EA  0877               	movf	turn_off_all@num+1,w
   3347  06EB  00F1               	movwf	___wmul@multiplier+1
   3348  06EC  0876               	movf	turn_off_all@num,w
@@ -3371,7 +3371,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3357  06F7  0870               	movf	?___wmul,w
   3358  06F8  00F9               	movwf	turn_off_all@i
   3359                           
-  3360                           ;main.c: 322:     while (i > 0) {
+  3360                           ;main.c: 303:     while (i > 0) {
   3361  06F9  2F05               	goto	l1217
   3362  06FA                     l194:	
   3363  06FA  002E               	movlb	14	; select bank14
@@ -3383,19 +3383,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3369  06FF                     u310:	
   3370  06FF                     l1213:	
   3371                           
-  3372                           ;main.c: 324:         TX1REG = 0x00;
+  3372                           ;main.c: 305:         TX1REG = 0x00;
   3373  06FF  0022               	movlb	2	; select bank2
   3374  0700  019A               	clrf	26	;volatile
   3375  0701                     l1215:	
   3376                           
-  3377                           ;main.c: 325:         --i;
+  3377                           ;main.c: 306:         --i;
   3378  0701  30FF               	movlw	255
   3379  0702  07F9               	addwf	turn_off_all@i,f
   3380  0703  30FF               	movlw	255
   3381  0704  3DFA               	addwfc	turn_off_all@i+1,f
   3382  0705                     l1217:	
   3383                           
-  3384                           ;main.c: 322:     while (i > 0) {
+  3384                           ;main.c: 303:     while (i > 0) {
   3385  0705  087A               	movf	turn_off_all@i+1,w
   3386  0706  3A80               	xorlw	128
   3387  0707  00F8               	movwf	??_turn_off_all
@@ -3505,7 +3505,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3491  05D0                     __ptext9:	
   3492 ;; *************** function _out_reset *****************
   3493 ;; Defined at:
-  3494 ;;		line 315 in file "main.c"
+  3494 ;;		line 296 in file "main.c"
   3495 ;; Parameters:    Size  Location     Type
   3496 ;;		None
   3497 ;; Auto vars:     Size  Location     Type
@@ -3541,12 +3541,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3527                           ; Regs used in _out_reset: [wreg+status,2+status,0+pclath+cstack]
   3528                           
   3529                           
-  3530                           ;main.c: 316:     LATBbits.LATB5 = 0;
+  3530                           ;main.c: 297:     LATBbits.LATB5 = 0;
   3531  05D0  0020               	movlb	0	; select bank0
   3532  05D1  1297               	bcf	23,5	;volatile
   3533  05D2                     l1197:	
   3534                           
-  3535                           ;main.c: 317:     delay(88);
+  3535                           ;main.c: 298:     delay(88);
   3536  05D2  3058               	movlw	88
   3537  05D3  00F0               	movwf	delay@delay_time
   3538  05D4  3000               	movlw	0
@@ -3560,7 +3560,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3546  05C7                     __ptext10:	
   3547 ;; *************** function _enable_out *****************
   3548 ;; Defined at:
-  3549 ;;		line 281 in file "main.c"
+  3549 ;;		line 262 in file "main.c"
   3550 ;; Parameters:    Size  Location     Type
   3551 ;;		None
   3552 ;; Auto vars:     Size  Location     Type
@@ -3595,21 +3595,21 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3581                           ; Regs used in _enable_out: []
   3582                           
   3583                           
-  3584                           ;main.c: 283:     TX1STAbits.TXEN = 1;
+  3584                           ;main.c: 264:     TX1STAbits.TXEN = 1;
   3585  05C7  0022               	movlb	2	; select bank2
   3586  05C8  169E               	bsf	30,5	;volatile
   3587                           
-  3588                           ;main.c: 284:     TX1STAbits.SYNC = 1;
+  3588                           ;main.c: 265:     TX1STAbits.SYNC = 1;
   3589  05C9  161E               	bsf	30,4	;volatile
   3590                           
-  3591                           ;main.c: 285:     RC1STAbits.CREN = 0;
+  3591                           ;main.c: 266:     RC1STAbits.CREN = 0;
   3592  05CA  121D               	bcf	29,4	;volatile
   3593                           
-  3594                           ;main.c: 288:     CWG1CON0bits.EN = 1;
+  3594                           ;main.c: 269:     CWG1CON0bits.EN = 1;
   3595  05CB  002C               	movlb	12	; select bank12
   3596  05CC  1790               	bsf	16,7	;volatile
   3597                           
-  3598                           ;main.c: 291:     CLC1CONbits.LC1EN = 1;
+  3598                           ;main.c: 272:     CLC1CONbits.LC1EN = 1;
   3599  05CD  003C               	movlb	28	; select bank28
   3600  05CE  1790               	bsf	16,7	;volatile
   3601  05CF                     l177:	
@@ -3620,7 +3620,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3606  060E                     __ptext11:	
   3607 ;; *************** function _disable_out *****************
   3608 ;; Defined at:
-  3609 ;;		line 301 in file "main.c"
+  3609 ;;		line 282 in file "main.c"
   3610 ;; Parameters:    Size  Location     Type
   3611 ;;		None
   3612 ;; Auto vars:     Size  Location     Type
@@ -3656,7 +3656,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3642                           ; Regs used in _disable_out: [wreg+status,2+status,0+pclath+cstack]
   3643                           
   3644                           
-  3645                           ;main.c: 302:     delay(100);
+  3645                           ;main.c: 283:     delay(100);
   3646  060E  3064               	movlw	100
   3647  060F  00F0               	movwf	delay@delay_time
   3648  0610  3000               	movlw	0
@@ -3664,25 +3664,25 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3650  0612  3186  262E  3186   	fcall	_delay
   3651  0615                     l1201:	
   3652                           
-  3653                           ;main.c: 304:     TX1STAbits.TXEN = 0;
+  3653                           ;main.c: 285:     TX1STAbits.TXEN = 0;
   3654  0615  0022               	movlb	2	; select bank2
   3655  0616  129E               	bcf	30,5	;volatile
   3656  0617                     l1203:	
   3657                           
-  3658                           ;main.c: 305:     TX1STAbits.SYNC = 0;
+  3658                           ;main.c: 286:     TX1STAbits.SYNC = 0;
   3659  0617  121E               	bcf	30,4	;volatile
   3660  0618                     l1205:	
   3661                           
-  3662                           ;main.c: 306:     RC1STAbits.CREN = 1;
+  3662                           ;main.c: 287:     RC1STAbits.CREN = 1;
   3663  0618  161D               	bsf	29,4	;volatile
   3664  0619                     l1207:	
   3665                           
-  3666                           ;main.c: 309:     CWG1CON0bits.EN = 0;
+  3666                           ;main.c: 290:     CWG1CON0bits.EN = 0;
   3667  0619  002C               	movlb	12	; select bank12
   3668  061A  1390               	bcf	16,7	;volatile
   3669  061B                     l1209:	
   3670                           
-  3671                           ;main.c: 312:     CLC1CONbits.LC1EN = 0;
+  3671                           ;main.c: 293:     CLC1CONbits.LC1EN = 0;
   3672  061B  003C               	movlb	28	; select bank28
   3673  061C  1390               	bcf	16,7	;volatile
   3674  061D                     l186:	
@@ -3693,7 +3693,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3679  062E                     __ptext12:	
   3680 ;; *************** function _delay *****************
   3681 ;; Defined at:
-  3682 ;;		line 294 in file "main.c"
+  3682 ;;		line 275 in file "main.c"
   3683 ;; Parameters:    Size  Location     Type
   3684 ;;  delay_time      2    0[COMMON] int 
   3685 ;; Auto vars:     Size  Location     Type
@@ -3729,26 +3729,26 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3715                           ; Regs used in _delay: [wreg]
   3716                           
   3717                           
-  3718                           ;main.c: 295:     int i = delay_time;
+  3718                           ;main.c: 276:     int i = delay_time;
   3719  062E  0871               	movf	delay@delay_time+1,w
   3720  062F  00F4               	movwf	delay@i+1
   3721  0630  0870               	movf	delay@delay_time,w
   3722  0631  00F3               	movwf	delay@i
   3723                           
-  3724                           ;main.c: 296:     while (i > 0) {
+  3724                           ;main.c: 277:     while (i > 0) {
   3725  0632  2E37               	goto	l180
   3726  0633                     l1177:	
   3727                           
-  3728                           ;main.c: 297:         --i;
+  3728                           ;main.c: 278:         --i;
   3729  0633  30FF               	movlw	255
   3730  0634  07F3               	addwf	delay@i,f
   3731  0635  30FF               	movlw	255
   3732  0636  3DF4               	addwfc	delay@i+1,f
   3733  0637                     l180:	
-  3734                           ;main.c: 298:     }
+  3734                           ;main.c: 279:     }
   3735                           
   3736                           
-  3737                           ;main.c: 296:     while (i > 0) {
+  3737                           ;main.c: 277:     while (i > 0) {
   3738  0637  0874               	movf	delay@i+1,w
   3739  0638  3A80               	xorlw	128
   3740  0639  00F2               	movwf	??_delay
@@ -3808,28 +3808,28 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3794                           ; Regs used in _init_port: [status,2]
   3795                           
   3796                           
-  3797                           ;main.c: 181:     TRISBbits.TRISB4 = 0;
+  3797                           ;main.c: 162:     TRISBbits.TRISB4 = 0;
   3798  05F1  0020               	movlb	0	; select bank0
   3799  05F2  1212               	bcf	18,4	;volatile
   3800                           
-  3801                           ;main.c: 182:     ANSELBbits.ANSB4 = 0;
+  3801                           ;main.c: 163:     ANSELBbits.ANSB4 = 0;
   3802  05F3  003E               	movlb	30	; select bank30
   3803  05F4  1243               	bcf	67,4	;volatile
   3804                           
-  3805                           ;main.c: 184:     TRISBbits.TRISB5 = 0;
+  3805                           ;main.c: 165:     TRISBbits.TRISB5 = 0;
   3806  05F5  0020               	movlb	0	; select bank0
   3807  05F6  1292               	bcf	18,5	;volatile
   3808                           
-  3809                           ;main.c: 185:     ANSELBbits.ANSB5 = 0;
+  3809                           ;main.c: 166:     ANSELBbits.ANSB5 = 0;
   3810  05F7  003E               	movlb	30	; select bank30
   3811  05F8  12C3               	bcf	67,5	;volatile
   3812  05F9                     l1251:	
   3813                           
-  3814                           ;main.c: 187:     TRISC = 0;
+  3814                           ;main.c: 168:     TRISC = 0;
   3815  05F9  0020               	movlb	0	; select bank0
   3816  05FA  0193               	clrf	19	;volatile
   3817                           
-  3818                           ;main.c: 188:     ANSELC = 0;
+  3818                           ;main.c: 169:     ANSELC = 0;
   3819  05FB  003E               	movlb	30	; select bank30
   3820  05FC  01CE               	clrf	78	;volatile
   3821  05FD                     l162:	
@@ -4612,7 +4612,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Tue Sep 08 16:53:12 2020
+Symbol Table                                                                                   Thu Sep 10 10:19:01 2020
 
                   ___wmul@multiplicand 0072                                    l141 07AE  
                                   l302 05B7                                    l310 05C5  

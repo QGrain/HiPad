@@ -3,15 +3,15 @@
 
 
 # 9
-#pragma config FOSC = INTOSC
-#pragma config WDTE = ON
+#pragma config FOSC = ECH
+#pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
 #pragma config CP = OFF
 #pragma config CPD = OFF
-#pragma config BOREN = ON
+#pragma config BOREN = OFF
 #pragma config CLKOUTEN = OFF
-#pragma config IESO = ON
+#pragma config IESO = OFF
 #pragma config FCMEN = ON
 
 
@@ -8948,8 +8948,11 @@ unsigned int cnt_2 = 0;
 unsigned int cnt_3 = 0;
 
 
-unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
+unsigned int voice[18] = {0, 86, 76, 68, 64, 57, 51, 46, 43, 38, 34, 32, 29, 25, 22, 21, 19, 17};
 
+unsigned int book[23] = {6, 10, 12, 10, 6, 8, 6, 8, 6, 8, 10, 10, 9, 10, 8, 6, 10, 12, 13, 13, 13, 10, 12};
+
+unsigned int time[23] = {4, 2, 1, 2, 2, 4, 1, 1, 1, 1, 4, 1, 1, 1, 1, 4, 2, 1 ,2, 2, 2, 2, 4};
 unsigned int i = 0;
 unsigned char count = 60;
 unsigned char recvData;
@@ -8964,38 +8967,35 @@ void i2c_isr();
 void interrupt irs_routine(void)
 {
 if(PIR1bits.TMR1IF == 1) {
+sound(voice[book[i]]);
 
-LATBbits.LATB0 = !LATBbits.LATB0;
+
 PIR1bits.TMR1IF = 0;
 TMR1H = 0xff;
-TMR1L = 0xf0;
+TMR1L = 0xfe;
 }
-if(PIR1bits.TMR2IF == 1) {
-sound(voice[i]);
 
-PIR1bits.TMR2IF = 0;
-TMR2 = 0xfe;
-}
-if(PIR1bits.SSP1IF == 1){
-i2c_isr();
-}
+# 76
 return;
 }
 
 void sound(int gate1)
 {
-if(++cnt_2 >= 100) {
+if(++cnt_2 >= time[i]*50) {
 cnt_2 = 0;
 if(++cnt_3 >= 100) {
 cnt_3 = 0;
 i = i + 1;
-if(i >= 10) i = 0;
+if(i >= 23) i = 0;
 }
 }
 
-if(++cnt_1 == gate1) {
+if(gate1) {
+if(++cnt_1 >= gate1) {
+
 LATBbits.LATB0 = !LATBbits.LATB0;
 cnt_1 = 0;
+}
 }
 }
 
@@ -9017,20 +9017,31 @@ PIR1bits.SSP1IF = 0;
 }
 
 void main(void) {
-OSCCON = 0b01101011;
+OSCCON = 0b01111011;
 Init();
 Enable_INT();
 
-# 119
+
+unsigned char peripheralAddr = 50;
+initHardware(0, peripheralAddr);
+
+
 TRISB = 0b11111100;
 LATBbits.LATB0 = 0;
 
 
 TMR1H = 0xff;
 TMR1L = 0xfe;
-T1CONbits.TMR1ON = 1;
+T1CONbits.TMR1ON = 0;
 
-# 137
+
+
+
+while(1) {
+if(recvData == 1)
+T1CONbits.TMR1ON = 1;
+}
+
 }
 
 
@@ -9065,6 +9076,7 @@ PEIE = 1;
 PIR1 = 0;
 PIE1 = 0;
 PIE1bits.TMR1IE = 1;
+
 
 return;
 }

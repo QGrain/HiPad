@@ -6,15 +6,15 @@
  */
 
 // CONFIG1
-#pragma config FOSC = INTOSC    // Oscillator Selection (INTOSC oscillator: I/O function on CLKIN pin)
-#pragma config WDTE = ON        // Watchdog Timer Enable (WDT enabled)
+#pragma config FOSC = ECH    // Oscillator Selection (INTOSC oscillator: I/O function on CLKIN pin)
+#pragma config WDTE = OFF        // Watchdog Timer Enable (WDT enabled)
 #pragma config PWRTE = OFF      // Power-up Timer Enable (PWRT disabled)
 #pragma config MCLRE = ON       // MCLR Pin Function Select (MCLR/VPP pin function is MCLR)
 #pragma config CP = OFF         // Flash Program Memory Code Protection (Program memory code protection is disabled)
 #pragma config CPD = OFF        // Data Memory Code Protection (Data memory code protection is disabled)
-#pragma config BOREN = ON       // Brown-out Reset Enable (Brown-out Reset enabled)
+#pragma config BOREN = OFF       // Brown-out Reset Enable (Brown-out Reset enabled)
 #pragma config CLKOUTEN = OFF   // Clock Out Enable (CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin)
-#pragma config IESO = ON        // Internal/External Switchover (Internal/External Switchover mode is enabled)
+#pragma config IESO = OFF        // Internal/External Switchover (Internal/External Switchover mode is enabled)
 #pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable (Fail-Safe Clock Monitor is enabled)
 
 // CONFIG2
@@ -38,8 +38,11 @@ unsigned int cnt_2 = 0;
 unsigned int cnt_3 = 0;
 //unsigned int voice[10] = {170, 160, 152, 144, 136, 128, 120, 114, 108, 102};
 // unsigned int voice[10] = {85, 80, 76, 72, 68, 64, 60, 57, 54, 51};
-unsigned int voice[10] = {43, 40, 38, 36, 34, 32, 30, 29, 27, 25};
-                        //C4, D4, E4, F4, G4, A4, B4, C5, D5, E5
+unsigned int voice[18] = {0, 86, 76, 68, 64, 57, 51, 46, 43, 38, 34, 32, 29, 25, 22, 21, 19, 17};
+                        //OO,C3, D3, E3, F3, G3, A3, B3, C4, D4, E4, F4, G4, A4, B4, C5, D5, E5
+unsigned int book[23] = {6, 10, 12, 10, 6, 8, 6, 8, 6, 8, 10, 10, 9, 10, 8, 6, 10, 12, 13, 13, 13, 10, 12};
+//unsigned int book[17] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
+unsigned int time[23] = {4, 2, 1, 2, 2, 4, 1, 1, 1, 1, 4, 1, 1, 1, 1, 4, 2, 1 ,2, 2, 2, 2, 4};
 unsigned int i = 0;
 unsigned char count = 60;
 unsigned char recvData;
@@ -54,38 +57,42 @@ void i2c_isr();
 void interrupt irs_routine(void)
 {
     if(PIR1bits.TMR1IF == 1) {
-//        sound(voice[i]);
-        LATBbits.LATB0 = !LATBbits.LATB0;
+        sound(voice[book[i]]);
+//        LATBbits.LATB0 = !LATBbits.LATB0;
+//        PORTBbits.RB0 = !PORTBbits.RB0;
         PIR1bits.TMR1IF = 0;
         TMR1H = 0xff;
-        TMR1L = 0xf0;
+        TMR1L = 0xfe;
     }
-    if(PIR1bits.TMR2IF == 1) {
-        sound(voice[i]);
+//    if(PIR1bits.TMR2IF == 1) {
+////        sound(voice[i]);
 //        LATBbits.LATB0 = !LATBbits.LATB0;
-        PIR1bits.TMR2IF = 0;
-        TMR2 = 0xfe;
-    }
-    if(PIR1bits.SSP1IF == 1){
-        i2c_isr();
-    }
+//        PIR1bits.TMR2IF = 0;
+//        TMR2 = 0xfe;
+//    }
+//    if(PIR1bits.SSP1IF == 1){
+//        i2c_isr();
+//    }
     return;
 }
 
 void sound(int gate1)
 {
-   if(++cnt_2 >= 100) {
+   if(++cnt_2 >= time[i]*50) {
         cnt_2 = 0;
         if(++cnt_3 >= 100) {
             cnt_3 = 0;
             i = i + 1;
-            if(i >= 10) i = 0;
+            if(i >= 23) i = 0;
         }
     }
     
-    if(++cnt_1 == gate1) {
-        LATBbits.LATB0 = !LATBbits.LATB0;
-        cnt_1 = 0;
+    if(gate1) {
+        if(++cnt_1 >= gate1) {
+    //        LATBbits.LATB0 = ~LATBbits.LATB0;
+            LATBbits.LATB0 = !LATBbits.LATB0;
+            cnt_1 = 0;
+        }
     }
 }
 
@@ -107,13 +114,13 @@ void i2c_isr() {
 }
 
 void main(void) {
-    OSCCON = 0b01101011; //设置中断源为内部振荡器，切频率为4MHz
+    OSCCON = 0b01111011; //设置中断源为内部振荡器，切频率为4MHz
     Init();
     Enable_INT();
     // Pull_Up();
 
-    // unsigned char peripheralAddr = 50;
-    // initHardware(false, peripheralAddr);
+    unsigned char peripheralAddr = 50;
+    initHardware(false, peripheralAddr);
     
     // GPIO
     TRISB = 0b11111100;
@@ -122,17 +129,15 @@ void main(void) {
     //Timer1循环次数设置
     TMR1H = 0xff;
     TMR1L = 0xfe;
-    T1CONbits.TMR1ON = 1;
+    T1CONbits.TMR1ON = 0;
     
     //Timer2循环次数设置
-    // TMR2 = 0xf5;
-    // T2CONbits.TMR2ON = 1;
-    // while(1) {
-    //     if(recvData == 1)
-    //         T2CONbits.TMR2ON = 1;
-    //     else 
-    //         T2CONbits.TMR2ON = 0;
-    // }
+//     TMR2 = 0xf5;
+//     T2CONbits.TMR2ON = 1;
+    while(1) {
+        if(recvData == 1)
+            T1CONbits.TMR1ON = 1;
+    }
     
 }
 
@@ -155,7 +160,7 @@ void Init()
     TRISCbits.TRISC4 = 0;
     
     T1CON = 0b01000000;
-    // T2CON = 0;
+//     T2CON = 0;
     
     return;
 }
@@ -168,7 +173,8 @@ void Enable_INT()
     PIR1 = 0;
     PIE1 = 0;
     PIE1bits.TMR1IE = 1;
-    // PIE1bits.TMR2IE = 1; 
+//    T1GCONbits.TMR1GE = 0;
+//    PIE1bits.TMR2IE = 1; 
     return;
 }
 
