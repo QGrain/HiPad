@@ -43,7 +43,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S25 . . . ]
 "374
 [v _INTCONbits `VS25 ~T0 @X0 0 e@11 ]
-"40 init.h
+"39 init.h
 [v _initIICPeripheralMode `(v ~T0 @X0 0 ef1`uc ]
 "1322 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1786.h
 [s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -5655,21 +5655,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 137: extern __bank0 unsigned char __resetbits;
 [; ;pic.h: 138: extern __bank0 __bit __powerdown;
 [; ;pic.h: 139: extern __bank0 __bit __timeout;
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;init.h: 38: void initHardware(bool isCenterBoard, unsigned char iicAddr);
-[; ;init.h: 39: void initIICCenterMode();
-[; ;init.h: 40: void initIICPeripheralMode(unsigned char iicAddr);
-[; ;init.h: 41: void initBluetoothUART();
-[; ;init.h: 42: void initFunctionSelectModule();
+[; ;init.h: 37: void initHardware(unsigned int isCenterBoard, unsigned char iicAddr);
+[; ;init.h: 38: void initIICCenterMode();
+[; ;init.h: 39: void initIICPeripheralMode(unsigned char iicAddr);
+[; ;init.h: 40: void initBluetoothUART();
+[; ;init.h: 41: void initFunctionSelectModule();
 [; ;i2c_peripheral.h: 9: void iicPeripheralInterruptTx(unsigned char data[], unsigned char size);
 [; ;i2c_peripheral.h: 10: extern unsigned char IICAddr;
 [; ;i2c_peripheral.h: 11: unsigned char iicPeripheralInterruptRx();
 "12 init.c
-[v _initHardware `(v ~T0 @X0 1 ef2`uc`uc ]
+[v _initHardware `(v ~T0 @X0 1 ef2`ui`uc ]
 {
-[; ;init.c: 12: void initHardware(bool isCenterBoard, unsigned char iicAddr) {
+[; ;init.c: 12: void initHardware(unsigned int isCenterBoard, unsigned char iicAddr) {
 [e :U _initHardware ]
-[v _isCenterBoard `uc ~T0 @X0 1 r1 ]
+[v _isCenterBoard `ui ~T0 @X0 1 r1 ]
 [v _iicAddr `uc ~T0 @X0 1 r2 ]
 [f ]
 [; ;init.c: 13: PORTA = 0;
@@ -5722,7 +5721,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 [; ;init.c: 40: if (isCenterBoard == 0) {
 "40
-[e $ ! == -> _isCenterBoard `i -> 0 `i 619  ]
+[e $ ! == _isCenterBoard -> -> 0 `i `ui 619  ]
 {
 [; ;init.c: 41: initIICPeripheralMode(iicAddr);
 "41

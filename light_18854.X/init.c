@@ -9,7 +9,7 @@
 #include "init.h"
 #include "i2c_center.h"
 
-void initHardware(bool isCenterBoard, unsigned char iicAddr) {
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr) {
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
@@ -45,10 +45,10 @@ void initHardware(bool isCenterBoard, unsigned char iicAddr) {
 void initIICCenterMode() {
      // Set RB4(SCL) RB5(SDA) as input mode for iic center mode
      //RB4 input
-    TRISBbits.TRISB4 = 0;
+    TRISBbits.TRISB4 = 1;
     ANSELBbits.ANSB4 = 0;
     //RB5 input
-    TRISBbits.TRISB5 = 0;
+    TRISBbits.TRISB5 = 1;
     ANSELBbits.ANSB5 = 0;
 
      //Initialize IIC
@@ -69,6 +69,6 @@ void initIICCenterMode() {
      SSP1CON2 = 0;
      SSP1STAT = 0x80;
 
-     PIE3bits.SSP1IE = 1;
-     PIR3bits.SSP1IF = 0;
+//     PIE3bits.SSP1IE = 1;
+//     PIR3bits.SSP1IF = 0;
 }

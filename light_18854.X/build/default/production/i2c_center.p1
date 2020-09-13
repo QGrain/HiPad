@@ -122,6 +122,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 ./i2c_center.h
 [; ;./i2c_center.h: 12: void IIC_ACK(unsigned char ack);
 [v _IIC_ACK `(v ~T0 @X0 0 ef1`uc ]
+"5 i2c_center.c
+[; ;i2c_center.c: 5: void delay_time(int delay_time);
+[v _delay_time `(v ~T0 @X0 0 ef1`i ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1673,213 +1676,212 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35006
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 35006: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"5 i2c_center.c
-[; ;i2c_center.c: 5: unsigned char recievedData[10];
+"6 i2c_center.c
+[; ;i2c_center.c: 6: unsigned char recievedData[10];
 [v _recievedData `uc ~T0 @X0 -> 10 `i e ]
-"7
-[; ;i2c_center.c: 7: unsigned char* centerReadFromPeripheral(unsigned char peripheralAddr, unsigned char dataSize) {
+"8
+[; ;i2c_center.c: 8: unsigned char* centerReadFromPeripheral(unsigned char peripheralAddr, unsigned char dataSize) {
 [v _centerReadFromPeripheral `(*uc ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _centerReadFromPeripheral ]
 [v _peripheralAddr `uc ~T0 @X0 1 r1 ]
 [v _dataSize `uc ~T0 @X0 1 r2 ]
 [f ]
-"8
-[; ;i2c_center.c: 8:     if (dataSize <= 0) {
+"9
+[; ;i2c_center.c: 9:     if (dataSize <= 0) {
 [e $ ! <= -> _dataSize `i -> 0 `i 1563  ]
 {
-"9
-[; ;i2c_center.c: 9:         return 0;
+"10
+[; ;i2c_center.c: 10:         return 0;
 [e ) -> -> 0 `i `*uc ]
 [e $UE 1562  ]
-"10
-[; ;i2c_center.c: 10:     }
+"11
+[; ;i2c_center.c: 11:     }
 }
 [e :U 1563 ]
-"11
-[; ;i2c_center.c: 11:     IIC_Start();
-[e ( _IIC_Start ..  ]
 "12
-[; ;i2c_center.c: 12:     IIC_Write_Byte((peripheralAddr << 1) + 1);
-[e ( _IIC_Write_Byte (1 -> + << -> _peripheralAddr `i -> 1 `i -> 1 `i `uc ]
+[; ;i2c_center.c: 12:     IIC_Start();
+[e ( _IIC_Start ..  ]
 "13
-[; ;i2c_center.c: 13:     for (unsigned char i = 0; i < dataSize; i++) {
+[; ;i2c_center.c: 13:     IIC_Write_Byte((peripheralAddr << 1) + 1);
+[e ( _IIC_Write_Byte (1 -> + << -> _peripheralAddr `i -> 1 `i -> 1 `i `uc ]
+"14
+[; ;i2c_center.c: 14:     for (unsigned char i = 0; i < dataSize; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 1567  ]
 [e :U 1564 ]
 {
-"14
-[; ;i2c_center.c: 14:         if (i == dataSize - 1) {
+"15
+[; ;i2c_center.c: 15:         if (i == dataSize - 1) {
 [e $ ! == -> _i `i - -> _dataSize `i -> 1 `i 1568  ]
 {
-"15
-[; ;i2c_center.c: 15:             recievedData[i] = IIC_Read_Byte(1);
-[e = *U + &U _recievedData * -> _i `ux -> -> # *U &U _recievedData `ui `ux ( _IIC_Read_Byte (1 -> -> 1 `i `uc ]
 "16
-[; ;i2c_center.c: 16:         } else {
+[; ;i2c_center.c: 16:             recievedData[i] = IIC_Read_Byte(1);
+[e = *U + &U _recievedData * -> _i `ux -> -> # *U &U _recievedData `ui `ux ( _IIC_Read_Byte (1 -> -> 1 `i `uc ]
+"17
+[; ;i2c_center.c: 17:         } else {
 }
 [e $U 1569  ]
 [e :U 1568 ]
 {
-"17
-[; ;i2c_center.c: 17:             recievedData[i] = IIC_Read_Byte(0);
-[e = *U + &U _recievedData * -> _i `ux -> -> # *U &U _recievedData `ui `ux ( _IIC_Read_Byte (1 -> -> 0 `i `uc ]
 "18
-[; ;i2c_center.c: 18:         }
+[; ;i2c_center.c: 18:             recievedData[i] = IIC_Read_Byte(0);
+[e = *U + &U _recievedData * -> _i `ux -> -> # *U &U _recievedData `ui `ux ( _IIC_Read_Byte (1 -> -> 0 `i `uc ]
+"19
+[; ;i2c_center.c: 19:         }
 }
 [e :U 1569 ]
-"19
-[; ;i2c_center.c: 19:     }
+"20
+[; ;i2c_center.c: 20:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 1567 ]
 [e $ < -> _i `i -> _dataSize `i 1564  ]
 [e :U 1565 ]
 }
-"20
-[; ;i2c_center.c: 20:     IIC_Stop();
-[e ( _IIC_Stop ..  ]
 "21
-[; ;i2c_center.c: 21:     return recievedData;
+[; ;i2c_center.c: 21:     IIC_Stop();
+[e ( _IIC_Stop ..  ]
+"22
+[; ;i2c_center.c: 22:     return recievedData;
 [e ) &U _recievedData ]
 [e $UE 1562  ]
-"22
-[; ;i2c_center.c: 22: }
+"23
+[; ;i2c_center.c: 23: }
 [e :UE 1562 ]
 }
-"24
-[; ;i2c_center.c: 24: void centerWriteToPeripheral(unsigned char peripheralAddr, unsigned char data) {
+"25
+[; ;i2c_center.c: 25: void centerWriteToPeripheral(unsigned char peripheralAddr, unsigned char data) {
 [v _centerWriteToPeripheral `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _centerWriteToPeripheral ]
 [v _peripheralAddr `uc ~T0 @X0 1 r1 ]
 [v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-"25
-[; ;i2c_center.c: 25:     IIC_Start();
-[e ( _IIC_Start ..  ]
 "26
-[; ;i2c_center.c: 26:     IIC_Write_Byte((peripheralAddr << 1) + 0);
-[e ( _IIC_Write_Byte (1 -> + << -> _peripheralAddr `i -> 1 `i -> 0 `i `uc ]
+[; ;i2c_center.c: 26:     IIC_Start();
+[e ( _IIC_Start ..  ]
 "27
-[; ;i2c_center.c: 27:     IIC_Write_Byte(data);
-[e ( _IIC_Write_Byte (1 _data ]
+[; ;i2c_center.c: 27:     IIC_Write_Byte((peripheralAddr << 1) + 0);
+[e ( _IIC_Write_Byte (1 -> + << -> _peripheralAddr `i -> 1 `i -> 0 `i `uc ]
 "28
-[; ;i2c_center.c: 28:     IIC_Stop();
-[e ( _IIC_Stop ..  ]
+[; ;i2c_center.c: 28:     IIC_Write_Byte(data);
+[e ( _IIC_Write_Byte (1 _data ]
 "29
-[; ;i2c_center.c: 29: }
+[; ;i2c_center.c: 29:     IIC_Stop();
+[e ( _IIC_Stop ..  ]
+"30
+[; ;i2c_center.c: 30: }
 [e :UE 1570 ]
 }
-"31
-[; ;i2c_center.c: 31: unsigned char IIC_Read_Byte(unsigned char ack) {
+"32
+[; ;i2c_center.c: 32: unsigned char IIC_Read_Byte(unsigned char ack) {
 [v _IIC_Read_Byte `(uc ~T0 @X0 1 ef1`uc ]
 {
 [e :U _IIC_Read_Byte ]
 [v _ack `uc ~T0 @X0 1 r1 ]
 [f ]
-"33
-[; ;i2c_center.c: 33:     unsigned char b;
-[v _b `uc ~T0 @X0 1 a ]
 "34
-[; ;i2c_center.c: 34:     SSP1CON2bits.RCEN = 1;
-[e = . . _SSP1CON2bits 0 3 -> -> 1 `i `uc ]
+[; ;i2c_center.c: 34:     unsigned char b;
+[v _b `uc ~T0 @X0 1 a ]
 "35
-[; ;i2c_center.c: 35:     while (!PIR3bits.SSP1IF);
+[; ;i2c_center.c: 35:     SSP1CON2bits.RCEN = 1;
+[e = . . _SSP1CON2bits 0 3 -> -> 1 `i `uc ]
+"36
+[; ;i2c_center.c: 36:     while (!PIR3bits.SSP1IF);
 [e $U 1572  ]
 [e :U 1573 ]
 [e :U 1572 ]
 [e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1573  ]
 [e :U 1574 ]
-"36
-[; ;i2c_center.c: 36:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "37
-[; ;i2c_center.c: 37:     b = SSP1BUF;
-[e = _b _SSP1BUF ]
+[; ;i2c_center.c: 37:     PIR3bits.SSP1IF = 0;
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "38
-[; ;i2c_center.c: 38:     SSP1STATbits.BF = 0;
-[e = . . _SSP1STATbits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_center.c: 38:     b = SSP1BUF;
+[e = _b _SSP1BUF ]
 "39
-[; ;i2c_center.c: 39:     IIC_ACK(ack);
-[e ( _IIC_ACK (1 _ack ]
+[; ;i2c_center.c: 39:     SSP1STATbits.BF = 0;
+[e = . . _SSP1STATbits 0 0 -> -> 0 `i `uc ]
 "40
-[; ;i2c_center.c: 40:     return b;
+[; ;i2c_center.c: 40:     IIC_ACK(ack);
+[e ( _IIC_ACK (1 _ack ]
+"41
+[; ;i2c_center.c: 41:     return b;
 [e ) _b ]
 [e $UE 1571  ]
-"41
-[; ;i2c_center.c: 41: }
+"42
+[; ;i2c_center.c: 42: }
 [e :UE 1571 ]
 }
-"43
-[; ;i2c_center.c: 43: void IIC_Write_Byte(unsigned char d) {
+"44
+[; ;i2c_center.c: 44: void IIC_Write_Byte(unsigned char d) {
 [v _IIC_Write_Byte `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _IIC_Write_Byte ]
 [v _d `uc ~T0 @X0 1 r1 ]
 [f ]
-"44
-[; ;i2c_center.c: 44:     SSP1BUF = d;
-[e = _SSP1BUF _d ]
 "45
-[; ;i2c_center.c: 45:     while (!PIR3bits.SSP1IF);
+[; ;i2c_center.c: 45:     SSP1BUF = d;
+[e = _SSP1BUF _d ]
+"46
+[; ;i2c_center.c: 46:     while (!PIR3bits.SSP1IF);
 [e $U 1576  ]
 [e :U 1577 ]
 [e :U 1576 ]
 [e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1577  ]
 [e :U 1578 ]
-"46
-[; ;i2c_center.c: 46:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "47
-[; ;i2c_center.c: 47: }
+[; ;i2c_center.c: 47:     PIR3bits.SSP1IF = 0;
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+"48
+[; ;i2c_center.c: 48: }
 [e :UE 1575 ]
 }
-"49
-[; ;i2c_center.c: 49: void IIC_ACK(unsigned char ack) {
+"50
+[; ;i2c_center.c: 50: void IIC_ACK(unsigned char ack) {
 [v _IIC_ACK `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _IIC_ACK ]
 [v _ack `uc ~T0 @X0 1 r1 ]
 [f ]
-"51
-[; ;i2c_center.c: 51:     SSP1CON2bits.ACKDT = (ack & 0x01);
-[e = . . _SSP1CON2bits 0 5 -> & -> _ack `i -> 1 `i `uc ]
 "52
-[; ;i2c_center.c: 52:     SSP1CON2bits.ACKEN = 1;
-[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+[; ;i2c_center.c: 52:     SSP1CON2bits.ACKDT = (ack & 0x01);
+[e = . . _SSP1CON2bits 0 5 -> & -> _ack `i -> 1 `i `uc ]
 "53
-[; ;i2c_center.c: 53:     while (!PIR3bits.SSP1IF);
+[; ;i2c_center.c: 53:     SSP1CON2bits.ACKEN = 1;
+[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+"54
+[; ;i2c_center.c: 54:     while (!PIR3bits.SSP1IF);
 [e $U 1580  ]
 [e :U 1581 ]
 [e :U 1580 ]
 [e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1581  ]
 [e :U 1582 ]
-"54
-[; ;i2c_center.c: 54:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "55
-[; ;i2c_center.c: 55: }
+[; ;i2c_center.c: 55:     PIR3bits.SSP1IF = 0;
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+"56
+[; ;i2c_center.c: 56: }
 [e :UE 1579 ]
 }
-"57
-[; ;i2c_center.c: 57: void IIC_Start() {
+"58
+[; ;i2c_center.c: 58: void IIC_Start() {
 [v _IIC_Start `(v ~T0 @X0 1 ef ]
 {
 [e :U _IIC_Start ]
 [f ]
-"58
-[; ;i2c_center.c: 58:     SSP1CON2bits.SEN = 1;
-[e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
 "59
-[; ;i2c_center.c: 59:     while(!PIR3bits.SSP1IF);
-[e $U 1584  ]
-[e :U 1585 ]
-[e :U 1584 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1585  ]
-[e :U 1586 ]
+[; ;i2c_center.c: 59:     PIR3bits.SSP1IF = 0;
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+"60
+[; ;i2c_center.c: 60:     SSP1CON2bits.SEN = 1;
+[e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
+"62
+[; ;i2c_center.c: 62:     delay_time(2000);
+[e ( _delay_time (1 -> 2000 `i ]
 "63
 [; ;i2c_center.c: 63:     PIR3bits.SSP1IF = 0;
 [e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
@@ -1898,15 +1900,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
 "68
 [; ;i2c_center.c: 68:     while (!PIR3bits.SSP1IF);
-[e $U 1588  ]
-[e :U 1589 ]
-[e :U 1588 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1589  ]
-[e :U 1590 ]
+[e $U 1585  ]
+[e :U 1586 ]
+[e :U 1585 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1586  ]
+[e :U 1587 ]
 "69
 [; ;i2c_center.c: 69:     PIR3bits.SSP1IF = 0;
 [e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "70
 [; ;i2c_center.c: 70: }
-[e :UE 1587 ]
+[e :UE 1584 ]
+}
+"72
+[; ;i2c_center.c: 72: void delay_time(int delay_time) {
+[v _delay_time `(v ~T0 @X0 1 ef1`i ]
+{
+[e :U _delay_time ]
+[v _delay_time `i ~T0 @X0 1 r1 ]
+[f ]
+"73
+[; ;i2c_center.c: 73:     int i = delay_time;
+[v _i `i ~T0 @X0 1 a ]
+[e = _i _delay_time ]
+"74
+[; ;i2c_center.c: 74:     while (i > 0) {
+[e $U 1589  ]
+[e :U 1590 ]
+{
+"75
+[; ;i2c_center.c: 75:         --i;
+[e =- _i -> 1 `i ]
+"76
+[; ;i2c_center.c: 76:     }
+}
+[e :U 1589 ]
+"74
+[; ;i2c_center.c: 74:     while (i > 0) {
+[e $ > _i -> 0 `i 1590  ]
+[e :U 1591 ]
+"77
+[; ;i2c_center.c: 77: }
+[e :UE 1588 ]
 }

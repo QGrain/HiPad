@@ -19722,7 +19722,7 @@ extern __bank0 __bit __timeout;
 
 
 
-void initHardware(_Bool isCenterBoard, unsigned char iicAddr);
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr);
 void initIICCenterMode();
 void initIICPeripheralMode(unsigned char iicAddr);
 void initBluetoothUART();
@@ -19747,7 +19747,7 @@ void IIC_Stop();
 # 10 "init.c" 2
 
 
-void initHardware(_Bool isCenterBoard, unsigned char iicAddr) {
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr) {
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
@@ -19774,10 +19774,10 @@ void initHardware(_Bool isCenterBoard, unsigned char iicAddr) {
 void initIICCenterMode() {
 
 
-    TRISBbits.TRISB4 = 0;
+    TRISBbits.TRISB4 = 1;
     ANSELBbits.ANSB4 = 0;
 
-    TRISBbits.TRISB5 = 0;
+    TRISBbits.TRISB5 = 1;
     ANSELBbits.ANSB5 = 0;
 
 
@@ -19798,6 +19798,6 @@ void initIICCenterMode() {
      SSP1CON2 = 0;
      SSP1STAT = 0x80;
 
-     PIE3bits.SSP1IE = 1;
-     PIR3bits.SSP1IF = 0;
+
+
 }

@@ -32,10 +32,9 @@
 #define	INIT_H
 
 #include <xc.h> 
-#include <stdbool.h>
 
 // iicAddr must in range 0-127
-void initHardware(bool isCenterBoard, unsigned char iicAddr);
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr);
 void initIICCenterMode();
 void initIICPeripheralMode(unsigned char iicAddr);
 void initBluetoothUART();

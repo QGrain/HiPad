@@ -9,7 +9,7 @@
 #include "init.h"
 #include "i2c_peripheral.h"
 
-void initHardware(bool isCenterBoard, unsigned char iicAddr) {
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr) {
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
@@ -37,7 +37,7 @@ void initHardware(bool isCenterBoard, unsigned char iicAddr) {
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
     
-    if (isCenterBoard == false) {
+    if (isCenterBoard == 0) {
         initIICPeripheralMode(iicAddr);
     }
 }

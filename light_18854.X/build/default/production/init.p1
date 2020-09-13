@@ -99,28 +99,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4558
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4558: extern volatile unsigned char SSP1STAT __attribute__((address(0x18F)));
 [v _SSP1STAT `Vuc ~T0 @X0 0 e@399 ]
-"21678
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 21678:     struct {
-[s S986 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S986 . SSP1IE BCL1IE SSP2IE BCL2IE TXIE RCIE ]
-"21677
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 21677: typedef union {
-[u S985 `S986 1 ]
-[n S985 . . ]
-"21687
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 21687: extern volatile PIE3bits_t PIE3bits __attribute__((address(0x719)));
-[v _PIE3bits `VS985 ~T0 @X0 0 e@1817 ]
-"21256
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 21256:     struct {
-[s S967 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S967 . SSP1IF BCL1IF SSP2IF BCL2IF TXIF RCIF ]
-"21255
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 21255: typedef union {
-[u S966 `S967 1 ]
-[n S966 . . ]
-"21265
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 21265: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x70F)));
-[v _PIR3bits `VS966 ~T0 @X0 0 e@1807 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1673,11 +1651,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 35006: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 "12 init.c
-[; ;init.c: 12: void initHardware(_Bool isCenterBoard, unsigned char iicAddr) {
-[v _initHardware `(v ~T0 @X0 1 ef2`a`uc ]
+[; ;init.c: 12: void initHardware(unsigned int isCenterBoard, unsigned char iicAddr) {
+[v _initHardware `(v ~T0 @X0 1 ef2`ui`uc ]
 {
 [e :U _initHardware ]
-[v _isCenterBoard `a ~T0 @X0 1 r1 ]
+[v _isCenterBoard `ui ~T0 @X0 1 r1 ]
 [v _iicAddr `uc ~T0 @X0 1 r2 ]
 [f ]
 "13
@@ -1721,7 +1699,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 "40
 [; ;init.c: 40:     if (isCenterBoard) {
-[e $ ! != -> _isCenterBoard `i -> 0 `i 1563  ]
+[e $ ! != _isCenterBoard -> -> 0 `i `ui 1563  ]
 {
 "41
 [; ;init.c: 41:         initIICCenterMode();
@@ -1741,14 +1719,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _initIICCenterMode ]
 [f ]
 "48
-[; ;init.c: 48:     TRISBbits.TRISB4 = 0;
-[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
+[; ;init.c: 48:     TRISBbits.TRISB4 = 1;
+[e = . . _TRISBbits 0 4 -> -> 1 `i `uc ]
 "49
 [; ;init.c: 49:     ANSELBbits.ANSB4 = 0;
 [e = . . _ANSELBbits 0 4 -> -> 0 `i `uc ]
 "51
-[; ;init.c: 51:     TRISBbits.TRISB5 = 0;
-[e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
+[; ;init.c: 51:     TRISBbits.TRISB5 = 1;
+[e = . . _TRISBbits 0 5 -> -> 1 `i `uc ]
 "52
 [; ;init.c: 52:     ANSELBbits.ANSB5 = 0;
 [e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
@@ -1779,12 +1757,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "70
 [; ;init.c: 70:      SSP1STAT = 0x80;
 [e = _SSP1STAT -> -> 128 `i `uc ]
-"72
-[; ;init.c: 72:      PIE3bits.SSP1IE = 1;
-[e = . . _PIE3bits 0 0 -> -> 1 `i `uc ]
-"73
-[; ;init.c: 73:      PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "74
 [; ;init.c: 74: }
 [e :UE 1564 ]

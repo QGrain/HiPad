@@ -3,7 +3,7 @@
 
 
 # 9
-#pragma config FOSC = ECH
+#pragma config FOSC = INTOSC
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
@@ -8932,11 +8932,8 @@ void iicPeripheralInterruptTx(unsigned char data[], unsigned char size);
 extern unsigned char IICAddr;
 unsigned char iicPeripheralInterruptRx();
 
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 38 "init.h"
-void initHardware(bool isCenterBoard, unsigned char iicAddr);
+# 37 "init.h"
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr);
 void initIICCenterMode();
 void initIICPeripheralMode(unsigned char iicAddr);
 void initBluetoothUART();
@@ -8945,7 +8942,8 @@ void initFunctionSelectModule();
 # 36 "main.c"
 unsigned int cnt_1 = 0;
 unsigned int cnt_2 = 0;
-unsigned int cnt_3 = 0;
+unsigned int cnt_i = 0;
+unsigned int cnt_j = 0;
 
 
 unsigned int voice[18] = {0, 86, 76, 68, 64, 57, 51, 46, 43, 38, 34, 32, 29, 25, 22, 21, 19, 17};
@@ -8953,7 +8951,7 @@ unsigned int voice[18] = {0, 86, 76, 68, 64, 57, 51, 46, 43, 38, 34, 32, 29, 25,
 unsigned int book[23] = {6, 10, 12, 10, 6, 8, 6, 8, 6, 8, 10, 10, 9, 10, 8, 6, 10, 12, 13, 13, 13, 10, 12};
 
 unsigned int time[23] = {4, 2, 1, 2, 2, 4, 1, 1, 1, 1, 4, 1, 1, 1, 1, 4, 2, 1 ,2, 2, 2, 2, 4};
-unsigned int i = 0;
+unsigned int i = 0, j = 0;
 unsigned char count = 60;
 unsigned char recvData;
 
@@ -8961,13 +8959,15 @@ void Init();
 void Enable_INT();
 void Pull_Up();
 void delay_time(int cnt);
-void sound(int gate1);
+void sound1(int gate1);
+void sound2(int gate2);
 void i2c_isr();
 
 void interrupt irs_routine(void)
 {
 if(PIR1bits.TMR1IF == 1) {
-sound(voice[book[i]]);
+sound1(voice[book[i]]);
+
 
 
 PIR1bits.TMR1IF = 0;
@@ -8976,25 +8976,42 @@ TMR1L = 0xfe;
 }
 
 # 76
+if(PIR1bits.SSP1IF == 1){
+i2c_isr();
+}
 return;
 }
 
-void sound(int gate1)
+void sound1(int gate1)
 {
-if(++cnt_2 >= time[i]*50) {
-cnt_2 = 0;
-if(++cnt_3 >= 100) {
-cnt_3 = 0;
+if(++cnt_i >= time[i]*1000) {
+cnt_i = 0;
 i = i + 1;
 if(i >= 23) i = 0;
 }
-}
 
 if(gate1) {
-if(++cnt_1 >= gate1) {
+if(++cnt_1 >= gate1>>2) {
 
 LATBbits.LATB0 = !LATBbits.LATB0;
 cnt_1 = 0;
+}
+}
+}
+
+void sound2(int gate2)
+{
+if(++cnt_j >= time[j]*1000) {
+cnt_j = 0;
+j = j + 1;
+if(j >= 23) j = 0;
+}
+
+if(gate2) {
+if(++cnt_2 >= gate2>>2) {
+
+LATBbits.LATB1 = !LATBbits.LATB1;
+cnt_2 = 0;
 }
 }
 }
@@ -9007,39 +9024,50 @@ if (SSPSTATbits.D_nA == 0 && SSPSTATbits.R_nW == 0) {
 recvData = iicPeripheralInterruptRx();
 count++;
 
-} else if (SSPSTATbits.D_nA == 0 && SSPSTATbits.R_nW == 1) {
-
-unsigned char data = 2;
-iicPeripheralInterruptTx(data, 1);
-count++;
 }
+
+# 131
 PIR1bits.SSP1IF = 0;
 }
 
 void main(void) {
-OSCCON = 0b01111011;
+OSCCON = 0b11111011;
 Init();
 Enable_INT();
-
+Pull_Up();
+WPUCbits.WPUC3 = 1;
+WPUCbits.WPUC4 = 1;
 
 unsigned char peripheralAddr = 50;
 initHardware(0, peripheralAddr);
 
 
-TRISB = 0b11111100;
+TRISB = 0;
 LATBbits.LATB0 = 0;
 
 
 TMR1H = 0xff;
 TMR1L = 0xfe;
-T1CONbits.TMR1ON = 0;
 
+LATAbits.LATA0 = 1;
+LATAbits.LATA1 = 1;
+LATAbits.LATA2 = 1;
 
-
-
+# 161
 while(1) {
-if(recvData == 1)
+
+if(PORTAbits.RA0 == 0) {
+T1CONbits.TMR1ON = 0;
+LATAbits.LATA0 = 1;
+}
+if(PORTAbits.RA1 == 0) {
 T1CONbits.TMR1ON = 1;
+LATAbits.LATA1 = 1;
+}
+if(PORTAbits.RA2 == 0) {
+T1CONbits.TMR1ON = 1;
+LATAbits.LATA2 = 1;
+}
 }
 
 }
@@ -9053,14 +9081,14 @@ while(--cnt > 0);
 void Init()
 {
 
-TRISA = 0;
+TRISA = 0x07;
 ANSELA = 0;
 
 TRISB = 0;
 ANSELB = 0;
 
-TRISCbits.TRISC3 = 0;
-TRISCbits.TRISC4 = 0;
+TRISCbits.TRISC3 = 1;
+TRISCbits.TRISC4 = 1;
 
 T1CON = 0b01000000;
 

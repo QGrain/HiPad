@@ -66,17 +66,21 @@ void main(void) {
     set_interrupt();
 
     set_pps();
-    set_eusart();
-    set_cwg();
-    set_clc();
+//    set_eusart();
+//    set_cwg();
+//    set_clc();
     
+    
+    WPUBbits.WPUB4 = 1;
+    WPUBbits.WPUB5 = 1;
     unsigned char peripheralAddr = 50;
-    unsigned char data = 1;
+    unsigned char data = 0b01011011;
     initHardware(1, peripheralAddr);
-    centerWriteToPeripheral(peripheralAddr, data);
-    
+        
     while(1){
-        lightup();
+        centerWriteToPeripheral(peripheralAddr, data);
+        delay(10000);
+//        lightup();
     }
     return;
 }
@@ -159,10 +163,10 @@ void set_interrupt() {
 
 void init_port() {
     //RB4 input
-    TRISBbits.TRISB4 = 0;
+    TRISBbits.TRISB4 = 1;
     ANSELBbits.ANSB4 = 0;
     //RB5 input
-    TRISBbits.TRISB5 = 0;
+    TRISBbits.TRISB5 = 1;
     ANSELBbits.ANSB5 = 0;
     
     TRISC = 0;
@@ -200,6 +204,9 @@ void set_pps() {
     //SCK SDL IN: RB4 <- RC3(SCL), RB5 <- RC4(SDA)
     SSP1CLKPPS = 0x0c;
     SSP1DATPPS = 0x0d;
+    //SCK SDL OUT
+    RB4PPS = 0x14;
+    RB5PPS = 0x15;
 
     //CLC IN: CLCIN0<-RC7(DT), CLCIN1<-RC6(CK), CLCIN2<-RC1(CWGA), CLCIN3<-RC2(CWGB)
     // CLCIN0PPS = 0x17;

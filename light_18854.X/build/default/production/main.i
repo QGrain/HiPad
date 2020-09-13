@@ -19740,7 +19740,7 @@ void IIC_Stop();
 
 
 
-void initHardware(_Bool isCenterBoard, unsigned char iicAddr);
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr);
 void initIICCenterMode();
 void initIICPeripheralMode(unsigned char iicAddr);
 void initBluetoothUART();
@@ -19777,17 +19777,21 @@ void main(void) {
     set_interrupt();
 
     set_pps();
-    set_eusart();
-    set_cwg();
-    set_clc();
 
+
+
+
+
+    WPUBbits.WPUB4 = 1;
+    WPUBbits.WPUB5 = 1;
     unsigned char peripheralAddr = 50;
-    unsigned char data = 1;
+    unsigned char data = 0b01011011;
     initHardware(1, peripheralAddr);
-    centerWriteToPeripheral(peripheralAddr, data);
 
     while(1){
-        lightup();
+        centerWriteToPeripheral(peripheralAddr, data);
+        delay(10000);
+
     }
     return;
 }
@@ -19811,7 +19815,7 @@ void lightup() {
         int B = ((led_val >> 6) & 0x03) << 4;
 
         do{ while(PIR3bits.TXIF != 1); TX1REG = G; while(PIR3bits.TXIF != 1); TX1REG = R; while(PIR3bits.TXIF != 1); TX1REG = B; } while(0);;
-# 118 "main.c"
+# 122 "main.c"
         if (++i == 16) {
             i = 0;
             disable_out();
@@ -19844,15 +19848,15 @@ void set_interrupt() {
 
     INTCONbits.INTEDG = 1;
     INTPPS = 0x00;
-# 158 "main.c"
+# 162 "main.c"
 }
 
 void init_port() {
 
-    TRISBbits.TRISB4 = 0;
+    TRISBbits.TRISB4 = 1;
     ANSELBbits.ANSB4 = 0;
 
-    TRISBbits.TRISB5 = 0;
+    TRISBbits.TRISB5 = 1;
     ANSELBbits.ANSB5 = 0;
 
     TRISC = 0;
@@ -19890,6 +19894,9 @@ void set_pps() {
 
     SSP1CLKPPS = 0x0c;
     SSP1DATPPS = 0x0d;
+
+    RB4PPS = 0x14;
+    RB5PPS = 0x15;
 
 
 
