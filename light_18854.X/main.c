@@ -201,12 +201,18 @@ void set_pps() {
     RC1PPS = 0x05;
     RC2PPS = 0x06;
     
-    //SCK SDL IN: RB4 <- RC3(SCL), RB5 <- RC4(SDA)
-    SSP1CLKPPS = 0x0c;
-    SSP1DATPPS = 0x0d;
-    //SCK SDL OUT
-    RB4PPS = 0x14;
-    RB5PPS = 0x15;
+    //SCL SDA IN: RB4 <- RC3(SCL1), RB5 <- RC4(SDA1)
+//    SSP1CLKPPS = 0x0c;
+//    SSP1DATPPS = 0x0d;
+//    //SCK SDL OUT
+//    RB4PPS = 0x14;
+//    RB5PPS = 0x15;
+    
+    //SCL SDA IN: RB4 <- RB1(SCL2), RB5 <- RB2(SDA2)
+    SSP2CLKPPS = 0x0c;
+    SSP2DATPPS = 0x0d;
+    RB4PPS = 0x16;
+    RB5PPS = 0x17;
 
     //CLC IN: CLCIN0<-RC7(DT), CLCIN1<-RC6(CK), CLCIN2<-RC1(CWGA), CLCIN3<-RC2(CWGB)
     // CLCIN0PPS = 0x17;

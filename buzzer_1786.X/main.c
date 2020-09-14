@@ -5,16 +5,37 @@
  * Created on 2020年8月23日, 上午10:22
  */
 
+//// CONFIG1
+//#pragma config FOSC = INTOSC    // Oscillator Selection (INTOSC oscillator: I/O function on CLKIN pin)
+//#pragma config WDTE = OFF        // Watchdog Timer Enable (WDT enabled)
+//#pragma config PWRTE = OFF      // Power-up Timer Enable (PWRT disabled)
+//#pragma config MCLRE = ON       // MCLR Pin Function Select (MCLR/VPP pin function is MCLR)
+//#pragma config CP = OFF         // Flash Program Memory Code Protection (Program memory code protection is disabled)
+//#pragma config CPD = OFF        // Data Memory Code Protection (Data memory code protection is disabled)
+//#pragma config BOREN = OFF       // Brown-out Reset Enable (Brown-out Reset enabled)
+//#pragma config CLKOUTEN = OFF   // Clock Out Enable (CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin)
+//#pragma config IESO = OFF        // Internal/External Switchover (Internal/External Switchover mode is enabled)
+//#pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable (Fail-Safe Clock Monitor is enabled)
+//
+//// CONFIG2
+//#pragma config WRT = OFF        // Flash Memory Self-Write Protection (Write protection off)
+//#pragma config VCAPEN = OFF     // Voltage Regulator Capacitor Enable bit (Vcap functionality is disabled on RA6.)
+//#pragma config PLLEN = ON       // PLL Enable (4x PLL enabled)
+//#pragma config STVREN = ON      // Stack Overflow/Underflow Reset Enable (Stack Overflow or Underflow will cause a Reset)
+//#pragma config BORV = LO        // Brown-out Reset Voltage Selection (Brown-out Reset Voltage (Vbor), low trip point selected.)
+//#pragma config LPBOR = OFF      // Low Power Brown-Out Reset Enable Bit (Low power brown-out is disabled)
+//#pragma config LVP = ON         // Low-Voltage Programming Enable (Low-voltage programming enabled)
+
 // CONFIG1
-#pragma config FOSC = INTOSC    // Oscillator Selection (INTOSC oscillator: I/O function on CLKIN pin)
-#pragma config WDTE = OFF        // Watchdog Timer Enable (WDT enabled)
+#pragma config FOSC = ECH       // Oscillator Selection (ECH, External Clock, High Power Mode (4-32 MHz): device clock supplied to CLKIN pin)
+#pragma config WDTE = OFF       // Watchdog Timer Enable (WDT disabled)
 #pragma config PWRTE = OFF      // Power-up Timer Enable (PWRT disabled)
 #pragma config MCLRE = ON       // MCLR Pin Function Select (MCLR/VPP pin function is MCLR)
 #pragma config CP = OFF         // Flash Program Memory Code Protection (Program memory code protection is disabled)
 #pragma config CPD = OFF        // Data Memory Code Protection (Data memory code protection is disabled)
-#pragma config BOREN = OFF       // Brown-out Reset Enable (Brown-out Reset enabled)
+#pragma config BOREN = ON       // Brown-out Reset Enable (Brown-out Reset enabled)
 #pragma config CLKOUTEN = OFF   // Clock Out Enable (CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin)
-#pragma config IESO = OFF        // Internal/External Switchover (Internal/External Switchover mode is enabled)
+#pragma config IESO = ON        // Internal/External Switchover (Internal/External Switchover mode is enabled)
 #pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable (Fail-Safe Clock Monitor is enabled)
 
 // CONFIG2
@@ -47,6 +68,7 @@ unsigned int time[23] = {4, 2, 1, 2, 2, 4, 1, 1, 1, 1, 4, 1, 1, 1, 1, 4, 2, 1 ,2
 unsigned int i = 0, j = 0;
 unsigned char count = 60;
 unsigned char recvData;
+unsigned int play = 0;
 
 void Init();
 void Enable_INT();
@@ -58,15 +80,15 @@ void i2c_isr();
 
 void interrupt irs_routine(void)
 {
-    if(PIR1bits.TMR1IF == 1) {
-        sound1(voice[book[i]]);
-//        sound2(voice[book[j]]);
-//        LATBbits.LATB0 = !LATBbits.LATB0;
-//        PORTBbits.RB0 = !PORTBbits.RB0;
-        PIR1bits.TMR1IF = 0;
-        TMR1H = 0xff;
-        TMR1L = 0xfe;
-    }
+//    if(PIR1bits.TMR1IF == 1) {
+////        sound1(voice[book[i]]);
+////        sound2(voice[book[j]]);
+////        LATBbits.LATB0 = !LATBbits.LATB0;
+////        PORTBbits.RB0 = !PORTBbits.RB0;
+//        PIR1bits.TMR1IF = 0;
+//        TMR1H = 0xff;
+//        TMR1L = 0xfe;
+//    }
 //    if(PIR1bits.TMR2IF == 1) {
 ////        sound(voice[i]);
 //        LATBbits.LATB0 = !LATBbits.LATB0;
@@ -75,20 +97,23 @@ void interrupt irs_routine(void)
 //    }
     if(PIR1bits.SSP1IF == 1){
         i2c_isr();
+        if(recvData == 0b01011011) {
+            play = 1;
+        }
     }
     return;
 }
 
 void sound1(int gate1)
 {
-   if(++cnt_i >= time[i]*1000) {
+    if(++cnt_i >= time[i]*4000) {
         cnt_i = 0;
         i = i + 1;
         if(i >= 23) i = 0;
     }
     
     if(gate1) {
-        if(++cnt_1 >= gate1>>1) {
+        if(++cnt_1 >= gate1) {
     //        LATBbits.LATB0 = ~LATBbits.LATB0;
             LATBbits.LATB0 = !LATBbits.LATB0;
             cnt_1 = 0;
@@ -98,14 +123,14 @@ void sound1(int gate1)
 
 void sound2(int gate2)
 {
-   if(++cnt_j >= time[j]*1000) {
+    if(++cnt_j >= time[j]*4000) {
         cnt_j = 0;
         j = j + 1;
         if(j >= 23) j = 0;
     }
     
     if(gate2) {
-        if(++cnt_2 >= gate2>>1) {
+        if(++cnt_2 >= gate2) {
     //        LATBbits.LATB1 = ~LATBbits.LATB1;
             LATBbits.LATB1 = !LATBbits.LATB1;
             cnt_2 = 0;
@@ -114,13 +139,10 @@ void sound2(int gate2)
 }
 
 void i2c_isr() {
-    // IIC received request
-    //PORTAbits.RA1 = ~PORTAbits.RA1;
+    // IIC received request;
     if (SSPSTATbits.D_nA == 0 && SSPSTATbits.R_nW == 0) {
         //Center write
         recvData = iicPeripheralInterruptRx();
-        count++;
-        //PORTAbits.RA1 = recvData % 2;
     }
 //    else if (SSPSTATbits.D_nA == 0 && SSPSTATbits.R_nW == 1) {
 //        //Center read
@@ -132,7 +154,7 @@ void i2c_isr() {
 }
 
 void main(void) {
-    OSCCON = 0b11111011; //设置中断源为内部振荡器，切频率为4MHz
+    OSCCON = 0b11111011; //设置中断源为内部振荡器，切频率为16MHz
     Init();
     Enable_INT();
     Pull_Up();
@@ -147,31 +169,36 @@ void main(void) {
     LATBbits.LATB0 = 0;
     
     //Timer1循环次数设置
-    TMR1H = 0xff;
-    TMR1L = 0xfe;
+//    TMR1H = 0xff;
+//    TMR1L = 0xfe;
+//    
+//    LATAbits.LATA0 = 1;
+//    LATAbits.LATA1 = 1;
+//    LATAbits.LATA2 = 1;
+//    T1CONbits.TMR1ON = 0;
     
-    LATAbits.LATA0 = 1;
-    LATAbits.LATA1 = 1;
-    LATAbits.LATA2 = 1;
-//    T1CONbits.TMR1ON = 1;
+    while(play) {
+        sound1(voice[book[i]]);
+
+    }
     
     //Timer2循环次数设置
 //     TMR2 = 0xf5;
 //     T2CONbits.TMR2ON = 1;
     while(1) {
 //        if(recvData == 1)
-        if(PORTAbits.RA0 == 0) {
-            T1CONbits.TMR1ON = 0;
-            LATAbits.LATA0 = 1;
-        }
-        if(PORTAbits.RA1 == 0) {
-            T1CONbits.TMR1ON = 1;
-            LATAbits.LATA1 = 1;
-        }
-        if(PORTAbits.RA2 == 0) {
-            T1CONbits.TMR1ON = 1;
-            LATAbits.LATA2 = 1;
-        }
+//        if(PORTAbits.RA0 == 0) {
+//            T1CONbits.TMR1ON = 0;
+//            LATAbits.LATA0 = 1;
+//        }
+//        if(PORTAbits.RA1 == 0) {
+//            T1CONbits.TMR1ON = 1;
+//            LATAbits.LATA1 = 1;
+//        }
+//        if(PORTAbits.RA2 == 0) {
+//            T1CONbits.TMR1ON = 1;
+//            LATAbits.LATA2 = 1;
+//        }
     }
     
 }

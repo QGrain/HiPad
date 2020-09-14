@@ -32,41 +32,41 @@ void centerWriteToPeripheral(unsigned char peripheralAddr, unsigned char data) {
 unsigned char IIC_Read_Byte(unsigned char ack) {
     //Read one byte
     unsigned char b;
-    SSP1CON2bits.RCEN = 1; //使能IIC接收模式
-    while (!PIR3bits.SSP1IF);
-    PIR3bits.SSP1IF = 0;
-    b = SSP1BUF;
-    SSP1STATbits.BF = 0;
+    SSP2CON2bits.RCEN = 1; //使能IIC接收模式
+    while (!PIR3bits.SSP2IF);
+    PIR3bits.SSP2IF = 0;
+    b = SSP2BUF;
+    SSP2STATbits.BF = 0;
     IIC_ACK(ack);
     return b;
 }
 
 void IIC_Write_Byte(unsigned char d) {
-    SSP1BUF = d; //???????SSPBUF????,????????
-    while (!PIR3bits.SSP1IF); //等待发送结束
-    PIR3bits.SSP1IF = 0; //SSPIF标志清0
+    SSP2BUF = d; //???????SSPBUF????,????????
+    while (!PIR3bits.SSP2IF); //等待发送结束
+    PIR3bits.SSP2IF = 0; //SSPIF标志清0
 }
 
 void IIC_ACK(unsigned char ack) {
     //The master ACK 0 or 1
-    SSP1CON2bits.ACKDT = (ack & 0x01); //ACK 0 or 1, 0 is active
-    SSP1CON2bits.ACKEN = 1; //在SDA和SCL引脚上启动应答顺序，并发送ACKDT数据位
-    while (!PIR3bits.SSP1IF); //等待应答发送结束
-    PIR3bits.SSP1IF = 0; //SSPIF标志清0
+    SSP2CON2bits.ACKDT = (ack & 0x01); //ACK 0 or 1, 0 is active
+    SSP2CON2bits.ACKEN = 1; //在SDA和SCL引脚上启动应答顺序，并发送ACKDT数据位
+    while (!PIR3bits.SSP2IF); //等待应答发送结束
+    PIR3bits.SSP2IF = 0; //SSPIF标志清0
 }
 
 void IIC_Start() {
-    PIR3bits.SSP1IF = 0;
-    SSP1CON2bits.SEN = 1; // Start signal
-//    while(!PIR3bits.SSP1IF);
-    delay_time(2000);
-    PIR3bits.SSP1IF = 0;
+    PIR3bits.SSP2IF = 0;
+    SSP2CON2bits.SEN = 1; // Start signal
+    while(!PIR3bits.SSP2IF);
+//    delay_time(2000);
+    PIR3bits.SSP2IF = 0;
 }
 
 void IIC_Stop() {
-    SSP1CON2bits.PEN = 1; //产生IIC停止信号
-    while (!PIR3bits.SSP1IF); //等待发送结束
-    PIR3bits.SSP1IF = 0; //SSPIF标志清0
+    SSP2CON2bits.PEN = 1; //产生IIC停止信号
+    while (!PIR3bits.SSP2IF); //等待发送结束
+    PIR3bits.SSP2IF = 0; //SSPIF标志清0
 }
 
 void delay_time(int delay_time) {

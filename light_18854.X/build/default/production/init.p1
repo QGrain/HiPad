@@ -68,37 +68,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33464
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 33464: extern volatile ANSELBbits_t ANSELBbits __attribute__((address(0xF43)));
 [v _ANSELBbits `VS1490 ~T0 @X0 0 e@3907 ]
-"4922
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4922: extern volatile unsigned char SSP1CON1 __attribute__((address(0x190)));
-[v _SSP1CON1 `Vuc ~T0 @X0 0 e@400 ]
-"4928
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4928:     struct {
-[s S238 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S238 . SSPM CKP SSPEN SSPOV WCOL ]
-"4935
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4935:     struct {
-[s S239 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S239 . SSPM0 SSPM1 SSPM2 SSPM3 ]
-"4941
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4941:     struct {
-[s S240 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S240 . SSPM01 SSPM11 SSPM21 SSPM31 CKP1 SSPEN1 SSPOV1 WCOL1 ]
-"4927
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4927: typedef union {
-[u S237 `S238 1 `S239 1 `S240 1 ]
-[n S237 . . . . ]
-"4952
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4952: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0x190)));
-[v _SSP1CON1bits `VS237 ~T0 @X0 0 e@400 ]
-"4368
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4368: extern volatile unsigned char SSP1ADD __attribute__((address(0x18D)));
-[v _SSP1ADD `Vuc ~T0 @X0 0 e@397 ]
-"5042
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5042: extern volatile unsigned char SSP1CON2 __attribute__((address(0x191)));
-[v _SSP1CON2 `Vuc ~T0 @X0 0 e@401 ]
-"4558
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4558: extern volatile unsigned char SSP1STAT __attribute__((address(0x18F)));
-[v _SSP1STAT `Vuc ~T0 @X0 0 e@399 ]
+"5865
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5865: extern volatile unsigned char SSP2CON1 __attribute__((address(0x19A)));
+[v _SSP2CON1 `Vuc ~T0 @X0 0 e@410 ]
+"5871
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5871:     struct {
+[s S275 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S275 . SSPM CKP SSPEN SSPOV WCOL ]
+"5878
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5878:     struct {
+[s S276 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S276 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"5884
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5884:     struct {
+[s S277 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S277 . SSPM02 SSPM12 SSPM22 SSPM32 CKP2 SSPEN2 SSPOV2 WCOL2 ]
+"5870
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5870: typedef union {
+[u S274 `S275 1 `S276 1 `S277 1 ]
+[n S274 . . . . ]
+"5895
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5895: extern volatile SSP2CON1bits_t SSP2CON1bits __attribute__((address(0x19A)));
+[v _SSP2CON1bits `VS274 ~T0 @X0 0 e@410 ]
+"5311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5311: extern volatile unsigned char SSP2ADD __attribute__((address(0x197)));
+[v _SSP2ADD `Vuc ~T0 @X0 0 e@407 ]
+"5985
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5985: extern volatile unsigned char SSP2CON2 __attribute__((address(0x19B)));
+[v _SSP2CON2 `Vuc ~T0 @X0 0 e@411 ]
+"5501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5501: extern volatile unsigned char SSP2STAT __attribute__((address(0x199)));
+[v _SSP2STAT `Vuc ~T0 @X0 0 e@409 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1731,32 +1731,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;init.c: 52:     ANSELBbits.ANSB5 = 0;
 [e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
 "55
-[; ;init.c: 55:      SSP1CON1 = 0;
-[e = _SSP1CON1 -> -> 0 `i `uc ]
+[; ;init.c: 55:      SSP2CON1 = 0;
+[e = _SSP2CON1 -> -> 0 `i `uc ]
 "58
-[; ;init.c: 58:      SSP1CON1bits.SSPM0 = 0;
-[e = . . _SSP1CON1bits 1 0 -> -> 0 `i `uc ]
+[; ;init.c: 58:      SSP2CON1bits.SSPM0 = 0;
+[e = . . _SSP2CON1bits 1 0 -> -> 0 `i `uc ]
 "59
-[; ;init.c: 59:      SSP1CON1bits.SSPM1 = 0;
-[e = . . _SSP1CON1bits 1 1 -> -> 0 `i `uc ]
+[; ;init.c: 59:      SSP2CON1bits.SSPM1 = 0;
+[e = . . _SSP2CON1bits 1 1 -> -> 0 `i `uc ]
 "60
-[; ;init.c: 60:      SSP1CON1bits.SSPM2 = 0;
-[e = . . _SSP1CON1bits 1 2 -> -> 0 `i `uc ]
+[; ;init.c: 60:      SSP2CON1bits.SSPM2 = 0;
+[e = . . _SSP2CON1bits 1 2 -> -> 0 `i `uc ]
 "61
-[; ;init.c: 61:      SSP1CON1bits.SSPM3 = 1;
-[e = . . _SSP1CON1bits 1 3 -> -> 1 `i `uc ]
+[; ;init.c: 61:      SSP2CON1bits.SSPM3 = 1;
+[e = . . _SSP2CON1bits 1 3 -> -> 1 `i `uc ]
 "64
-[; ;init.c: 64:      SSP1ADD = 0x09;
-[e = _SSP1ADD -> -> 9 `i `uc ]
+[; ;init.c: 64:      SSP2ADD = 0x09;
+[e = _SSP2ADD -> -> 9 `i `uc ]
 "67
-[; ;init.c: 67:      SSP1CON1bits.SSPEN = 1;
-[e = . . _SSP1CON1bits 0 2 -> -> 1 `i `uc ]
+[; ;init.c: 67:      SSP2CON1bits.SSPEN = 1;
+[e = . . _SSP2CON1bits 0 2 -> -> 1 `i `uc ]
 "69
-[; ;init.c: 69:      SSP1CON2 = 0;
-[e = _SSP1CON2 -> -> 0 `i `uc ]
+[; ;init.c: 69:      SSP2CON2 = 0;
+[e = _SSP2CON2 -> -> 0 `i `uc ]
 "70
-[; ;init.c: 70:      SSP1STAT = 0x80;
-[e = _SSP1STAT -> -> 128 `i `uc ]
+[; ;init.c: 70:      SSP2STAT = 0x80;
+[e = _SSP2STAT -> -> 128 `i `uc ]
 "74
 [; ;init.c: 74: }
 [e :UE 1564 ]

@@ -25,8 +25,6 @@
 [v _IIC_Start IIC_Start `(v  1 e 1 0 ]
 "66
 [v _IIC_Stop IIC_Stop `(v  1 e 1 0 ]
-"72
-[v _delay_time delay_time `(v  1 e 1 0 ]
 "12 D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\init.c
 [v _initHardware initHardware `(v  1 e 1 0 ]
 "45
@@ -41,15 +39,15 @@
 [v _init_port init_port `(v  1 e 1 0 ]
 "193
 [v _set_pps set_pps `(v  1 e 1 0 ]
-"269
+"275
 [v _enable_out enable_out `(v  1 e 1 0 ]
-"282
+"288
 [v _delay delay `(v  1 e 1 0 ]
-"289
+"295
 [v _disable_out disable_out `(v  1 e 1 0 ]
-"303
+"309
 [v _out_reset out_reset `(v  1 e 1 0 ]
-"308
+"314
 [v _turn_off_all turn_off_all `(v  1 e 1 0 ]
 [s S174 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
@@ -167,12 +165,12 @@
 "4136
 [u S254 . 1 `S245 1 . 1 0 ]
 [v _BAUD1CONbits BAUD1CONbits `VES254  1 e 1 @287 ]
-"4348
-[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
-"4368
-[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
-"4558
-[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
+"5291
+[v _SSP2BUF SSP2BUF `VEuc  1 e 1 @406 ]
+"5311
+[v _SSP2ADD SSP2ADD `VEuc  1 e 1 @407 ]
+"5501
+[v _SSP2STAT SSP2STAT `VEuc  1 e 1 @409 ]
 [s S1203 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
@@ -182,7 +180,7 @@
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-"4667
+"5610
 [s S1212 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -209,47 +207,47 @@
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S1238 . 1 `uc 1 BF1 1 0 :1:0 
-`uc 1 UA1 1 0 :1:1 
+[s S1238 . 1 `uc 1 BF2 1 0 :1:0 
+`uc 1 UA2 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
 `uc 1 STOP 1 0 :1:4 
 `uc 1 D 1 0 :1:5 
-`uc 1 CKE1 1 0 :1:6 
-`uc 1 SMP1 1 0 :1:7 
+`uc 1 CKE2 1 0 :1:6 
+`uc 1 SMP2 1 0 :1:7 
 ]
 [s S1247 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
-`uc 1 START1 1 0 :1:3 
-`uc 1 STOP1 1 0 :1:4 
+`uc 1 START2 1 0 :1:3 
+`uc 1 STOP2 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
 [s S1253 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 RW1 1 0 :1:2 
-`uc 1 I2C_START1 1 0 :1:3 
+`uc 1 RW2 1 0 :1:2 
+`uc 1 I2C_START2 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
-`uc 1 DA1 1 0 :1:5 
+`uc 1 DA2 1 0 :1:5 
 ]
 [s S1259 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 I2C_READ1 1 0 :1:2 
+`uc 1 I2C_READ2 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
-`uc 1 DATA_ADDRESS1 1 0 :1:5 
+`uc 1 DATA_ADDRESS2 1 0 :1:5 
 ]
 [s S1265 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 READ_WRITE1 1 0 :1:2 
+`uc 1 READ_WRITE2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
-`uc 1 D_A1 1 0 :1:5 
+`uc 1 D_A2 1 0 :1:5 
 ]
 [s S1270 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_W1 1 0 :1:2 
+`uc 1 R_W2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
-`uc 1 D_nA1 1 0 :1:5 
+`uc 1 D_nA2 1 0 :1:5 
 ]
 [s S1275 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_nW1 1 0 :1:2 
+`uc 1 R_nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
-`uc 1 I2C_DAT1 1 0 :1:5 
+`uc 1 I2C_DAT2 1 0 :1:5 
 ]
 [s S1280 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
@@ -257,39 +255,39 @@
 `uc 1 nA2 1 0 :1:5 
 ]
 [s S1285 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 nWRITE1 1 0 :1:2 
+`uc 1 nWRITE2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
-`uc 1 nADDRESS1 1 0 :1:5 
+`uc 1 nADDRESS2 1 0 :1:5 
 ]
 [u S1290 . 1 `S1203 1 . 1 0 `S1212 1 . 1 0 `S1217 1 . 1 0 `S1222 1 . 1 0 `S1227 1 . 1 0 `S1232 1 . 1 0 `S1238 1 . 1 0 `S1247 1 . 1 0 `S1253 1 . 1 0 `S1259 1 . 1 0 `S1265 1 . 1 0 `S1270 1 . 1 0 `S1275 1 . 1 0 `S1280 1 . 1 0 `S1285 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES1290  1 e 1 @399 ]
-"4922
-[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
+[v _SSP2STATbits SSP2STATbits `VES1290  1 e 1 @409 ]
+"5865
+[v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @410 ]
 [s S1036 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
-"4952
+"5895
 [s S1042 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S1047 . 1 `uc 1 SSPM01 1 0 :1:0 
-`uc 1 SSPM11 1 0 :1:1 
-`uc 1 SSPM21 1 0 :1:2 
-`uc 1 SSPM31 1 0 :1:3 
-`uc 1 CKP1 1 0 :1:4 
-`uc 1 SSPEN1 1 0 :1:5 
-`uc 1 SSPOV1 1 0 :1:6 
-`uc 1 WCOL1 1 0 :1:7 
+[s S1047 . 1 `uc 1 SSPM02 1 0 :1:0 
+`uc 1 SSPM12 1 0 :1:1 
+`uc 1 SSPM22 1 0 :1:2 
+`uc 1 SSPM32 1 0 :1:3 
+`uc 1 CKP2 1 0 :1:4 
+`uc 1 SSPEN2 1 0 :1:5 
+`uc 1 SSPOV2 1 0 :1:6 
+`uc 1 WCOL2 1 0 :1:7 
 ]
 [u S1056 . 1 `S1036 1 . 1 0 `S1042 1 . 1 0 `S1047 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES1056  1 e 1 @400 ]
-"5042
-[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
+[v _SSP2CON1bits SSP2CON1bits `VES1056  1 e 1 @410 ]
+"5985
+[v _SSP2CON2 SSP2CON2 `VEuc  1 e 1 @411 ]
 [s S1115 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
@@ -299,7 +297,7 @@
 `uc 1 ACKSTAT 1 0 :1:6 
 `uc 1 GCEN 1 0 :1:7 
 ]
-"5089
+"6032
 [s S1124 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
@@ -310,24 +308,24 @@
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S1134 . 1 `uc 1 SEN1 1 0 :1:0 
-`uc 1 ADMSK11 1 0 :1:1 
-`uc 1 ADMSK21 1 0 :1:2 
-`uc 1 ADMSK31 1 0 :1:3 
-`uc 1 ACKEN1 1 0 :1:4 
-`uc 1 ACKDT1 1 0 :1:5 
-`uc 1 ACKSTAT1 1 0 :1:6 
-`uc 1 GCEN1 1 0 :1:7 
+[s S1134 . 1 `uc 1 SEN2 1 0 :1:0 
+`uc 1 ADMSK12 1 0 :1:1 
+`uc 1 ADMSK22 1 0 :1:2 
+`uc 1 ADMSK32 1 0 :1:3 
+`uc 1 ACKEN2 1 0 :1:4 
+`uc 1 ACKDT2 1 0 :1:5 
+`uc 1 ACKSTAT2 1 0 :1:6 
+`uc 1 GCEN2 1 0 :1:7 
 ]
 [s S1143 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 RSEN1 1 0 :1:1 
-`uc 1 PEN1 1 0 :1:2 
-`uc 1 RCEN1 1 0 :1:3 
-`uc 1 ADMSK41 1 0 :1:4 
-`uc 1 ADMSK51 1 0 :1:5 
+`uc 1 RSEN2 1 0 :1:1 
+`uc 1 PEN2 1 0 :1:2 
+`uc 1 RCEN2 1 0 :1:3 
+`uc 1 ADMSK42 1 0 :1:4 
+`uc 1 ADMSK52 1 0 :1:5 
 ]
 [u S1150 . 1 `S1115 1 . 1 0 `S1124 1 . 1 0 `S1127 1 . 1 0 `S1134 1 . 1 0 `S1143 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES1150  1 e 1 @401 ]
+[v _SSP2CON2bits SSP2CON2bits `VES1150  1 e 1 @411 ]
 [s S485 . 1 `uc 1 CS 1 0 :1:0 
 ]
 "18911
@@ -609,10 +607,10 @@
 [v _CLCIN2PPS CLCIN2PPS `VEuc  1 e 1 @3773 ]
 "31115
 [v _CLCIN3PPS CLCIN3PPS `VEuc  1 e 1 @3774 ]
-"31211
-[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3781 ]
-"31263
-[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3782 ]
+"31367
+[v _SSP2CLKPPS SSP2CLKPPS `VEuc  1 e 1 @3784 ]
+"31419
+[v _SSP2DATPPS SSP2DATPPS `VEuc  1 e 1 @3785 ]
 "32227
 [v _RB4PPS RB4PPS `VEuc  1 e 1 @3868 ]
 "32277
@@ -687,7 +685,7 @@
 "193
 [v _set_pps set_pps `(v  1 e 1 0 ]
 {
-"220
+"226
 } 0
 "147
 [v _set_interrupt set_interrupt `(v  1 e 1 0 ]
@@ -716,22 +714,22 @@
 {
 "74
 } 0
-"282 D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
+"288 D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\main.c
 [v _delay delay `(v  1 e 1 0 ]
 {
-"283
+"289
 [v delay@i i `i  1 a 2 3 ]
-"282
+"288
 [v delay@delay_time delay_time `i  1 p 2 0 ]
-"287
+"293
 } 0
 "25 D:\SeedClass\Embedding CourseDesign\HiPad\light_18854.X\i2c_center.c
 [v _centerWriteToPeripheral centerWriteToPeripheral `(v  1 e 1 0 ]
 {
 [v centerWriteToPeripheral@peripheralAddr peripheralAddr `uc  1 a 1 wreg ]
 [v centerWriteToPeripheral@peripheralAddr peripheralAddr `uc  1 a 1 wreg ]
-[v centerWriteToPeripheral@data data `uc  1 p 1 5 ]
-[v centerWriteToPeripheral@peripheralAddr peripheralAddr `uc  1 a 1 6 ]
+[v centerWriteToPeripheral@data data `uc  1 p 1 1 ]
+[v centerWriteToPeripheral@peripheralAddr peripheralAddr `uc  1 a 1 2 ]
 "30
 } 0
 "44
@@ -751,13 +749,4 @@
 [v _IIC_Start IIC_Start `(v  1 e 1 0 ]
 {
 "64
-} 0
-"72
-[v _delay_time delay_time `(v  1 e 1 0 ]
-{
-"73
-[v delay_time@i i `i  1 a 2 3 ]
-"72
-[v delay_time@delay_time delay_time `i  1 p 2 0 ]
-"77
 } 0

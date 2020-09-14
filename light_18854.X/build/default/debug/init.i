@@ -19781,22 +19781,22 @@ void initIICCenterMode() {
     ANSELBbits.ANSB5 = 0;
 
 
-     SSP1CON1 = 0;
+     SSP2CON1 = 0;
 
 
-     SSP1CON1bits.SSPM0 = 0;
-     SSP1CON1bits.SSPM1 = 0;
-     SSP1CON1bits.SSPM2 = 0;
-     SSP1CON1bits.SSPM3 = 1;
+     SSP2CON1bits.SSPM0 = 0;
+     SSP2CON1bits.SSPM1 = 0;
+     SSP2CON1bits.SSPM2 = 0;
+     SSP2CON1bits.SSPM3 = 1;
 
 
-     SSP1ADD = 0x09;
+     SSP2ADD = 0x09;
 
 
-     SSP1CON1bits.SSPEN = 1;
+     SSP2CON1bits.SSPEN = 1;
 
-     SSP1CON2 = 0;
-     SSP1STAT = 0x80;
+     SSP2CON2 = 0;
+     SSP2STAT = 0x80;
 
 
 

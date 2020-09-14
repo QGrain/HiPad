@@ -19890,13 +19890,11 @@ void set_pps() {
 
     RC1PPS = 0x05;
     RC2PPS = 0x06;
-
-
-    SSP1CLKPPS = 0x0c;
-    SSP1DATPPS = 0x0d;
-
-    RB4PPS = 0x14;
-    RB5PPS = 0x15;
+# 212 "main.c"
+    SSP2CLKPPS = 0x0c;
+    SSP2DATPPS = 0x0d;
+    RB4PPS = 0x16;
+    RB5PPS = 0x17;
 
 
 

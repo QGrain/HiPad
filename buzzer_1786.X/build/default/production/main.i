@@ -2,16 +2,16 @@
 # 1 "main.c"
 
 
-# 9
-#pragma config FOSC = INTOSC
+# 30
+#pragma config FOSC = ECH
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
 #pragma config CP = OFF
 #pragma config CPD = OFF
-#pragma config BOREN = OFF
+#pragma config BOREN = ON
 #pragma config CLKOUTEN = OFF
-#pragma config IESO = OFF
+#pragma config IESO = ON
 #pragma config FCMEN = ON
 
 
@@ -8939,7 +8939,7 @@ void initIICPeripheralMode(unsigned char iicAddr);
 void initBluetoothUART();
 void initFunctionSelectModule();
 
-# 36 "main.c"
+# 57 "main.c"
 unsigned int cnt_1 = 0;
 unsigned int cnt_2 = 0;
 unsigned int cnt_i = 0;
@@ -8954,6 +8954,7 @@ unsigned int time[23] = {4, 2, 1, 2, 2, 4, 1, 1, 1, 1, 4, 1, 1, 1, 1, 4, 2, 1 ,2
 unsigned int i = 0, j = 0;
 unsigned char count = 60;
 unsigned char recvData;
+unsigned int play = 0;
 
 void Init();
 void Enable_INT();
@@ -8965,33 +8966,27 @@ void i2c_isr();
 
 void interrupt irs_routine(void)
 {
-if(PIR1bits.TMR1IF == 1) {
-sound1(voice[book[i]]);
 
-
-
-PIR1bits.TMR1IF = 0;
-TMR1H = 0xff;
-TMR1L = 0xfe;
-}
-
-# 76
+# 98
 if(PIR1bits.SSP1IF == 1){
 i2c_isr();
+if(recvData == 0b01011011) {
+play = 1;
+}
 }
 return;
 }
 
 void sound1(int gate1)
 {
-if(++cnt_i >= time[i]*1000) {
+if(++cnt_i >= time[i]*4000) {
 cnt_i = 0;
 i = i + 1;
 if(i >= 23) i = 0;
 }
 
 if(gate1) {
-if(++cnt_1 >= gate1>>2) {
+if(++cnt_1 >= gate1) {
 
 LATBbits.LATB0 = !LATBbits.LATB0;
 cnt_1 = 0;
@@ -9001,14 +8996,14 @@ cnt_1 = 0;
 
 void sound2(int gate2)
 {
-if(++cnt_j >= time[j]*1000) {
+if(++cnt_j >= time[j]*4000) {
 cnt_j = 0;
 j = j + 1;
 if(j >= 23) j = 0;
 }
 
 if(gate2) {
-if(++cnt_2 >= gate2>>2) {
+if(++cnt_2 >= gate2) {
 
 LATBbits.LATB1 = !LATBbits.LATB1;
 cnt_2 = 0;
@@ -9018,15 +9013,12 @@ cnt_2 = 0;
 
 void i2c_isr() {
 
-
 if (SSPSTATbits.D_nA == 0 && SSPSTATbits.R_nW == 0) {
 
 recvData = iicPeripheralInterruptRx();
-count++;
-
 }
 
-# 131
+# 153
 PIR1bits.SSP1IF = 0;
 }
 
@@ -9045,29 +9037,18 @@ initHardware(0, peripheralAddr);
 TRISB = 0;
 LATBbits.LATB0 = 0;
 
+# 180
+while(play) {
+sound1(voice[book[i]]);
 
-TMR1H = 0xff;
-TMR1L = 0xfe;
+}
 
-LATAbits.LATA0 = 1;
-LATAbits.LATA1 = 1;
-LATAbits.LATA2 = 1;
 
-# 161
+
+
 while(1) {
 
-if(PORTAbits.RA0 == 0) {
-T1CONbits.TMR1ON = 0;
-LATAbits.LATA0 = 1;
-}
-if(PORTAbits.RA1 == 0) {
-T1CONbits.TMR1ON = 1;
-LATAbits.LATA1 = 1;
-}
-if(PORTAbits.RA2 == 0) {
-T1CONbits.TMR1ON = 1;
-LATAbits.LATA2 = 1;
-}
+# 202
 }
 
 }

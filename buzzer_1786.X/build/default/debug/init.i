@@ -8905,11 +8905,8 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 38 "init.h"
-void initHardware(bool isCenterBoard, unsigned char iicAddr);
+# 37 "init.h"
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr);
 void initIICCenterMode();
 void initIICPeripheralMode(unsigned char iicAddr);
 void initBluetoothUART();
@@ -8921,7 +8918,7 @@ extern unsigned char IICAddr;
 unsigned char iicPeripheralInterruptRx();
 
 # 12 "init.c"
-void initHardware(bool isCenterBoard, unsigned char iicAddr) {
+void initHardware(unsigned int isCenterBoard, unsigned char iicAddr) {
 PORTA = 0;
 PORTB = 0;
 PORTC = 0;

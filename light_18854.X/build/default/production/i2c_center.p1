@@ -11,33 +11,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14
 [; ;./i2c_center.h: 14: void IIC_Stop();
 [v _IIC_Stop `(v ~T0 @X0 0 e? ]
-"5048 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5048:     struct {
-[s S242 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S242 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
-"5058
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5058:     struct {
-[s S243 :1 `uc 1 :5 `uc 1 ]
-[n S243 . . ADMSK ]
-"5062
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5062:     struct {
-[s S244 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S244 . . ADMSK1 ADMSK2 ADMSK3 ADMSK4 ADMSK5 ]
-"5070
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5070:     struct {
-[s S245 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S245 . SEN1 ADMSK11 ADMSK21 ADMSK31 ACKEN1 ACKDT1 ACKSTAT1 GCEN1 ]
-"5080
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5080:     struct {
-[s S246 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S246 . . RSEN1 PEN1 RCEN1 ADMSK41 ADMSK51 ]
-"5047
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5047: typedef union {
-[u S241 `S242 1 `S243 1 `S244 1 `S245 1 `S246 1 ]
-[n S241 . . . . . . ]
-"5089
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5089: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0x191)));
-[v _SSP1CON2bits `VS241 ~T0 @X0 0 e@401 ]
+"5991 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5991:     struct {
+[s S279 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S279 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"6001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 6001:     struct {
+[s S280 :1 `uc 1 :5 `uc 1 ]
+[n S280 . . ADMSK ]
+"6005
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 6005:     struct {
+[s S281 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S281 . . ADMSK1 ADMSK2 ADMSK3 ADMSK4 ADMSK5 ]
+"6013
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 6013:     struct {
+[s S282 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S282 . SEN2 ADMSK12 ADMSK22 ADMSK32 ACKEN2 ACKDT2 ACKSTAT2 GCEN2 ]
+"6023
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 6023:     struct {
+[s S283 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S283 . . RSEN2 PEN2 RCEN2 ADMSK42 ADMSK52 ]
+"5990
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5990: typedef union {
+[u S278 `S279 1 `S280 1 `S281 1 `S282 1 `S283 1 ]
+[n S278 . . . . . . ]
+"6032
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 6032: extern volatile SSP2CON2bits_t SSP2CON2bits __attribute__((address(0x19B)));
+[v _SSP2CON2bits `VS278 ~T0 @X0 0 e@411 ]
 "21256
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 21256:     struct {
 [s S967 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -49,82 +49,79 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21265
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 21265: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x70F)));
 [v _PIR3bits `VS966 ~T0 @X0 0 e@1807 ]
-"4348
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4348: extern volatile unsigned char SSP1BUF __attribute__((address(0x18C)));
-[v _SSP1BUF `Vuc ~T0 @X0 0 e@396 ]
-"4564
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4564:     struct {
-[s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S222 . BF UA R_nW S P D_nA CKE SMP ]
-"4574
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4574:     struct {
-[s S223 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S223 . . R_W . D_A ]
-"4580
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4580:     struct {
-[s S224 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S224 . . nW . nA ]
-"4586
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4586:     struct {
-[s S225 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S225 . . nWRITE . nADDRESS ]
-"4592
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4592:     struct {
-[s S226 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S226 . . READ_WRITE . DATA_ADDRESS ]
-"4598
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4598:     struct {
-[s S227 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S227 . . I2C_READ I2C_START I2C_STOP I2C_DAT ]
-"4605
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4605:     struct {
-[s S228 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S228 . BF1 UA1 R START STOP D CKE1 SMP1 ]
-"4615
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4615:     struct {
-[s S229 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S229 . . RW START1 STOP1 DA ]
-"4622
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4622:     struct {
-[s S230 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S230 . . RW1 I2C_START1 I2C_STOP2 DA1 ]
-"4629
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4629:     struct {
-[s S231 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S231 . . I2C_READ1 S2 P2 DATA_ADDRESS1 ]
-"4636
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4636:     struct {
-[s S232 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S232 . . READ_WRITE1 . D_A1 ]
-"4642
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4642:     struct {
-[s S233 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S233 . . R_W1 . D_nA1 ]
-"4648
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4648:     struct {
-[s S234 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S234 . . R_nW1 . I2C_DAT1 ]
-"4654
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4654:     struct {
-[s S235 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S235 . . nW2 . nA2 ]
-"4660
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4660:     struct {
-[s S236 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S236 . . nWRITE1 . nADDRESS1 ]
-"4563
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4563: typedef union {
-[u S221 `S222 1 `S223 1 `S224 1 `S225 1 `S226 1 `S227 1 `S228 1 `S229 1 `S230 1 `S231 1 `S232 1 `S233 1 `S234 1 `S235 1 `S236 1 ]
-[n S221 . . . . . . . . . . . . . . . . ]
-"4667
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 4667: extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0x18F)));
-[v _SSP1STATbits `VS221 ~T0 @X0 0 e@399 ]
+"5291
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5291: extern volatile unsigned char SSP2BUF __attribute__((address(0x196)));
+[v _SSP2BUF `Vuc ~T0 @X0 0 e@406 ]
+"5507
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5507:     struct {
+[s S259 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S259 . BF UA R_nW S P D_nA CKE SMP ]
+"5517
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5517:     struct {
+[s S260 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S260 . . R_W . D_A ]
+"5523
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5523:     struct {
+[s S261 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S261 . . nW . nA ]
+"5529
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5529:     struct {
+[s S262 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S262 . . nWRITE . nADDRESS ]
+"5535
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5535:     struct {
+[s S263 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S263 . . READ_WRITE . DATA_ADDRESS ]
+"5541
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5541:     struct {
+[s S264 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S264 . . I2C_READ I2C_START I2C_STOP I2C_DAT ]
+"5548
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5548:     struct {
+[s S265 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S265 . BF2 UA2 R START STOP D CKE2 SMP2 ]
+"5558
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5558:     struct {
+[s S266 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S266 . . RW START2 STOP2 DA ]
+"5565
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5565:     struct {
+[s S267 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S267 . . RW2 I2C_START2 I2C_STOP2 DA2 ]
+"5572
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5572:     struct {
+[s S268 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S268 . . I2C_READ2 S2 P2 DATA_ADDRESS2 ]
+"5579
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5579:     struct {
+[s S269 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S269 . . READ_WRITE2 . D_A2 ]
+"5585
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5585:     struct {
+[s S270 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S270 . . R_W2 . D_nA2 ]
+"5591
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5591:     struct {
+[s S271 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S271 . . R_nW2 . I2C_DAT2 ]
+"5597
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5597:     struct {
+[s S272 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S272 . . nW2 . nA2 ]
+"5603
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5603:     struct {
+[s S273 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S273 . . nWRITE2 . nADDRESS2 ]
+"5506
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5506: typedef union {
+[u S258 `S259 1 `S260 1 `S261 1 `S262 1 `S263 1 `S264 1 `S265 1 `S266 1 `S267 1 `S268 1 `S269 1 `S270 1 `S271 1 `S272 1 `S273 1 ]
+[n S258 . . . . . . . . . . . . . . . . ]
+"5610
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 5610: extern volatile SSP2STATbits_t SSP2STATbits __attribute__((address(0x199)));
+[v _SSP2STATbits `VS258 ~T0 @X0 0 e@409 ]
 "12 ./i2c_center.h
 [; ;./i2c_center.h: 12: void IIC_ACK(unsigned char ack);
 [v _IIC_ACK `(v ~T0 @X0 0 ef1`uc ]
-"5 i2c_center.c
-[; ;i2c_center.c: 5: void delay_time(int delay_time);
-[v _delay_time `(v ~T0 @X0 0 ef1`i ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18854.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1787,24 +1784,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;i2c_center.c: 34:     unsigned char b;
 [v _b `uc ~T0 @X0 1 a ]
 "35
-[; ;i2c_center.c: 35:     SSP1CON2bits.RCEN = 1;
-[e = . . _SSP1CON2bits 0 3 -> -> 1 `i `uc ]
+[; ;i2c_center.c: 35:     SSP2CON2bits.RCEN = 1;
+[e = . . _SSP2CON2bits 0 3 -> -> 1 `i `uc ]
 "36
-[; ;i2c_center.c: 36:     while (!PIR3bits.SSP1IF);
+[; ;i2c_center.c: 36:     while (!PIR3bits.SSP2IF);
 [e $U 1572  ]
 [e :U 1573 ]
 [e :U 1572 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1573  ]
+[e $ ! != -> . . _PIR3bits 0 2 `i -> 0 `i 1573  ]
 [e :U 1574 ]
 "37
-[; ;i2c_center.c: 37:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_center.c: 37:     PIR3bits.SSP2IF = 0;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
 "38
-[; ;i2c_center.c: 38:     b = SSP1BUF;
-[e = _b _SSP1BUF ]
+[; ;i2c_center.c: 38:     b = SSP2BUF;
+[e = _b _SSP2BUF ]
 "39
-[; ;i2c_center.c: 39:     SSP1STATbits.BF = 0;
-[e = . . _SSP1STATbits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_center.c: 39:     SSP2STATbits.BF = 0;
+[e = . . _SSP2STATbits 0 0 -> -> 0 `i `uc ]
 "40
 [; ;i2c_center.c: 40:     IIC_ACK(ack);
 [e ( _IIC_ACK (1 _ack ]
@@ -1824,18 +1821,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _d `uc ~T0 @X0 1 r1 ]
 [f ]
 "45
-[; ;i2c_center.c: 45:     SSP1BUF = d;
-[e = _SSP1BUF _d ]
+[; ;i2c_center.c: 45:     SSP2BUF = d;
+[e = _SSP2BUF _d ]
 "46
-[; ;i2c_center.c: 46:     while (!PIR3bits.SSP1IF);
+[; ;i2c_center.c: 46:     while (!PIR3bits.SSP2IF);
 [e $U 1576  ]
 [e :U 1577 ]
 [e :U 1576 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1577  ]
+[e $ ! != -> . . _PIR3bits 0 2 `i -> 0 `i 1577  ]
 [e :U 1578 ]
 "47
-[; ;i2c_center.c: 47:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_center.c: 47:     PIR3bits.SSP2IF = 0;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
 "48
 [; ;i2c_center.c: 48: }
 [e :UE 1575 ]
@@ -1848,21 +1845,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ack `uc ~T0 @X0 1 r1 ]
 [f ]
 "52
-[; ;i2c_center.c: 52:     SSP1CON2bits.ACKDT = (ack & 0x01);
-[e = . . _SSP1CON2bits 0 5 -> & -> _ack `i -> 1 `i `uc ]
+[; ;i2c_center.c: 52:     SSP2CON2bits.ACKDT = (ack & 0x01);
+[e = . . _SSP2CON2bits 0 5 -> & -> _ack `i -> 1 `i `uc ]
 "53
-[; ;i2c_center.c: 53:     SSP1CON2bits.ACKEN = 1;
-[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+[; ;i2c_center.c: 53:     SSP2CON2bits.ACKEN = 1;
+[e = . . _SSP2CON2bits 0 4 -> -> 1 `i `uc ]
 "54
-[; ;i2c_center.c: 54:     while (!PIR3bits.SSP1IF);
+[; ;i2c_center.c: 54:     while (!PIR3bits.SSP2IF);
 [e $U 1580  ]
 [e :U 1581 ]
 [e :U 1580 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1581  ]
+[e $ ! != -> . . _PIR3bits 0 2 `i -> 0 `i 1581  ]
 [e :U 1582 ]
 "55
-[; ;i2c_center.c: 55:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_center.c: 55:     PIR3bits.SSP2IF = 0;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
 "56
 [; ;i2c_center.c: 56: }
 [e :UE 1579 ]
@@ -1874,17 +1871,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _IIC_Start ]
 [f ]
 "59
-[; ;i2c_center.c: 59:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_center.c: 59:     PIR3bits.SSP2IF = 0;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
 "60
-[; ;i2c_center.c: 60:     SSP1CON2bits.SEN = 1;
-[e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
-"62
-[; ;i2c_center.c: 62:     delay_time(2000);
-[e ( _delay_time (1 -> 2000 `i ]
+[; ;i2c_center.c: 60:     SSP2CON2bits.SEN = 1;
+[e = . . _SSP2CON2bits 0 0 -> -> 1 `i `uc ]
+"61
+[; ;i2c_center.c: 61:     while(!PIR3bits.SSP2IF);
+[e $U 1584  ]
+[e :U 1585 ]
+[e :U 1584 ]
+[e $ ! != -> . . _PIR3bits 0 2 `i -> 0 `i 1585  ]
+[e :U 1586 ]
 "63
-[; ;i2c_center.c: 63:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_center.c: 63:     PIR3bits.SSP2IF = 0;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
 "64
 [; ;i2c_center.c: 64: }
 [e :UE 1583 ]
@@ -1896,21 +1897,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _IIC_Stop ]
 [f ]
 "67
-[; ;i2c_center.c: 67:     SSP1CON2bits.PEN = 1;
-[e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
+[; ;i2c_center.c: 67:     SSP2CON2bits.PEN = 1;
+[e = . . _SSP2CON2bits 0 2 -> -> 1 `i `uc ]
 "68
-[; ;i2c_center.c: 68:     while (!PIR3bits.SSP1IF);
-[e $U 1585  ]
-[e :U 1586 ]
-[e :U 1585 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1586  ]
-[e :U 1587 ]
+[; ;i2c_center.c: 68:     while (!PIR3bits.SSP2IF);
+[e $U 1588  ]
+[e :U 1589 ]
+[e :U 1588 ]
+[e $ ! != -> . . _PIR3bits 0 2 `i -> 0 `i 1589  ]
+[e :U 1590 ]
 "69
-[; ;i2c_center.c: 69:     PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;i2c_center.c: 69:     PIR3bits.SSP2IF = 0;
+[e = . . _PIR3bits 0 2 -> -> 0 `i `uc ]
 "70
 [; ;i2c_center.c: 70: }
-[e :UE 1584 ]
+[e :UE 1587 ]
 }
 "72
 [; ;i2c_center.c: 72: void delay_time(int delay_time) {
@@ -1925,8 +1926,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _i _delay_time ]
 "74
 [; ;i2c_center.c: 74:     while (i > 0) {
-[e $U 1589  ]
-[e :U 1590 ]
+[e $U 1592  ]
+[e :U 1593 ]
 {
 "75
 [; ;i2c_center.c: 75:         --i;
@@ -1934,12 +1935,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76
 [; ;i2c_center.c: 76:     }
 }
-[e :U 1589 ]
+[e :U 1592 ]
 "74
 [; ;i2c_center.c: 74:     while (i > 0) {
-[e $ > _i -> 0 `i 1590  ]
-[e :U 1591 ]
+[e $ > _i -> 0 `i 1593  ]
+[e :U 1594 ]
 "77
 [; ;i2c_center.c: 77: }
-[e :UE 1588 ]
+[e :UE 1591 ]
 }

@@ -5,29 +5,35 @@
 [d frameptr 6 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"5 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\i2c_peripheral.c
-[v _iicPeripheralInterruptTx iicPeripheralInterruptTx `(v  1 e 1 0 ]
-"35
+"35 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\i2c_peripheral.c
 [v _iicPeripheralInterruptRx iicPeripheralInterruptRx `(uc  1 e 1 0 ]
-"45 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\init.c
+"12 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\init.c
+[v _initHardware initHardware `(v  1 e 1 0 ]
+"45
 [v _initIICPeripheralMode initIICPeripheralMode `(v  1 e 1 0 ]
-"57 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
+"59 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 [v _irs_routine irs_routine `II(v  1 e 1 0 ]
-"79
-[v _sound sound `(v  1 e 1 0 ]
-"114
+"82
+[v _sound1 sound1 `(v  1 e 1 0 ]
+"116
+[v _i2c_isr i2c_isr `(v  1 e 1 0 ]
+"134
 [v _main main `(v  1 e 1 0 ]
-"150
+"185
 [v _Init Init `(v  1 e 1 0 ]
-"168
+"203
 [v _Enable_INT Enable_INT `(v  1 e 1 0 ]
-[s S455 . 1 `uc 1 IOCIF 1 0 :1:0 
+"216
+[v _Pull_Up Pull_Up `(v  1 e 1 0 ]
+[s S568 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -37,15 +43,29 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "374 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1786.h
-[s S464 . 1 `uc 1 . 1 0 :2:0 
+[s S577 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S469 . 1 `S455 1 . 1 0 `S464 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES469  1 e 1 @11 ]
+[u S582 . 1 `S568 1 . 1 0 `S577 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES582  1 e 1 @11 ]
 "429
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
+[s S177 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"449
+[s S186 . 1 `uc 1 PORTA 1 0 :8:0 
+]
+[u S188 . 1 `S177 1 . 1 0 `S186 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES188  1 e 1 @12 ]
 "499
 [v _PORTB PORTB `VEuc  1 e 1 @13 ]
 "569
@@ -70,7 +90,7 @@
 [v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
 "923
 [v _T1CON T1CON `VEuc  1 e 1 @24 ]
-[s S117 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S203 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -80,19 +100,19 @@
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
 "945
-[s S126 . 1 `uc 1 . 1 0 :4:0 
+[s S212 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS 1 0 :2:4 
 `uc 1 TMR1CS 1 0 :2:6 
 ]
-[u S130 . 1 `S117 1 . 1 0 `S126 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES130  1 e 1 @24 ]
+[u S216 . 1 `S203 1 . 1 0 `S212 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES216  1 e 1 @24 ]
 "1176
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1246
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1316
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S150 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S236 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -102,13 +122,13 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1336
-[s S159 . 1 `uc 1 TRISC 1 0 :8:0 
+[s S245 . 1 `uc 1 TRISC 1 0 :8:0 
 ]
-[u S161 . 1 `S150 1 . 1 0 `S159 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES161  1 e 1 @142 ]
+[u S247 . 1 `S236 1 . 1 0 `S245 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES247  1 e 1 @142 ]
 "1407
 [v _PIE1 PIE1 `VEuc  1 e 1 @145 ]
-[s S181 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S267 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -118,9 +138,9 @@
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1424
-[u S190 . 1 `S181 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES190  1 e 1 @145 ]
-[s S202 . 1 `uc 1 PS0 1 0 :1:0 
+[u S276 . 1 `S267 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES276  1 e 1 @145 ]
+[s S288 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -130,16 +150,16 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1635
-[s S211 . 1 `uc 1 PS 1 0 :3:0 
+[s S297 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S216 . 1 `S202 1 . 1 0 `S211 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES216  1 e 1 @149 ]
+[u S302 . 1 `S288 1 . 1 0 `S297 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES302  1 e 1 @149 ]
 "1869
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
-[s S425 . 1 `uc 1 SCS0 1 0 :1:0 
+[s S538 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF0 1 0 :1:3 
@@ -149,17 +169,31 @@
 `uc 1 SPLLEN 1 0 :1:7 
 ]
 "1891
-[s S434 . 1 `uc 1 SCS 1 0 :2:0 
+[s S547 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF 1 0 :4:3 
 ]
-[u S438 . 1 `S425 1 . 1 0 `S434 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES438  1 e 1 @153 ]
+[u S551 . 1 `S538 1 . 1 0 `S547 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES551  1 e 1 @153 ]
 "2293
 [v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S151 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"2313
+[s S160 . 1 `uc 1 LATA 1 0 :8:0 
+]
+[u S162 . 1 `S151 1 . 1 0 `S160 1 . 1 0 ]
+[v _LATAbits LATAbits `VES162  1 e 1 @268 ]
 "2363
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S50 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S54 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -169,23 +203,37 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2383
-[s S59 . 1 `uc 1 LATB 1 0 :8:0 
+[s S63 . 1 `uc 1 LATB 1 0 :8:0 
 ]
-[u S61 . 1 `S50 1 . 1 0 `S59 1 . 1 0 ]
-[v _LATBbits LATBbits `VES61  1 e 1 @269 ]
+[u S65 . 1 `S54 1 . 1 0 `S63 1 . 1 0 ]
+[v _LATBbits LATBbits `VES65  1 e 1 @269 ]
 "2433
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "3533
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "3598
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+[s S118 . 1 `uc 1 WPUC0 1 0 :1:0 
+`uc 1 WPUC1 1 0 :1:1 
+`uc 1 WPUC2 1 0 :1:2 
+`uc 1 WPUC3 1 0 :1:3 
+`uc 1 WPUC4 1 0 :1:4 
+`uc 1 WPUC5 1 0 :1:5 
+`uc 1 WPUC6 1 0 :1:6 
+`uc 1 WPUC7 1 0 :1:7 
+]
+"4882
+[s S127 . 1 `uc 1 WPUC 1 0 :8:0 
+]
+[u S129 . 1 `S118 1 . 1 0 `S127 1 . 1 0 ]
+[v _WPUCbits WPUCbits `VES129  1 e 1 @526 ]
 "4953
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
 "5212
 [v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
 "5720
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
-[s S76 . 1 `uc 1 BF 1 0 :1:0 
+[s S80 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -195,27 +243,27 @@
 `uc 1 SMP 1 0 :1:7 
 ]
 "5792
-[u S85 . 1 `S76 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES85  1 e 1 @532 ]
+[u S89 . 1 `S80 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES89  1 e 1 @532 ]
 "5846
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
-[s S320 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S433 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5933
-[s S326 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S439 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S331 . 1 `S320 1 . 1 0 `S326 1 . 1 0 ]
-[v _SSPCONbits SSPCONbits `VES331  1 e 1 @533 ]
+[u S444 . 1 `S433 1 . 1 0 `S439 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES444  1 e 1 @533 ]
 "5995
-[v _SSPCON1bits SSPCON1bits `VES331  1 e 1 @533 ]
-[s S371 . 1 `uc 1 SEN 1 0 :1:0 
+[v _SSPCON1bits SSPCON1bits `VES444  1 e 1 @533 ]
+[s S484 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -225,8 +273,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6184
-[u S380 . 1 `S371 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES380  1 e 1 @534 ]
+[u S493 . 1 `S484 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES493  1 e 1 @534 ]
 "14199
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "15588
@@ -238,40 +286,88 @@
 "37
 [v _cnt_2 cnt_2 `ui  1 e 2 0 ]
 "38
-[v _cnt_3 cnt_3 `ui  1 e 2 0 ]
-"41
-[v _voice voice `[17]ui  1 e 34 0 ]
+[v _cnt_i cnt_i `ui  1 e 2 0 ]
+"39
+[v _cnt_j cnt_j `ui  1 e 2 0 ]
+"42
+[v _voice voice `[18]ui  1 e 36 0 ]
 "44
-[v _book book `[17]ui  1 e 34 0 ]
+[v _book book `[23]ui  1 e 46 0 ]
 "46
-[v _i i `ui  1 e 2 0 ]
+[v _time time `[23]ui  1 e 46 0 ]
 "47
-[v _count count `uc  1 e 1 0 ]
+[v _i i `ui  1 e 2 0 ]
+[v _j j `ui  1 e 2 0 ]
 "48
+[v _count count `uc  1 e 1 0 ]
+"49
 [v _recvData recvData `uc  1 e 1 0 ]
-"114
+"134
 [v _main main `(v  1 e 1 0 ]
 {
-"142
+"177
 } 0
-"150
+"12 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\init.c
+[v _initHardware initHardware `(v  1 e 1 0 ]
+{
+[v initHardware@isCenterBoard isCenterBoard `ui  1 p 2 2 ]
+[v initHardware@iicAddr iicAddr `uc  1 p 1 4 ]
+"43
+} 0
+"45
+[v _initIICPeripheralMode initIICPeripheralMode `(v  1 e 1 0 ]
+{
+[v initIICPeripheralMode@iicAddr iicAddr `uc  1 a 1 wreg ]
+[v initIICPeripheralMode@iicAddr iicAddr `uc  1 a 1 wreg ]
+"47
+[v initIICPeripheralMode@iicAddr iicAddr `uc  1 a 1 1 ]
+"74
+} 0
+"216 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
+[v _Pull_Up Pull_Up `(v  1 e 1 0 ]
+{
+"220
+} 0
+"185
 [v _Init Init `(v  1 e 1 0 ]
 {
-"166
+"201
 } 0
-"168
+"203
 [v _Enable_INT Enable_INT `(v  1 e 1 0 ]
 {
-"179
+"214
 } 0
-"57
+"59
 [v _irs_routine irs_routine `II(v  1 e 1 0 ]
 {
-"77
+"80
 } 0
-"79
-[v _sound sound `(v  1 e 1 0 ]
+"82
+[v _sound1 sound1 `(v  1 e 1 0 ]
 {
-[v sound@gate1 gate1 `i  1 p 2 0 ]
-"95
+[v sound1@gate1 gate1 `i  1 p 2 6 ]
+"97
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"116 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
+[v _i2c_isr i2c_isr `(v  1 e 1 0 ]
+{
+"132
+} 0
+"35 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\i2c_peripheral.c
+[v _iicPeripheralInterruptRx iicPeripheralInterruptRx `(uc  1 e 1 0 ]
+{
+"41
+[v iicPeripheralInterruptRx@data data `uc  1 a 1 2 ]
+"51
 } 0

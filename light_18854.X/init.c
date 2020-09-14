@@ -52,23 +52,23 @@ void initIICCenterMode() {
     ANSELBbits.ANSB5 = 0;
 
      //Initialize IIC
-     SSP1CON1 = 0;
+     SSP2CON1 = 0;
 
      //Set as IIC center mode
-     SSP1CON1bits.SSPM0 = 0;
-     SSP1CON1bits.SSPM1 = 0;
-     SSP1CON1bits.SSPM2 = 0;
-     SSP1CON1bits.SSPM3 = 1;
+     SSP2CON1bits.SSPM0 = 0;
+     SSP2CON1bits.SSPM1 = 0;
+     SSP2CON1bits.SSPM2 = 0;
+     SSP2CON1bits.SSPM3 = 1;
 
      //Set IIC baud speed as 100kHz (System clock is 4MHz)
-     SSP1ADD = 0x09;
+     SSP2ADD = 0x09;
 
      //Enable SDA and SCL ports
-     SSP1CON1bits.SSPEN = 1;
+     SSP2CON1bits.SSPEN = 1;
 
-     SSP1CON2 = 0;
-     SSP1STAT = 0x80;
+     SSP2CON2 = 0;
+     SSP2STAT = 0x80;
 
-//     PIE3bits.SSP1IE = 1;
-//     PIR3bits.SSP1IF = 0;
+//     PIE3bits.SSP2IE = 1;
+//     PIR3bits.SSP2IF = 0;
 }
