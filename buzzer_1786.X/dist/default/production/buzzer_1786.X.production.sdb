@@ -19,19 +19,19 @@
 [v _initHardware initHardware `(v  1 e 1 0 ]
 "45
 [v _initIICPeripheralMode initIICPeripheralMode `(v  1 e 1 0 ]
-"81 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
+"82 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 [v _irs_routine irs_routine `II(v  1 e 1 0 ]
-"107
+"90
 [v _sound1 sound1 `(v  1 e 1 0 ]
-"141
+"124
 [v _i2c_isr i2c_isr `(v  1 e 1 0 ]
-"156
+"142
 [v _main main `(v  1 e 1 0 ]
-"212
+"198
 [v _Init Init `(v  1 e 1 0 ]
-"230
+"216
 [v _Enable_INT Enable_INT `(v  1 e 1 0 ]
-"243
+"229
 [v _Pull_Up Pull_Up `(v  1 e 1 0 ]
 [s S457 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
@@ -241,29 +241,29 @@
 [v _cnt_i cnt_i `ui  1 e 2 0 ]
 "60
 [v _cnt_j cnt_j `ui  1 e 2 0 ]
-"63
-[v _voice voice `[18]ui  1 e 36 0 ]
-"65
+"64
+[v _voice voice `[15]ui  1 e 30 0 ]
+"66
 [v _book book `[23]ui  1 e 46 0 ]
-"67
-[v _time time `[23]ui  1 e 46 0 ]
 "68
+[v _time time `[23]ui  1 e 46 0 ]
+"69
 [v _i i `ui  1 e 2 0 ]
 [v _j j `ui  1 e 2 0 ]
-"70
-[v _recvData recvData `uc  1 e 1 0 ]
 "71
+[v _recvData recvData `uc  1 e 1 0 ]
+"72
 [v _play play `ui  1 e 2 0 ]
-"156
+"142
 [v _main main `(v  1 e 1 0 ]
 {
-"204
+"190
 } 0
-"107
+"90
 [v _sound1 sound1 `(v  1 e 1 0 ]
 {
 [v sound1@gate1 gate1 `i  1 p 2 4 ]
-"122
+"105
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -291,30 +291,30 @@
 [v initIICPeripheralMode@iicAddr iicAddr `uc  1 a 1 5 ]
 "74
 } 0
-"243 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
+"229 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\main.c
 [v _Pull_Up Pull_Up `(v  1 e 1 0 ]
 {
-"247
+"233
 } 0
-"212
+"198
 [v _Init Init `(v  1 e 1 0 ]
 {
-"228
+"214
 } 0
-"230
+"216
 [v _Enable_INT Enable_INT `(v  1 e 1 0 ]
 {
-"241
+"227
 } 0
-"81
+"82
 [v _irs_routine irs_routine `II(v  1 e 1 0 ]
 {
-"105
+"88
 } 0
-"141
+"124
 [v _i2c_isr i2c_isr `(v  1 e 1 0 ]
 {
-"154
+"140
 } 0
 "35 D:\SeedClass\Embedding CourseDesign\HiPad\buzzer_1786.X\i2c_peripheral.c
 [v _iicPeripheralInterruptRx iicPeripheralInterruptRx `(uc  1 e 1 0 ]

@@ -8946,7 +8946,8 @@ unsigned int cnt_i = 0;
 unsigned int cnt_j = 0;
 
 
-unsigned int voice[18] = {0, 86, 76, 68, 64, 57, 51, 46, 43, 38, 34, 32, 29, 25, 22, 21, 19, 17};
+
+unsigned int voice[15] = {0, 64, 57, 51, 46, 43, 38, 34, 32, 29, 25, 22, 21, 19, 17};
 
 unsigned int book[23] = {6, 10, 12, 10, 6, 8, 6, 8, 6, 8, 10, 10, 9, 10, 8, 6, 10, 12, 13, 13, 13, 10, 12};
 
@@ -8966,27 +8967,22 @@ void i2c_isr();
 
 void interrupt irs_routine(void)
 {
-
-# 98
 if(PIR1bits.SSP1IF == 1){
 i2c_isr();
-if(recvData == 0b01011011) {
-play = 1;
-}
 }
 return;
 }
 
 void sound1(int gate1)
 {
-if(++cnt_i >= time[i]*4000) {
+if(++cnt_i >= time[i]*1000) {
 cnt_i = 0;
 i = i + 1;
 if(i >= 23) i = 0;
 }
 
 if(gate1) {
-if(++cnt_1 >= gate1) {
+if(++cnt_1 >= gate1>>1) {
 
 LATBbits.LATB0 = !LATBbits.LATB0;
 cnt_1 = 0;
@@ -9016,9 +9012,12 @@ void i2c_isr() {
 if (SSPSTATbits.D_nA == 0 && SSPSTATbits.R_nW == 0) {
 
 recvData = iicPeripheralInterruptRx();
+if(recvData == 0b01011011) {
+play = 1;
+}
 }
 
-# 153
+# 139
 PIR1bits.SSP1IF = 0;
 }
 
@@ -9037,10 +9036,10 @@ initHardware(0, peripheralAddr);
 TRISB = 0;
 LATBbits.LATB0 = 0;
 
-# 180
-while(play) {
+# 166
+while(1) {
+if(play)
 sound1(voice[book[i]]);
-
 }
 
 
@@ -9048,7 +9047,7 @@ sound1(voice[book[i]]);
 
 while(1) {
 
-# 202
+# 188
 }
 
 }
