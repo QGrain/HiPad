@@ -10,28 +10,20 @@
 #include "i2c_center.h"
 
 void initHardware(unsigned int isCenterBoard, unsigned char iicAddr) {
-    PORTA = 0;
-    PORTB = 0;
-    PORTC = 0;
-
-    LATA = 0;
-    LATB = 0;
-    LATC = 0;
-
-    ANSELA = 0;
-    ANSELB = 0;
-
-    TRISA = 0;
-    TRISB = 0;
-    TRISC = 0;
-
-    //Set system clock
-    //System clock will be decided by IRCF<3:0>
-//    OSCCON1bits.SCS = 0b11;
+//    PORTA = 0;
+//    PORTB = 0;
+//    PORTC = 0;
 //
-//    //4MHz
-//    OSCCON1bits.IRCF = 0b1101;
-//    OSCCON1bits.SPLLEN = 0;
+//    LATA = 0;
+//    LATB = 0;
+//    LATC = 0;
+//
+//    ANSELA = 0;
+//    ANSELB = 0;
+//
+//    TRISA = 0;
+//    TRISB = 0;
+//    TRISC = 0;
 
     //Enable interrupt service
     INTCONbits.PEIE = 1;

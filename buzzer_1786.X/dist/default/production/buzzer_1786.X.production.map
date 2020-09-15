@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\buzzer_1786.X.production.sym \
   --cmf=dist/default/production\buzzer_1786.X.production.cmf -z -Q16F1786 \
-  -oC:\Users\Zhiyu\AppData\Local\Temp\si6g.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Zhiyu\AppData\Local\Temp\sec.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/buzzer_1786.X.production.map -E1 -ver=XC8 \
-  --acfsm=1493 -ASTACK=020CEh-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
+  --acfsm=1493 -ASTACK=020D0h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
   -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh \
@@ -32,7 +32,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Zhiyu\AppData\Local\Temp\si6g.o \
+  C:\Users\Zhiyu\AppData\Local\Temp\sec.o \
   dist/default/production\buzzer_1786.X.production.o 
 
 Object code version is 3.11
@@ -42,37 +42,38 @@ Machine type is 16F1786
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Zhiyu\AppData\Local\Temp\si6g.o
+C:\Users\Zhiyu\AppData\Local\Temp\sec.o
                 end_init                             10       10        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
 dist/default/production\buzzer_1786.X.production.o
                 cinit                                12       12       37        8       0
                 intentry                              4        4        C        8       0
-                text10                              1D5      1D5       1C        8       0
-                text9                               19C      19C       1D        8       0
-                text7                               201      201        8        8       0
-                text6                               1F1      1F1       10        8       0
-                text5                               215      215        3        8       0
-                text4                               1B9      1B9       1C        8       0
-                text3                               13A      13A       24        8       0
-                text2                               15E      15E       20        8       0
-                text1                                49       49       5D        8       0
-                maintext                             A6       A6       38        8       0
-                cstackBANK0                          4B       4B        9       20       1
+                text11                              24B      24B       1C        8       0
+                text10                              1A7      1A7       26        8       0
+                text8                               274      274        7        8       0
+                text7                               267      267        D        8       0
+                text6                               287      287        3        8       0
+                text5                               10B      10B       3C        8       0
+                text4                               22F      22F       1C        8       0
+                text3                               1CD      1CD       24        8       0
+                text2                               1F1      1F1       20        8       0
+                text1                                AE       AE       5D        8       0
+                maintext                             49       49       65        8       0
+                cstackBANK0                          4D       4D        9       20       1
                 cstackCOMMON                         70       70        6       70       1
-                clrtext                             20F      20F        6        8       0
-                inittext                            209      209        6        8       0
-                dataBANK2                           120      120       2E      120       1
-                dataBANK1                            A0       A0       2E       A0       1
+                clrtext                             281      281        6        8       0
+                inittext                            27B      27B        6        8       0
+                dataBANK2                           120      120       30      120       1
+                dataBANK1                            A0       A0       30       A0       1
                 dataBANK0                            20       20       1E       20       1
-                bssBANK0                             3E       3E        D       20       1
+                bssBANK0                             3E       3E        F       20       1
                 dataCOMMON                           79       79        1       70       1
                 bssCOMMON                            76       76        3       70       1
-                idataBANK2                          10C      10C       2E        8       0
-                idataBANK1                           DE       DE       2E        8       0
-                idataBANK0                          17E      17E       1E        8       0
-                idataCOMMON                         218      218        1        8       0
+                idataBANK2                          177      177       30        8       0
+                idataBANK1                          147      147       30        8       0
+                idataBANK0                          211      211       1E        8       0
+                idataCOMMON                         28A      28A        1        8       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -82,22 +83,23 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                12       12       37         0
                 intentry                              4        4        C         0
                 reset_vec                             0        0        2         0
-                text10                              1D5      1D5       1C         0
-                text9                               19C      19C       1D         0
-                text7                               201      201        8         0
-                text6                               1F1      1F1       10         0
-                text5                               215      215        3         0
-                text4                               1B9      1B9       1C         0
-                text3                               13A      13A       24         0
-                text2                               15E      15E       20         0
-                text1                                49       49       5D         0
-                maintext                             A6       A6       38         0
-                clrtext                             20F      20F        6         0
-                inittext                            209      209        6         0
-                idataBANK2                          10C      10C       2E         0
-                idataBANK1                           DE       DE       2E         0
-                idataBANK0                          17E      17E       1E         0
-                idataCOMMON                         218      218        1         0
+                text11                              24B      24B       1C         0
+                text10                              1A7      1A7       26         0
+                text8                               274      274        7         0
+                text7                               267      267        D         0
+                text6                               287      287        3         0
+                text5                               10B      10B       3C         0
+                text4                               22F      22F       1C         0
+                text3                               1CD      1CD       24         0
+                text2                               1F1      1F1       20         0
+                text1                                AE       AE       5D         0
+                maintext                             49       49       65         0
+                clrtext                             281      281        6         0
+                inittext                            27B      27B        6         0
+                idataBANK2                          177      177       30         0
+                idataBANK1                          147      147       30         0
+                idataBANK0                          211      211       1E         0
+                idataCOMMON                         28A      28A        1         0
 
         CLASS   STRCODE        
 
@@ -113,15 +115,15 @@ TOTAL           Name                               Link     Load   Length     Sp
                 bssCOMMON                            76       76        3         1
 
         CLASS   BANK0          
-                cstackBANK0                          4B       4B        9         1
+                cstackBANK0                          4D       4D        9         1
                 dataBANK0                            20       20       1E         1
-                bssBANK0                             3E       3E        D         1
+                bssBANK0                             3E       3E        F         1
 
         CLASS   BANK1          
-                dataBANK1                            A0       A0       2E         1
+                dataBANK1                            A0       A0       30         1
 
         CLASS   BANK2          
-                dataBANK2                           120      120       2E         1
+                dataBANK2                           120      120       30         1
 
         CLASS   BANK3          
 
@@ -264,23 +266,23 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  000215  000219         8       0  CODE        2
-                dataBANK0                      000020  000034  000054        20       1  BANK0       1
+                intentry                       000004  000287  00028B         8       0  CODE        2
+                dataBANK0                      000020  000036  000056        20       1  BANK0       1
                 cstackCOMMON                   000070  00000A  00007A        70       1  COMMON      1
-                dataBANK1                      0000A0  00002E  0000CE        A0       1  BANK1       1
-                dataBANK2                      000120  00002E  00014E       120       1  BANK2       1
+                dataBANK1                      0000A0  000030  0000D0        A0       1  BANK1       1
+                dataBANK2                      000120  000030  000150       120       1  BANK2       1
                 config                         008007  000002  008009     1000E       0  CONFIG      2
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            00054-0006F              1C           1
-        BANK1            000CE-000EF              22           1
+        BANK0            00056-0006F              1A           1
+        BANK1            000D0-000EF              20           1
         BANK10           00520-0056F              50           1
         BANK11           005A0-005EF              50           1
         BANK12           00620-0064F              30           1
-        BANK2            0014E-0016F              22           1
+        BANK2            00150-0016F              20           1
         BANK3            001A0-001EF              50           1
         BANK4            00220-0026F              50           1
         BANK5            002A0-002EF              50           1
@@ -290,17 +292,17 @@ UNUSED ADDRESS RANGES
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
-                         00219-01FFF             800
+                         0028B-01FFF             800
         COMMON           0007A-0007D               4           1
         CONST            00002-00003               2           2
-                         00219-01FFF             100
+                         0028B-01FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00002-00003               2           2
-                         00219-01FFF             100
+                         0028B-01FFF             100
         IDLOC            08000-08003               4           2
-        RAM              00054-0006F              1C           1
-                         000CE-000EF              22
-                         0014E-0016F              22
+        RAM              00056-0006F              1A           1
+                         000D0-000EF              20
+                         00150-0016F              20
                          001A0-001EF              50
                          00220-0026F              50
                          002A0-002EF              50
@@ -343,22 +345,22 @@ UNUSED ADDRESS RANGES
         SFR7             00380-0039F              20           1
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
-        STACK            020CE-023EF             322           1
+        STACK            020D0-023EF             320           1
         STRCODE          00002-00003               2           2
-                         00219-01FFF            1DE7
+                         0028B-01FFF            1D75
         STRING           00002-00003               2           2
-                         00219-01FFF             100
+                         0028B-01FFF             100
 
                                   Symbol Table
 
-?___wmul                           cstackBANK0  0004B
+?___wmul                           cstackBANK0  0004D
 _ANSELA                            (abs)        0018C
 _ANSELB                            (abs)        0018D
-_Enable_INT                        text7        00201
+_Enable_INT                        text8        00274
 _GIE                               (abs)        0005F
-_IICAddr                           bssBANK0     0004A
+_IICAddr                           bssBANK0     0004C
 _INTCONbits                        (abs)        0000B
-_Init                              text6        001F1
+_Init                              text7        00267
 _LATA                              (abs)        0010C
 _LATB                              (abs)        0010D
 _LATBbits                          (abs)        0010D
@@ -374,7 +376,7 @@ _PIR1bits                          (abs)        00011
 _PORTA                             (abs)        0000C
 _PORTB                             (abs)        0000D
 _PORTC                             (abs)        0000E
-_Pull_Up                           text5        00215
+_Pull_Up                           text6        00287
 _SSP1BUF                           (abs)        00211
 _SSPADD                            (abs)        00212
 _SSPCON1                           (abs)        00215
@@ -383,7 +385,6 @@ _SSPCON2bits                       (abs)        00216
 _SSPCONbits                        (abs)        00215
 _SSPSTAT                           (abs)        00214
 _SSPSTATbits                       (abs)        00214
-_T1CON                             (abs)        00018
 _TRISA                             (abs)        0008C
 _TRISB                             (abs)        0008D
 _TRISC                             (abs)        0008E
@@ -501,7 +502,7 @@ __Hsfr7                            sfr7         00000
 __Hsfr8                            sfr8         00000
 __Hsfr9                            sfr9         00000
 __Hspace_0                         (abs)        08009
-__Hspace_1                         (abs)        0014E
+__Hspace_1                         (abs)        00150
 __Hspace_2                         (abs)        00000
 __Hspace_3                         (abs)        00000
 __Hstack                           stack        00000
@@ -609,58 +610,61 @@ __Lstack                           stack        00000
 __Lstrings                         strings      00000
 __Ltext                            text         00000
 __S0                               (abs)        08009
-__S1                               (abs)        0014E
+__S1                               (abs)        00150
 __S2                               (abs)        00000
 __S3                               (abs)        00000
 ___int_sp                          stack        00000
 ___latbits                         (abs)        00002
 ___sp                              stack        00000
 ___stackhi                         (abs)        023EF
-___stacklo                         (abs)        020CE
-___wmul                            text2        0015E
-___wmul@multiplicand               cstackBANK0  0004D
-___wmul@multiplier                 cstackBANK0  0004B
+___stacklo                         (abs)        020D0
+___wmul                            text2        001F1
+___wmul@multiplicand               cstackBANK0  0004F
+___wmul@multiplier                 cstackBANK0  0004D
 ___wmul@product                    cstackCOMMON 00074
-__end_of_Enable_INT                text7        00209
-__end_of_Init                      text6        00201
-__end_of_Pull_Up                   text5        00218
-__end_of___wmul                    text2        0017E
+__end_of_Enable_INT                text8        0027B
+__end_of_Init                      text7        00274
+__end_of_Pull_Up                   text6        0028A
+__end_of___wmul                    text2        00211
 __end_of__initialization           cinit        00045
-__end_of_i2c_isr                   text9        001B9
-__end_of_iicPeripheralInterruptRx  text10       001F1
-__end_of_initHardware              text3        0015E
-__end_of_initIICPeripheralMode     text4        001D5
+__end_of_base_sound                text5        00147
+__end_of_i2c_isr                   text10       001CD
+__end_of_iicPeripheralInterruptRx  text11       00267
+__end_of_initHardware              text3        001F1
+__end_of_initIICPeripheralMode     text4        0024B
 __end_of_irs_routine               intentry     00010
-__end_of_main                      maintext     000DE
-__end_of_sound1                    text1        000A6
+__end_of_main                      maintext     000AE
+__end_of_sound1                    text1        0010B
 __initialization                   cinit        00012
 __pbssBANK0                        bssBANK0     0003E
 __pbssCOMMON                       bssCOMMON    00076
-__pcstackBANK0                     cstackBANK0  0004B
+__pcstackBANK0                     cstackBANK0  0004D
 __pcstackCOMMON                    cstackCOMMON 00070
 __pdataBANK0                       dataBANK0    00020
 __pdataBANK1                       dataBANK1    000A0
 __pdataBANK2                       dataBANK2    00120
 __pdataCOMMON                      dataCOMMON   00079
-__pidataBANK0                      idataBANK0   0017E
-__pidataBANK1                      idataBANK1   000DE
-__pidataBANK2                      idataBANK2   0010C
-__pidataCOMMON                     idataCOMMON  00218
+__pidataBANK0                      idataBANK0   00211
+__pidataBANK1                      idataBANK1   00147
+__pidataBANK2                      idataBANK2   00177
+__pidataCOMMON                     idataCOMMON  0028A
 __pintentry                        intentry     00004
-__pmaintext                        maintext     000A6
-__ptext1                           text1        00049
-__ptext10                          text10       001D5
-__ptext2                           text2        0015E
-__ptext3                           text3        0013A
-__ptext4                           text4        001B9
-__ptext5                           text5        00215
-__ptext6                           text6        001F1
-__ptext7                           text7        00201
-__ptext9                           text9        0019C
+__pmaintext                        maintext     00049
+__ptext1                           text1        000AE
+__ptext10                          text10       001A7
+__ptext11                          text11       0024B
+__ptext2                           text2        001F1
+__ptext3                           text3        001CD
+__ptext4                           text4        0022F
+__ptext5                           text5        0010B
+__ptext6                           text6        00287
+__ptext7                           text7        00267
+__ptext8                           text8        00274
 __size_of_Enable_INT               (abs)        00000
 __size_of_Init                     (abs)        00000
 __size_of_Pull_Up                  (abs)        00000
 __size_of___wmul                   (abs)        00000
+__size_of_base_sound               (abs)        00000
 __size_of_i2c_isr                  (abs)        00000
 __size_of_iicPeripheralInterruptRx (abs)        00000
 __size_of_initHardware             (abs)        00000
@@ -668,32 +672,36 @@ __size_of_initIICPeripheralMode    (abs)        00000
 __size_of_irs_routine              (abs)        00000
 __size_of_main                     (abs)        00000
 __size_of_sound1                   (abs)        00000
+_base_sound                        text5        0010B
 _book                              dataBANK2    00120
+_cnt_0                             bssBANK0     0004A
 _cnt_1                             bssBANK0     00048
 _cnt_2                             bssBANK0     00046
 _cnt_i                             bssBANK0     00044
 _cnt_j                             bssBANK0     00042
 _i                                 bssBANK0     00040
-_i2c_isr                           text9        0019C
-_iicPeripheralInterruptRx          text10       001D5
-_initHardware                      text3        0013A
-_initIICPeripheralMode             text4        001B9
+_i2c_isr                           text10       001A7
+_iicPeripheralInterruptRx          text11       0024B
+_initHardware                      text3        001CD
+_initIICPeripheralMode             text4        0022F
 _irs_routine                       intentry     00004
 _j                                 bssCOMMON    00076
-_main                              maintext     000A6
+_main                              maintext     00049
 _play                              bssBANK0     0003E
 _recvData                          bssCOMMON    00078
-_sound1                            text1        00049
+_sound1                            text1        000AE
 _time                              dataBANK1    000A0
 _voice                             dataBANK0    00020
+base_sound@gate0                   cstackCOMMON 00074
+base_sound@time                    cstackBANK0  0004F
 btemp                              (abs)        0007E
-clear_ram0                         clrtext      0020F
+clear_ram0                         clrtext      00281
 end_of_initialization              cinit        00045
 iicPeripheralInterruptRx@data      cstackCOMMON 00072
-initHardware@iicAddr               cstackBANK0  0004D
-initHardware@isCenterBoard         cstackBANK0  0004B
+initHardware@iicAddr               cstackBANK0  0004F
+initHardware@isCenterBoard         cstackBANK0  0004D
 initIICPeripheralMode@iicAddr      cstackCOMMON 00075
-init_ram                           inittext     00209
+init_ram                           inittext     0027B
 int$flags                          (abs)        0007E
 intlevel0                          functab      00000
 intlevel1                          functab      00000
@@ -702,7 +710,7 @@ intlevel3                          functab      00000
 intlevel4                          functab      00000
 intlevel5                          functab      00000
 reset_vec                          reset_vec    00000
-sound1@gate1                       cstackBANK0  0004F
+sound1@gate1                       cstackBANK0  00051
 start                              init         00010
 start_initialization               cinit        00012
 wtemp0                             (abs)        0007E
@@ -712,7 +720,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 142 in file "main.c"
+		line 153 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -720,7 +728,7 @@ FUNCTION INFORMATION:
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -736,6 +744,7 @@ Total ram usage:        2 bytes
 		_Enable_INT
 		_Init
 		_Pull_Up
+		_base_sound
 		_initHardware
 		_sound1
  This function is called by:
@@ -745,7 +754,7 @@ Total ram usage:        2 bytes
 
  *************** function _sound1 *****************
  Defined at:
-		line 90 in file "main.c"
+		line 106 in file "main.c"
  Parameters:    Size  Location     Type
   gate1           2    4[BANK0 ] int 
  Auto vars:     Size  Location     Type
@@ -866,9 +875,39 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _base_sound *****************
+ Defined at:
+		line 92 in file "main.c"
+ Parameters:    Size  Location     Type
+  gate0           2    4[COMMON] int 
+ Auto vars:     Size  Location     Type
+  time            2    2[BANK0 ] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       4       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
  *************** function _Pull_Up *****************
  Defined at:
-		line 229 in file "main.c"
+		line 215 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -898,7 +937,7 @@ Total ram usage:        0 bytes
 
  *************** function _Init *****************
  Defined at:
-		line 198 in file "main.c"
+		line 191 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -928,7 +967,7 @@ Total ram usage:        0 bytes
 
  *************** function _Enable_INT *****************
  Defined at:
-		line 216 in file "main.c"
+		line 205 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -958,7 +997,7 @@ Total ram usage:        0 bytes
 
  *************** function _irs_routine *****************
  Defined at:
-		line 82 in file "main.c"
+		line 84 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -988,7 +1027,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_isr *****************
  Defined at:
-		line 124 in file "main.c"
+		line 138 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1051,12 +1090,12 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
-		___wmul        		CODE           	015E	0000	33
+		___wmul        		CODE           	01F1	0000	33
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c estimated size: 33
 
 i2c_peripheral.c
-		_iicPeripheralInterruptRx		CODE           	01D5	0000	29
+		_iicPeripheralInterruptRx		CODE           	024B	0000	29
 
 i2c_peripheral.c estimated size: 29
 
@@ -1066,19 +1105,20 @@ shared
 shared estimated size: 52
 
 init.c
-		_initHardware  		CODE           	013A	0000	37
-		_initIICPeripheralMode		CODE           	01B9	0000	29
+		_initHardware  		CODE           	01CD	0000	37
+		_initIICPeripheralMode		CODE           	022F	0000	29
 
 init.c estimated size: 66
 
 main.c
-		_Pull_Up       		CODE           	0215	0000	4
+		_Pull_Up       		CODE           	0287	0000	4
 		_irs_routine   		CODE           	0004	0000	13
-		_sound1        		CODE           	0049	0000	94
-		_main          		CODE           	00A6	0000	57
-		_Enable_INT    		CODE           	0201	0000	9
-		_Init          		CODE           	01F1	0000	17
-		_i2c_isr       		CODE           	019C	0000	30
+		_base_sound    		CODE           	010B	0000	61
+		_sound1        		CODE           	00AE	0000	94
+		_main          		CODE           	0049	0000	102
+		_Enable_INT    		CODE           	0274	0000	8
+		_Init          		CODE           	0267	0000	14
+		_i2c_isr       		CODE           	01A7	0000	39
 
-main.c estimated size: 224
+main.c estimated size: 335
 

@@ -24,7 +24,7 @@ unsigned char* centerReadFromPeripheral(unsigned char peripheralAddr, unsigned c
 
 void centerWriteToPeripheral(unsigned char peripheralAddr, unsigned char data) {
     IIC_Start();         //Start condition
-    IIC_Write_Byte((peripheralAddr << 1) + 0);     //7 bit address + Read
+    IIC_Write_Byte((peripheralAddr << 1) + 0);     //7 bit address + write
     IIC_Write_Byte(data);
     IIC_Stop();          //Stop condition
 }
@@ -42,7 +42,7 @@ unsigned char IIC_Read_Byte(unsigned char ack) {
 }
 
 void IIC_Write_Byte(unsigned char d) {
-    SSP2BUF = d; //???????SSPBUF????,????????
+    SSP2BUF = d; //写入SSPBUF
     while (!PIR3bits.SSP2IF); //等待发送结束
     PIR3bits.SSP2IF = 0; //SSPIF标志清0
 }
